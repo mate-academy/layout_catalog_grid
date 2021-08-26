@@ -22,13 +22,9 @@
 
   &__item {
     position: relative;
-    color: #060b35;
+    color: #00acdc;
     list-style: none;
     line-height: 60px;
-  }
-
-  &__item:not(:last-child) {
-    margin-right: 20px;
   }
 
   &__link {
