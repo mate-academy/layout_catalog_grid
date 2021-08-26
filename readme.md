@@ -15,6 +15,7 @@ Implement layout using grid layout
 - Gap between cards should be `48px`
 - Do not modify header
 - Blocks should start from the left
+- Blocks should wrap to a new row when the screen width decreases
 
 
 ## Requirements:

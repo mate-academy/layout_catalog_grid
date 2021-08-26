@@ -1,9 +1,11 @@
 .catalog {
+  box-sizing: content-box;
   display: flex;
   flex-wrap: wrap;
 
   max-width: 944px;
   margin: 0 auto;
+  padding: 0 50px;
 
   &__card {
     display: flex;
@@ -11,9 +13,9 @@
     align-items: center;
     width: 200px;
     height: 300px;
+    margin-bottom: 48px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
   }
 
   &__card:not(:nth-child(4n)) {
