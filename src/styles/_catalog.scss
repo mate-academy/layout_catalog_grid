@@ -16,11 +16,6 @@ $card-height: 300px;
     height: $card-height;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
-  }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
   }
 
   @media (min-width: 488px) {
