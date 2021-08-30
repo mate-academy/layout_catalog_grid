@@ -1,6 +1,13 @@
 $cardsWidth: 200px;
 
 .catalog {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, $cardsWidth);
+  gap: 48px;
+  max-width: 944px;
+  margin: 0 auto;
+
   @media (min-width: 488px) {
     grid-template-columns: repeat(2, $cardsWidth);
   }
@@ -12,14 +19,6 @@ $cardsWidth: 200px;
   @media (min-width: 1024px) {
     grid-template-columns: repeat(4, $cardsWidth);
   }
-
-  display: grid;
-  justify-content: center;
-  grid-template-columns: repeat(auto-fill, $cardsWidth);
-  gap: 48px;
-
-  max-width: 944px;
-  margin: 0 auto;
 
   &__card {
     display: grid;
