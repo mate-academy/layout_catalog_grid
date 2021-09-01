@@ -1,20 +1,22 @@
 .catalog {
+  --number-of-columns: 1;
+
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(var(--number-of-columns), 200px);
   gap: 48px;
   justify-items: center;
   align-items: center;
 
   @media (min-width: 488px) {
-    grid-template-columns: 1fr 1fr;
+    --number-of-columns: 2;
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr;
+    --number-of-columns: 3;
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    --number-of-columns: 4;
   }
 
   max-width: 944px;
@@ -26,6 +28,7 @@
     align-items: center;
     width: 200px;
     height: 300px;
+    box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
