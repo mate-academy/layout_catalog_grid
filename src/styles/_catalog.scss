@@ -15,8 +15,6 @@
     grid-template-columns: repeat(4, 200px);
   }
 
-  margin: 0 auto;
-
   &__card {
     display: flex;
     justify-content: center;
@@ -27,7 +25,4 @@
     border-radius: 5px;
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
-  }
 }
