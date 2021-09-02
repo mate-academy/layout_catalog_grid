@@ -2,7 +2,7 @@
   $gap-width: 48px;
   $card-width: 200px;
   gap: $gap-width;
-  grid-template-columns: repeat(auto-fill, minmax($card-width, 220px));
+  grid-template-columns: repeat(auto-fill, minmax($card-width, 200px));
   display: grid;
   justify-content: center;
   align-items: center;
@@ -17,10 +17,5 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
-  }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
   }
 }
