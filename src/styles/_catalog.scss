@@ -4,6 +4,7 @@
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   justify-items: center;
   gap: 48px;
+  margin: 0 auto;
 }
 
 .product-card {
@@ -13,7 +14,7 @@
   border-radius: 5px;
   padding: 32px 16px 16px;
   color: $text-accent-color;
-  transition: all linear 0.3s;
+  transition: color linear 0.3s, transform linear 0.3s;
 
   &:hover {
     transform: scale(1.2);
@@ -100,12 +101,12 @@
     height: 16px;
     width: 16px;
     margin-right: 4px;
-    background-image: url(../images/star-active.svg);
+    background-image: url(../images/star.svg);
     background-repeat: no-repeat;
     background-position: center;
   }
+}
 
-  &__star:last-child {
-    background-image: url(../images/star.svg);
-  }
+.stars--4 .stars__star:not(:last-child) {
+  background-image: url(../images/star-active.svg);
 }
