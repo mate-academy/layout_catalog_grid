@@ -15,6 +15,10 @@ $gaps:48px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
+  
+  @media (max-width: 487px) {
+    max-width: $size + $gaps;
+  }
 
   @media (min-width: 488px) {
     max-width: 2*$size + $gaps;
