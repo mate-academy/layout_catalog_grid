@@ -12,3 +12,27 @@ body {
 
 @import "_header.scss";
 @import "_catalog.scss";
+
+$card-width: 200px;
+$gap-width: 48px;
+
+@media (max-width: 487px) {
+  .catalog {
+    grid-template-columns: repeat(1, 200px);
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 488px) and (max-width: 767px) {
+  .catalog {
+    grid-template-columns: repeat(2, 200px);
+    max-width: $card-width * 2 + $gap-width;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .catalog {
+    grid-template-columns: repeat(3, 200px);
+    max-width: $card-width * 3 + $gap-width * 2;
+  }
+}
