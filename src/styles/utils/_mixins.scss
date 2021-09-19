@@ -1,0 +1,4 @@
+@mixin card($height, $width) {
+  width: $card-width;
+  height: $card-height;
+}
