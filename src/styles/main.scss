@@ -10,5 +10,23 @@ body {
   box-sizing: border-box;
 }
 
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+
+  @media (max-width: 768px) {
+    & {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 488px) {
+    & {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+
 @import "_header.scss";
 @import "_catalog.scss";
