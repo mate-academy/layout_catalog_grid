@@ -28,4 +28,8 @@ body {
   @media (max-width: 768px) {
     grid-template-columns: repeat(2, $card_width);
   }
+  
+  @media (max-width: 488px) {
+    grid-template-columns: repeat(1, $card_width);
+  }
 }
