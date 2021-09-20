@@ -10,5 +10,22 @@ body {
   box-sizing: border-box;
 }
 
+@import "./utils/variables";
+
 @import "_header.scss";
 @import "_catalog.scss";
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, $card_width);
+  justify-content: center;
+  gap: 48px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, $card_width);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, $card_width);
+  }
+}
