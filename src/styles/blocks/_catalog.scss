@@ -4,7 +4,7 @@
   max-width: 944px;
   margin: 0 auto;
 
-  grid-template-columns: repeat(auto-fill, $card-width);
+  grid-template-columns: repeat(4, $card-width);
   justify-content: center;
   align-content: space-between;
 
@@ -15,5 +15,16 @@
     @include card($card-height, $card-width);
     border: 1px solid #ccc;
     border-radius: 5px;
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, $card-width);
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (max-width: 488px) {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
