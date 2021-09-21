@@ -26,8 +26,4 @@
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
-  }
 }

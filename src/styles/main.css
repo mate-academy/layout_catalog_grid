@@ -86,8 +86,4 @@ body {
   border-radius: 5px;
 }
 
-.catalog__card:not(:nth-child(4n)) {
-  margin-right: 48px;
-}
-
 /*# sourceMappingURL=main.css.map */
