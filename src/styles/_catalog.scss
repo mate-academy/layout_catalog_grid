@@ -1,8 +1,7 @@
 .catalog {
   display: grid;
-  grid-template-columns: 1, 1fr;
+  grid-template-columns: 1fr;
   gap: 48px;
-  justify-content: center;
 
   max-width: 944px;
   margin: 0 auto;
