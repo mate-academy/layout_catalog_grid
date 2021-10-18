@@ -1,7 +1,8 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
-
+  display: grid;
+  grid-template-columns: repeat(4, product-card(width));
+  justify-content: center;
+  gap: product-card(spacing);
   max-width: 944px;
   margin: 0 auto;
 
@@ -9,14 +10,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 300px;
+    width: product-card(width);
+    height: product-card(height);
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
+  @include respond-to(tablet, desktop) {
+    grid-template-columns: repeat(3, product-card(width));
+  }
+
+  @include respond-to(phone, tablet) {
+    grid-template-columns: repeat(2, product-card(width));
   }
 }
