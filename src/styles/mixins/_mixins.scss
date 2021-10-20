@@ -1,8 +1,0 @@
-@mixin respond-to($min-resolution, $max-resolution) {
-  @media screen and (
-    min-width: #{breakpoint($min-resolution)}) 
-    and (max-width:#{breakpoint($max-resolution)}
-  ) {
-    @content;
-  }
-}
