@@ -1,0 +1,7 @@
+@function product-card($property) {
+  @return map-get($card, $property);
+}
+
+@function breakpoint($resolution) {
+  @return map-get($breakpoints, $resolution);
+}
