@@ -11,6 +11,7 @@ body {
 }
 
 @import "./settings/variables";
+@import "./mixins/mixins";
 @import "./functions/functions";
 
 @import "_header.scss";

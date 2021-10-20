@@ -1,10 +1,8 @@
 .catalog {
   display: grid;
-  grid-template-columns: repeat(auto-fill, product-card(width));
+  grid-template-columns: repeat(2, product-card(width));
   justify-content: center;
   gap: product-card(spacing);
-  max-width: 944px;
-  margin: 0 auto;
 
   &__card {
     display: flex;
@@ -13,5 +11,13 @@
     height: product-card(height);
     border: 1px solid #ccc;
     border-radius: 5px;
+  }
+
+  @include respond-to(tablet) {
+    grid-template-columns: repeat(3, product-card(width));
+  }
+
+  @include respond-to(desktop) {
+    grid-template-columns: repeat(4, product-card(width));
   }
 }
