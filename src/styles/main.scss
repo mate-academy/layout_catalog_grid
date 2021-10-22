@@ -1,14 +1,13 @@
-html {
-  font-family: Roboto, sans-serif;
-}
+@import "./utils/reset";
+@import "./utils/variables";
 
-body {
-  margin: 0;
-}
+@import "./blocks/catalog.scss";
+@import "./blocks/header.scss";
 
 * {
   box-sizing: border-box;
 }
 
-@import "_header.scss";
-@import "_catalog.scss";
+html {
+  font-family: Roboto, sans-serif;
+}
