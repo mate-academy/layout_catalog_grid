@@ -1,3 +1,5 @@
+$width: 200px;
+
 .catalog {
   display: grid;
   justify-content: center;
@@ -7,8 +9,8 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    width: 200px;
     height: 300px;
+    width: $width;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
@@ -16,18 +18,18 @@
 
 @media (min-width: 488px) {
   .catalog {
-    grid-template-columns: repeat(2,200px);
+    grid-template-columns: repeat(2,$width);
   }
 }
 
 @media (min-width: 768px) {
   .catalog {
-    grid-template-columns: repeat(3,200px);
+    grid-template-columns: repeat(3,$width);
   }
 }
 
 @media (min-width: 1024px) {
   .catalog {
-    grid-template-columns: repeat(4,200px);
+    grid-template-columns: repeat(4,$width);
   }
 }
