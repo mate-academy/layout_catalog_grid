@@ -1,22 +1,22 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: $card-width;
+  gap: $gap-size;
+  justify-content: center;
 
-  max-width: 944px;
-  margin: 0 auto;
+  @include screen-size($screen-size-s, 2);
+
+  @include screen-size($screen-size-m, 3);
+
+  @include screen-size($screen-size-l, 4);
 
   &__card {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
-    width: 200px;
     height: 300px;
+
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
-  }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
   }
 }
