@@ -1,0 +1,5 @@
+@mixin screen-size ($screen-size, $columns) {
+  @media screen and (min-width: #{$screen-size}) {
+    grid-template-columns: repeat($columns, $card-width);
+  }
+}
