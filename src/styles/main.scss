@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: Roboto, sans-serif;
 }
@@ -6,9 +10,29 @@ body {
   margin: 0;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 @import "_header.scss";
 @import "_catalog.scss";
+
+@media (min-width: 488px) and (max-width: 767px) {
+  .catalog {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .catalog {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto auto;
+  }
+}
+
+@media (min-width: 1024px) {
+  .catalog {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto;
+  }
+}
