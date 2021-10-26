@@ -1,0 +1,5 @@
+@mixin adaptive ($min-width, $columns) {
+  @media (min-width: $min-width) {
+    grid-template-columns: repeat($columns, map-get($card-size, "width"));
+  }
+}

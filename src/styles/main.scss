@@ -10,8 +10,8 @@ body {
   box-sizing: border-box;
 }
 
+@import "./mixins.scss";
 @import "./variables.scss";
 
 @import "./blocks/header.scss";
 @import "./blocks/catalog.scss";
-@import "./blocks/page.scss";

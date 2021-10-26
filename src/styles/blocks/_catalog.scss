@@ -1,19 +1,15 @@
 .catalog {
   display: grid;
-  grid-template-columns: repeat(2, map-get($card-size, "width"));
+  grid-template-columns: repeat(1, map-get($card-size, "width"));
   gap: 48px;
   justify-content: center;
 
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, map-get($card-size, "width"));
-  }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, map-get($card-size, "width"));
-  }
+  @include adaptive(480px, 2);
+  @include adaptive(768px, 3);
+  @include adaptive(1024px, 4);
 
   &__card {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     height: map-get($card-size, "height");
