@@ -1,0 +1,19 @@
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(1, map-get($card-size, "width"));
+  gap: 48px;
+  justify-content: center;
+
+  @include adaptive(480px, 2);
+  @include adaptive(768px, 3);
+  @include adaptive(1024px, 4);
+
+  &__card {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: map-get($card-size, "height");
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
