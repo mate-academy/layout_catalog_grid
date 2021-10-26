@@ -4,13 +4,13 @@
   @include grid-breakpoint(1024px, 4);
 
   display: grid;
-  grid-template-columns: repeat(1, $card-width);
+  // grid-template-columns: repeat(1, $card-width);
   justify-content: center;
   gap: 48px;
   
 
   &__card {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     width: $card-width;
