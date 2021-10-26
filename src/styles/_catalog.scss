@@ -1,8 +1,6 @@
 .catalog {
   display: grid;
   gap: 48px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  
 
   &__card {
     display: grid;
@@ -15,20 +13,20 @@
   }
 }
 
-// @media (min-width: 488px) {
-//   .catalog {
-//     grid-template-columns: repeat(2, 200px);
-//   }
-// }
+@media (min-width: 488px) {
+  .catalog {
+    grid-template-columns: repeat(2, 200px);
+  }
+}
 
-// @media (min-width: 768px) {
-//   .catalog {
-//     grid-template-columns: repeat(3, 200px);
-//   }
-// }
+@media (min-width: 768px) {
+  .catalog {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
 
-// @media (min-width: 1024px) {
-//   .catalog {
-//     grid-template-columns: repeat(4, 200px);
-//   }
-// }
+@media (min-width: 1024px) {
+  .catalog {
+    grid-template-columns: repeat(4, 200px);
+  }
+}
