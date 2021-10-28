@@ -1,7 +1,7 @@
 .catalog {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(2, 200px);
+  grid-template-columns: repeat(2, $card-width);
   gap: 48px;
 
   &__card {
@@ -13,11 +13,11 @@
     border-radius: 5px;
   }
 
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 200px);
+  @media (min-width: $tablet-catalog-width) {
+    grid-template-columns: repeat(3, $card-width);
   }
 
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 200px);
+  @media (min-width: $laptop-catalog-width) {
+    grid-template-columns: repeat(4, $card-width);
   }
 }
