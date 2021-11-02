@@ -1,6 +1,6 @@
 # Frontend practice with catalog page using grid
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://<your_account>.github.io/layout_catalog_grid/)
+- [DEMO LINK](https://derenivska.github.io/layout_catalog_grid/)
 
 > Follow [this instructions](https://github.com/mate-academy/layout_task-guideline#how-to-solve-the-layout-tasks-on-github)
 
@@ -27,3 +27,4 @@ Implement layout using grid layout
 - **IMPORTANT** Save and push your changes to GitHub manually after `deploy`
 - Do not use tabs. Use 2 spaces for indentation.
 - Don't use repeated styles.
+
