@@ -1,8 +1,8 @@
 .catalog {
   display: grid;
-  padding: 0 48px;
   grid-template-columns: repeat(auto-fill, 200px);
   gap: 48px;
+  justify-content: center;
 
   &__card {
     display: grid;
@@ -14,20 +14,6 @@
   }
 }
 
-@media (min-width: 488px) {
-  .catalog {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media (min-width: 768px) {
-  .catalog {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-@media (min-width: 1024px) {
-  .catalog {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-  }
+@each $i, $width in $vars {
+  @include grid($i, $width);
 }
