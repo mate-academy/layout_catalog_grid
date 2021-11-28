@@ -1,0 +1,4 @@
+@mixin disp-grid {
+  display: grid;
+  @content;
+}
