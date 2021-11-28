@@ -1,0 +1,19 @@
+.catalog {
+  @extend %position;
+
+  gap: 48px;
+
+  @each $media-width, $columns in $media {
+    @media (min-width:#{$media-width}) {
+      grid-template-columns: repeat(#{$columns}, $card-width);
+    }
+  }
+
+  &__card {
+    @extend %position;
+
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
