@@ -10,5 +10,12 @@ body {
   box-sizing: border-box;
 }
 
+$card-width: 200px;
+
+%grid-center {
+  display: grid;
+  justify-content: center;
+}
+
 @import "_header.scss";
 @import "_catalog.scss";
