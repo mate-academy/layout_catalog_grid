@@ -1,0 +1,11 @@
+.page {
+  display: grid;
+
+  &__header {
+    margin-bottom: 50px;
+  }
+
+  &__catalog {
+    margin: 0 auto;
+  }
+}
