@@ -1,0 +1,5 @@
+@mixin getGrid($min-width, $repeat-amount) {
+  @media (min-width: $min-width) {
+    grid-template-columns: repeat($repeat-amount, 200px);
+  }
+}
