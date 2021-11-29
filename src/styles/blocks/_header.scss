@@ -9,7 +9,15 @@
 
   overflow: hidden;
 
+  @media (max-width: 778px) {
+    height: 200px;
+  }
+
   &__logo {
     height: 40px;
+
+    @media (max-width: 778px) {
+      margin: 0 auto;
+    }
   }
 }

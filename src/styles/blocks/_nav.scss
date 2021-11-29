@@ -9,6 +9,12 @@
     padding: 0;
 
     text-align: center;
+
+    @media (max-width: 778px) {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(8, 1fr);
+      gap: 5px;
+    }
   }
 
   &__item {
