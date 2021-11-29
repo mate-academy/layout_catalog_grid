@@ -1,6 +1,6 @@
 .catalog {
   display: grid;
-  grid-template-columns: repeat(1);
+  grid-template-columns: 200px;
   gap: 48px;
   justify-content: center;
 
@@ -20,7 +20,6 @@
     display: grid;
     justify-content: center;
     align-content: center;
-    width: 200px;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
