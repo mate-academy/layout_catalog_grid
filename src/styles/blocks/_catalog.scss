@@ -1,0 +1,29 @@
+.catalog {
+  display: grid;
+  justify-content: center;
+  gap: 48px;
+
+  @media (min-width: 480px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  &__card {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 0 auto;
+  }
+}
