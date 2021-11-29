@@ -1,10 +1,8 @@
 .catalog {
   display: grid;
   grid-template-columns: repeat(1, 200px);
-
+  justify-content: center;
   gap: 48px;
-  max-width: 944px;
-  margin: 0 auto;
 
   @media (min-width: 488px) {
     grid-template-columns: repeat(2, 200px);
@@ -20,7 +18,7 @@
 
   &__card {
     box-sizing: border-box;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     width: 200px;
