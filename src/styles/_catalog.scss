@@ -4,9 +4,11 @@
   gap: 48px;
 
   $media:
+    1px 1,
     488px 2,
     768px 3,
     1024px 4;
+
   @each $viewport-width, $columns in $media {
     @media(min-width: #{$viewport-width}) {
       grid-template-columns: repeat(#{$columns}, 200px);
