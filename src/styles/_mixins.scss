@@ -1,0 +1,7 @@
+@mixin grid($number, $min-width) {
+  @media (min-width: $min-width) {
+    .catalog {
+      grid-template-columns: repeat($number, 200px);
+    }
+  }
+}
