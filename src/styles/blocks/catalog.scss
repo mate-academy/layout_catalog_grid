@@ -1,7 +1,7 @@
 .catalog {
-  @include disp-grid;
-  grid-template-columns: repeat(auto-fill, $card-width);
-  grid-gap: $gap;
+  display: grid;
+  grid-gap: 48px;
+  grid-template-columns: $card-width;
 
   @media (min-width: 488px) {
     grid-template-columns: repeat(2, 1fr);
@@ -16,16 +16,14 @@
   }
 
   &__card {
-    @include disp-grid {
-      margin: auto;
-      justify-content: center;
-      align-items: center;
-    }
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: $card-width;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    transition: color, transform 300ms;
+    transition: color 300ms, transform 300ms;
                 
     &:hover {
       transform: scale(1.2);

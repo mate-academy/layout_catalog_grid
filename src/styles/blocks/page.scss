@@ -1,5 +1,5 @@
 .page {
-  @include disp-grid;
+  display: grid;
 
   &__header {
     margin-bottom: 50px;
