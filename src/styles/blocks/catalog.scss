@@ -1,5 +1,8 @@
 .catalog {
-  @extend %position;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: $card-width;
 
   gap: 48px;
 
@@ -10,7 +13,9 @@
   }
 
   &__card {
-    @extend %position;
+    display: grid;
+    justify-content: center;
+    align-content: center;
 
     height: 300px;
     border: 1px solid #ccc;
