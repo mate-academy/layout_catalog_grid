@@ -1,6 +1,7 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 48px;
+  justify-content: center;
 
   max-width: 944px;
   margin: 0 auto;
@@ -20,3 +21,18 @@
     margin-right: 48px;
   }
 }
+
+$sizes: (
+  2: 488, 
+  3: 768, 
+  4: 1024
+);
+
+@each $i, $size in $sizes {
+  .catalog {
+    @media screen and (min-width: #{$size}px) {
+      grid-template-columns: repeat(#{$i}, 200px);
+    }
+  }
+}
+
