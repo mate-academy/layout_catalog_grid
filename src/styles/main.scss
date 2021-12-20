@@ -2,7 +2,7 @@ html {
   font-family: Roboto, sans-serif;
 }
 
-body {
+.page {
   margin: 0;
 }
 
@@ -12,3 +12,4 @@ body {
 
 @import "_header.scss";
 @import "_catalog.scss";
+@import "_nav.scss";
