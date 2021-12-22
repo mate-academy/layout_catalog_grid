@@ -15,9 +15,13 @@ body {
 
 .catalog {
   display: grid;
-  grid-template-columns: repeat(2, 200px);
+  grid-template-columns: 200px;
   justify-content: center;
   gap: 0 48px;
+
+  @media (min-width: 488px) {
+    grid-template-columns: repeat(2, 200px);
+  }
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(3, 200px);
