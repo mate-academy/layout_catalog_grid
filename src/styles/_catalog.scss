@@ -1,8 +1,9 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  max-width: 1025px;
 
-  max-width: 944px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 48px;
   margin: 0 auto;
 
   &__card {
