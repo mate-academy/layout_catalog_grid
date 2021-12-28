@@ -1,6 +1,6 @@
 .catalog {
   display: grid;
-  max-width: 1025px;
+  max-width: 1024px;
 
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 48px;
@@ -14,7 +14,7 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
+    margin: 0 24px 48px;
   }
 
   &__card:not(:nth-child(4n)) {
