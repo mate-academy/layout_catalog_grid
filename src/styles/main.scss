@@ -2,5 +2,5 @@
 @import "./utilit/var.scss";
 @import "./utilit/reset.scss";
 @import "./utilit/normalize.scss";
-@import "_header.scss";
-@import "_catalog.scss";
+@import "./block/header";
+@import "./block/catalog";
