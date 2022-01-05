@@ -6,7 +6,7 @@
   padding: 0 50px;
   margin-bottom: 50px;
 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px $bs-color;
 
   overflow: hidden;
 
@@ -18,14 +18,11 @@
 .nav {
   &__list {
     display: flex;
-    margin: 0;
-    padding: 0;
   }
 
   &__item {
     position: relative;
-    color: #060b35;
-    list-style: none;
+    color: $dark-blue;
     line-height: 60px;
   }
 
@@ -35,7 +32,6 @@
 
   &__link {
     color: inherit;
-    text-decoration: none;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 500;
