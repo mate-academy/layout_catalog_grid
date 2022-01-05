@@ -1,17 +1,18 @@
+@import "./src/styles/utils/_mixins.scss";
+@import "./src/styles/utils/_variables.scss";
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  height: $header-height;
   padding: 0 50px;
   margin-bottom: 50px;
-
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-
+  box-shadow: 0 2px 4px $header-box-shadows;
   overflow: hidden;
 
   &__logo {
-    height: 40px;
+    height: $logo-height;
   }
 }
 
@@ -24,20 +25,15 @@
 
   &__item {
     position: relative;
-    color: #060b35;
-    list-style: none;
-    line-height: 60px;
+    @include item-rule;
   }
 
   &__item:not(:last-child) {
-    margin-right: 20px;
+    margin-right: $logo-height / 2;
   }
 
   &__link {
     color: inherit;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 12px;
-    font-weight: 500;
+    @include font-rule;
   }
 }

@@ -1,0 +1,29 @@
+@import "src/styles/utils/_variables.scss";
+@import "src/styles/utils/_mixins.scss";
+
+.catalog {
+  display: grid;
+  justify-content: center;
+  gap: $gap-catalog;
+
+  @media (min-width: 488px) {
+    grid-template-columns: repeat(2, $card-width);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, $card-width);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, $card-width);
+  }
+
+  &__card {
+    @include size-card;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid $card-border-clr;
+    border-radius: 5px;
+  }
+}

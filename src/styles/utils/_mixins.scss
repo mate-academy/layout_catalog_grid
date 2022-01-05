@@ -1,0 +1,17 @@
+@mixin font-rule {
+  font-size: 12px;
+  font-weight: 500;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+@mixin item-rule {
+  color: #060b35;
+  list-style: none;
+  line-height: 60px;
+}
+
+@mixin size-card {
+  width: 200px;
+  height: 300px;
+}
