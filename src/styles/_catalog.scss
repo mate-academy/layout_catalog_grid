@@ -1,23 +1,16 @@
 .catalog {
   display: grid;
-  flex-wrap: wrap;
   justify-content: center;
   grid-template-columns: repeat(2, $width);
   gap: $gap;
 
   &__card {
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: $height;
     border: 1px solid $borderColor;
     border-radius: 5px;
-  }
-}
-
-@media (min-width: 488px) {
-  .catalog {
-    grid-template-columns: repeat(2, $width);
   }
 }
 
