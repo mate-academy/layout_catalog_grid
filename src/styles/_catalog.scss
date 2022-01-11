@@ -1,9 +1,8 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
-
-  max-width: 944px;
-  margin: 0 auto;
+  display: grid;
+  gap: 48px;
+  justify-content: center;
+  align-items: center;
 
   &__card {
     display: flex;
@@ -13,10 +12,24 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-right: 0;
     margin-bottom: 48px;
   }
+}
+@media screen and (min-width: 488px) {
+  .catalog {
+    grid-template-columns: repeat(2, 200px);
+  }
+}
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
+@media screen and (min-width: 768px) {
+  .catalog {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .catalog {
+    grid-template-columns: repeat(4, 200px);
   }
 }
