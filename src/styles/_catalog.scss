@@ -3,13 +3,12 @@
   gap: 48px;
   justify-content: center;
   align-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
 
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
-    // width: 200px;
+    width: 200px;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -17,8 +16,20 @@
     margin-bottom: 48px;
   }
 }
+@media screen and (min-width: 488px) {
+  .catalog {
+    grid-template-columns: repeat(2, 200px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .catalog {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .catalog {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 200px);
   }
 }
