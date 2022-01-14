@@ -11,4 +11,34 @@ body {
 }
 
 @import "_header.scss";
-@import "_catalog.scss";
+// @import "_catalog.scss";
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  justify-content: center;
+  align-content: center;
+  gap: 48px;
+
+  &__card {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    width: 200px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .catalog {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .catalog {
+    grid-template-columns: repeat(4, 200px);
+  }
+}
