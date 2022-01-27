@@ -1,7 +1,6 @@
 $card-width: 200px;
 
 $media:
-  1 #{$card-width},
   2 488px,
   3 768px,
   4 1024px;
@@ -16,9 +15,6 @@ $media:
       grid-template-columns: repeat($cols, $card-width);
     }
   }
-
-  max-width: 944px;
-  margin: 0 auto;
 
   &__card {
     display: flex;
