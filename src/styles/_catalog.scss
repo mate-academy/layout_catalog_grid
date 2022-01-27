@@ -7,7 +7,6 @@
   justify-content: center;
 
   max-width: 944px;
-  margin: 0 auto;
 
   @media (max-width: 1023px) {
     grid-template-columns: repeat(3, $card-width);
