@@ -2,19 +2,16 @@ $width-of-card: 200px;
 
 .catalog {
   display: grid;
-  gap: 48px;
   justify-content: center;
+  gap: 48px;
+  grid-template-columns: repeat(4, $width-of-card);
 
-  @media (min-width: 488px) {
-    grid-template-columns: repeat(2, $width-of-card);
-  }
-
-  @media (min-width: 768px) {
+  @media (max-width: 1023px) {
     grid-template-columns: repeat(3, $width-of-card);
   }
 
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, $width-of-card);
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, $width-of-card);
   }
 
   &__card {
