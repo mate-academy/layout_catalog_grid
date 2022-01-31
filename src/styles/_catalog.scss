@@ -1,6 +1,6 @@
 .catalog {
   display: grid;
-  grid-template-columns: repeat(2, 200px);
+  grid-template-columns: 200px;
   gap: 48px;
   justify-content: center;
 
@@ -17,6 +17,12 @@
 
   &__card:not(:nth-child(4n)) {
     margin-right: 48px;
+  }
+}
+
+@media (min-width: 488px) {
+  .catalog {
+    grid-template-columns: repeat(2, 200px);
   }
 }
 
