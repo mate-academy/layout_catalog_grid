@@ -4,6 +4,8 @@ html {
 
 @import "_reset";
 @import "_vars";
-@import "_header.scss";
+@import "_mixins";
+@import "_header";
+@import "_stars";
 @import "_card";
-@import "_catalog.scss";
+@import "_catalog";
