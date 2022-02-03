@@ -14,12 +14,12 @@ $star-size: 16px;
       background-image: url($src-star-active);
     }
   }
-}
 
-.star {
-  @include square($star-size);
-  margin-right: 4px;
-  background-image: url($src-star);
-  background-repeat: no-repeat;
-  background-position: center;
+  &__star {
+    @include square($star-size);
+    margin-right: 4px;
+    background-image: url($src-star);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
 }

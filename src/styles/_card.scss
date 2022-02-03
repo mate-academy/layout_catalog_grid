@@ -83,13 +83,13 @@
     text-align: center;
     text-decoration: none;
     text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out,
+      color 0.4s ease;
   }
 
   &:hover .card__buy {
     background-color: $c-white;
     color: $c-ocean;
-    transition: background-color 0.3s ease-in-out,
-      color 0.4s ease;
   }
 
   &:hover {
