@@ -1,0 +1,39 @@
+.catalog {
+  display: grid;
+  justify-content: center;
+  padding: 20px;
+  grid-template-columns: 200px;
+  gap: 48px;
+
+  @media (min-width: 448px) {
+    & {
+      grid-template-columns: repeat(2, 200px);
+    }
+  }
+
+  @media (min-width: 768px) {
+    & {
+      grid-template-columns: repeat(3, 200px);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    & {
+      grid-template-columns: repeat(4, 200px);
+    }
+  }
+
+  &__card {
+    display: grid;
+    place-content: center;
+    width: 200px;
+    height: 300px;
+    border: 1px solid #ccc;
+    transition: color 300ms, transform 300ms;
+
+    &:hover {
+      transform: scale(1.2);
+      color: #34568b;
+    }
+  }
+}
