@@ -1,0 +1,9 @@
+@mixin fontFamily ($main-font, $second-font) {
+  font-family: #{$main-font}, #{$second-font};
+}
+
+@mixin transformCard {
+  transition-duration: 0.3s;
+  transition-delay: 0.1s;
+  transition-timing-function: ease-in-out;
+}
