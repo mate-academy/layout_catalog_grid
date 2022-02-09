@@ -1,12 +1,27 @@
+$card-width: 200px;
+
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  
 
   max-width: 944px;
   margin: 0 auto;
 
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: repeat(auto-fill, minmax($card-width, 1fr));
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax($card-width, 1fr));
+  }
+
+  @media screen and (min-width: 488px) {
+    grid-template-columns: repeat(auto-fill, minmax($card-width, 1fr));
+  }
+
   &__card {
-    display: flex;
+    display: grid;
+    gap: 48px;
     justify-content: center;
     align-items: center;
     width: 200px;
