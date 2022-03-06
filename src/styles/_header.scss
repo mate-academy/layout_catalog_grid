@@ -1,14 +1,12 @@
 .header {
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto max-content;
+  grid-template-rows: 60px;
   justify-content: space-between;
-  height: 60px;
+  align-items: center;
   padding: 0 50px;
   margin-bottom: 50px;
-
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-
-  overflow: hidden;
 
   &__logo {
     height: 40px;
@@ -17,20 +15,17 @@
 
 .nav {
   &__list {
-    display: flex;
-    margin: 0;
-    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    align-items: center;
+    gap: 0 20px;
   }
 
   &__item {
-    position: relative;
+    display: inline-block;
+    min-width: fit-content;
     color: #060b35;
     list-style: none;
-    line-height: 60px;
-  }
-
-  &__item:not(:last-child) {
-    margin-right: 20px;
   }
 
   &__link {
