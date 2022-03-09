@@ -1,9 +1,9 @@
 - check your work using basic recommendations [here](https://github.com/mate-academy/layout_search-bar-airbnb/blob/master/checklist.md)
-- use product item from `product card` task and header from `moyo header` task
-- check your classes, are they ok? do they follow BEM methodology?
-- remember about hover effects
-- one `h1` tag per page
-- don't forget about semantics, div development is not a better option
+<!-- - use product item from `product card` task and header from `moyo header` task -->
+<!-- - check your classes, are they ok? do they follow BEM methodology? -->
+<!-- - remember about hover effects -->
+<!-- - one `h1` tag per page -->
+<!-- - don't forget about semantics, div development is not a better option -->
 - follow BEM naming convention:
 >**WRONG WAY**
 >```html
