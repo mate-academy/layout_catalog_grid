@@ -4,14 +4,6 @@
   justify-content: center;
   gap: 48px;
 
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 200px);
-  }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 200px);
-  }
-
   &__card {
     display: grid;
     justify-content: center;
@@ -20,5 +12,13 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 200px);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 200px);
   }
 }
