@@ -43,9 +43,11 @@
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 500;
+    transition: 0.5s;
 
     &:hover {
       color: $hover-color;
+      transition: 0.5s;
     }
   }
 }
