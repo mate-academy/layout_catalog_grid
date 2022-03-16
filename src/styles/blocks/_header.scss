@@ -1,11 +1,13 @@
+.page__header {
+  padding: 0 50px;
+  margin-bottom: 50px;
+}
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
-  padding: 0 50px;
-  margin-bottom: 50px;
-
+  height: $header-height;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
   overflow: hidden;
@@ -15,18 +17,20 @@
   }
 }
 
+.header__nav {
+  margin: 0;
+  padding: 0;
+}
+
 .nav {
   &__list {
     display: flex;
-    margin: 0;
-    padding: 0;
   }
 
   &__item {
-    position: relative;
-    color: #060b35;
+    color: $main-color;
     list-style: none;
-    line-height: 60px;
+    line-height: $header-height;
   }
 
   &__item:not(:last-child) {
@@ -34,10 +38,16 @@
   }
 
   &__link {
-    color: inherit;
+    color: $main-color;
     text-decoration: none;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 500;
+    transition: 0.5s;
+
+    &:hover {
+      color: $hover-color;
+      transition: 0.5s;
+    }
   }
 }
