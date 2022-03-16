@@ -10,5 +10,6 @@ body {
   margin: 0;
 }
 
+@import "./utils/variables.scss";
 @import "_header.scss";
 @import "_catalog.scss";
