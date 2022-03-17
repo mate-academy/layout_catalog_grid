@@ -11,15 +11,18 @@ $card-height: 300px;
   margin: 0 auto;
 
   @media (min-width: 488px) {
-    grid-template-columns: repeat(2, minmax($card-width, 1fr));
+    grid-template-columns: repeat(2, $card-width);
+    max-width: 2 * ($card-width + $gap-size);
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(3, minmax($card-width, 1fr));
+    grid-template-columns: repeat(3, $card-width);
+    max-width: 3 * ($card-width + $gap-size);
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, minmax($card-width, 1fr));
+    grid-template-columns: repeat(4, $card-width);
+    max-width: 4 * ($card-width + $gap-size);
   }
 
   &__card {
