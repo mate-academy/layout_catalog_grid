@@ -1,22 +1,39 @@
-.catalog {
-  display: flex;
-  flex-wrap: wrap;
+$card-width: 200px;
+$card-height: 300px;
 
-  max-width: 944px;
-  margin: 0 auto;
+.catalog {
+  display: grid;
+  gap: 48px;
+  grid-template-columns: repeat(auto-fill, $card-width);
+  grid-template-rows: repeat(auto-fill, $card-height);
+  justify-content: center;
 
   &__card {
-    display: flex;
+    display: grid;
     justify-content: center;
-    align-items: center;
-    width: 200px;
+    align-content: center;
+    width: $card-width;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
+    box-sizing: border-box;
   }
+}
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
+@media (min-width: 488px) {
+  .catalog {
+    grid-template-columns: repeat(2, $card-width);
+  }
+}
+
+@media (min-width: 768px) {
+  .catalog {
+    grid-template-columns: repeat(3, $card-width);
+  }
+}
+
+@media (min-width: 1024px) {
+  .catalog {
+    grid-template-columns: repeat(4, $card-width);
   }
 }
