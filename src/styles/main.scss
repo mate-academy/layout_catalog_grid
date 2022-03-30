@@ -12,3 +12,26 @@ body {
 
 @import "_header.scss";
 @import "_catalog.scss";
+
+.catalog {
+  display: grid;
+  gap: 48px;
+}
+
+@media screen and (min-width: 488px) {
+  .catalog {
+    grid-template-columns: repeat(2, 200px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .catalog {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .catalog {
+    grid-template-columns: repeat(4, 200px);
+  }
+}
