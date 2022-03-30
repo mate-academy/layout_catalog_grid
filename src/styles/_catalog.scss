@@ -5,6 +5,7 @@ $min-widths:
 
 .catalog {
   display: grid;
+  justify-content: center;
   gap: 48px;
 
   @each $cards, $width in $min-widths {
