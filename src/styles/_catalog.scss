@@ -1,22 +1,103 @@
-.catalog {
-  display: flex;
-  flex-wrap: wrap;
+$margin-reset: 0;
 
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 48px;
+  justify-items: center;
   max-width: 944px;
   margin: 0 auto;
+  padding-bottom: 50px;
 
-  &__card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 300px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 48px;
+  @media (max-width: 1023px) {
+    grid-template-columns: repeat(3, 1fr);
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  &__card {
+    display: grid;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 32px 16px 16px;
+
+    &-image {
+      width: 160px;
+      height: 134px;
+      margin: 0 3px 40px;
+    }
+
+    &-title {
+      font-size: 12px;
+      font-weight: 500;
+      color: #060b35;
+      line-height: 18px;
+      margin: $margin-reset;
+      margin-bottom: 4px;
+    }
+
+    &-product-code {
+      font-size: 10px;
+      color: #616070;
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+
+    &-ratings {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: flex-end;
+      margin-bottom: 24px;
+    }
+
+    &-review-count {
+      font-size: 10px;
+      color: #060b35;
+      font-weight: 400;
+      justify-self: end;
+    }
+
+    &-pricing {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      margin-bottom: 16px;
+
+      &-label {
+        color: #616070;
+        font-weight: 400;
+      }
+
+      &-price {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18px;
+        justify-self: end;
+      }
+    }
+
+    &-button {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 14px;
+      color: #fff;
+      background-color: #00acdc;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 12px 0;
+      transition: border-color 0.3s, color 0.3s, background-color 0.3s;
+
+      &:hover {
+        border-color: #00acdc;
+        background-color: #fff;
+        color: #00acdc;
+      }
+    }
   }
 }
