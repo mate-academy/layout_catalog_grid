@@ -1,20 +1,20 @@
+$medias:
+  "2" 488px,
+  "3" 768px,
+  "4" 1024px;
+
+$cell-width: 200px;
+
 .catalog {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(1, 200px);
-  // margin: 0 auto;
+  grid-template-columns: repeat(1, $cell-width);
   gap: 48px;
 
-  @media (min-width: 488px) {
-    grid-template-columns: repeat(2, 200px);
-  }
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 200px);
-  }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 200px);
+  @each $number, $media in $medias {
+    @media (min-width: #{$media}) {
+      grid-template-columns: repeat(#{$number}, $cell-width);
+    }
   }
 
   &__card {
@@ -26,5 +26,4 @@
     border-radius: 5px;
     margin-bottom: 48px;
   }
-
 }
