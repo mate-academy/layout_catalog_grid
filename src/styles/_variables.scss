@@ -1,0 +1,7 @@
+$card-width: 1fr;
+
+$resolutions: (
+  488px: $card-width $card-width,
+  768px: $card-width $card-width $card-width,
+  1024px: $card-width $card-width $card-width $card-width
+);
