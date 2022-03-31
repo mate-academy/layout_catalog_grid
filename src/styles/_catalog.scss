@@ -1,4 +1,8 @@
 $card-width: 200px;
+$screen-sizes:
+  "2" 488px,
+  "3" 768px,
+  "4" 1024px;
 
 .catalog {
   display: grid;
@@ -6,16 +10,10 @@ $card-width: 200px;
   grid-template-columns: repeat(1, $card-width);
   gap: 48px;
 
-  @media (min-width: 488px) {
-    grid-template-columns: repeat(2, $card-width);
-  }
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, $card-width);
-  }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, $card-width);
+  @each $cards, $width in $screen-sizes {
+    @media (min-width: #{$width}) {
+      grid-template-columns: repeat(#{$cards}, $card-width);
+    }
   }
 
   &__card {
