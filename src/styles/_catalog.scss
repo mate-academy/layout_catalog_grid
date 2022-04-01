@@ -1,22 +1,25 @@
-.catalog {
-  display: flex;
-  flex-wrap: wrap;
+.container {
+  display: grid;
+  justify-content: center;
+}
 
-  max-width: 944px;
-  margin: 0 auto;
+.catalog {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  padding-bottom: 48px;
 
   &__card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
     width: 200px;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
+    align-items: center;
   }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
+  @each $resolution, $columns in $resolutions {
+    @media (min-width: $resolution) {
+      grid-template-columns: $columns;
+    }
   }
 }
