@@ -1,0 +1,21 @@
+.catalog {
+  display: grid;
+  grid-gap: 48px;
+  justify-content: center;
+
+  @each $screen, $cards-qty in $screens {
+    @media screen and (min-width: $screen) {
+      grid-template-columns: repeat($cards-qty, $card-width);
+    }
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $card-width;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
