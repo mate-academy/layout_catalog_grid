@@ -1,14 +1,33 @@
+$medias:
+  "2" 488px,
+  "3" 768px,
+  "4" 1024px;
+
+
+$cardWidth: 200px;
+
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  align-self: center;
+  justify-self: center;
+  grid-template-columns: repeat(1, $cardWidth);
+  gap: 48px;
 
   max-width: 944px;
   margin: 0 auto;
 
+
+  
+  @each $number, $media in $medias {
+    @media (min-width: #{$media}) {
+      grid-template-columns: repeat(#{$number}, $cardWidth);
+    }
+  }
+
+
   &__card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    place-items: center;
     width: 200px;
     height: 300px;
     border: 1px solid #ccc;
