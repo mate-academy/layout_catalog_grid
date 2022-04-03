@@ -1,22 +1,24 @@
-.catalog {
-  display: flex;
-  flex-wrap: wrap;
+@import "./utils/_variables";
 
-  max-width: 944px;
-  margin: 0 auto;
+.catalog {
+  display: grid;
+  grid-template-columns: $fr;
+  gap: 48px;
 
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 300px;
+    width: $card-width;
+    height: $card-height;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
+    margin: 0 auto;
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
+  @each $card, $screen-width in $cards {
+    @media (min-width: #{$screen-width}) {
+      grid-template-columns: repeat(#{$card}, $fr);
+    }
   }
 }
