@@ -1,5 +1,9 @@
+@import "./header.scss";
+@import "./catalog.scss";
+@import "./variables.scss";
+
 html {
-  font-family: Roboto, sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -9,6 +13,3 @@ body {
 * {
   box-sizing: border-box;
 }
-
-@import "_header.scss";
-@import "_catalog.scss";
