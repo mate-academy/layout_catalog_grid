@@ -13,6 +13,10 @@
     grid-template-columns: repeat(2, 200px);
   }
 
+  @media (max-width: 487px) {
+    grid-template-columns: repeat(1, 200px);
+  }
+
   &__card {
     display: flex;
     justify-content: center;
