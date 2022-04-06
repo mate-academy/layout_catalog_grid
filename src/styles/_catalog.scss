@@ -1,22 +1,32 @@
+// Variables
+$card-width: 200px;
+$card-gap: 48px;
+$screen-widths:
+  2 "488px",
+  3 "768px",
+  4 "1024px";
+
+// Cataolog styling
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+
+  @each $card-count, $screen-width in $screen-widths {
+    @media (min-width: $screen-width) {
+      grid-template-columns: repeat($card-count, $card-width);
+    }
+  }
+  justify-content: center;
+  gap: $card-gap;
 
   max-width: 944px;
-  margin: 0 auto;
 
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: $card-width;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
-  }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
   }
 }
