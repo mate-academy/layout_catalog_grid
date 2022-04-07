@@ -1,22 +1,99 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 48px;
+  justify-content: center;
+  padding-bottom: 50px;
 
-  max-width: 944px;
-  margin: 0 auto;
-
-  &__card {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 300px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 48px;
+  @media (max-width: 1023px) {
+    grid-template-columns: repeat(3, 200px);
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, 200px);
+  }
+
+  &__card {
+    display: grid;
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 32px 16px 16px;
+
+    &-image {
+      width: 160px;
+      height: 134px;
+      margin: 0 3px 40px;
+    }
+
+    &-title {
+      font-size: 12px;
+      font-weight: 500;
+      color: $secondary-clr;
+      line-height: 18px;
+      margin: 0;
+      margin-bottom: 4px;
+    }
+
+    &-product-code {
+      font-size: 10px;
+      color: $small-text-clr;
+      font-weight: 400;
+      margin-bottom: 16px;
+    }
+
+    &-ratings {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: flex-end;
+      margin-bottom: 24px;
+    }
+
+    &-review-count {
+      font-size: 10px;
+      color: $secondary-clr;
+      font-weight: 400;
+      justify-self: end;
+    }
+
+    &-pricing {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      margin-bottom: 16px;
+
+      &-label {
+        color: $small-text-clr;
+        font-weight: 400;
+      }
+
+      &-price {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 18px;
+        justify-self: end;
+      }
+    }
+
+    &-button {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 14px;
+      color: #fff;
+      background-color: $primary-clr;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      text-decoration: none;
+      text-transform: uppercase;
+      text-align: center;
+      padding: 12px 0;
+      transition: border-color 0.3s, color 0.3s, background-color 0.3s;
+
+      &:hover {
+        border-color: $primary-clr;
+        background-color: #fff;
+        color: $primary-clr;
+      }
+    }
   }
 }
