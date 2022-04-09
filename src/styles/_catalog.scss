@@ -2,7 +2,7 @@
 .catalog {
   display: grid;
   grid-template-columns: repeat(4, $cards-width);
-  justify-content: start;
+  justify-content: center;
   gap: $gap;
 
   &__card {
