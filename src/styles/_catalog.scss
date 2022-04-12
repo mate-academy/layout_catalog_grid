@@ -4,9 +4,9 @@
   justify-content: center;
   gap: 48px;
 
-  @media (min-width: 1192px) {
+  @media (min-width: 1191px) {
     & {
-      grid-template-columns: repeat(4, minmax (200px, 200px));
+      grid-template-columns: repeat(4,200px);
     }
   }
 
