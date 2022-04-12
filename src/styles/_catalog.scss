@@ -2,6 +2,8 @@
   display: grid;
   grid-template-columns: 1, 1fr;
   gap: 48px;
+  justify-content: center;
+  align-items: center;
 
   @media (min-width: 488px) {
     & {
@@ -27,5 +29,7 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    justify-content: center;
+    align-items: center;
   }
 }
