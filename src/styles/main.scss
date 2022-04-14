@@ -1,3 +1,5 @@
+$card-width: 200px;
+
 html {
   font-family: Roboto, sans-serif;
 }
@@ -8,6 +10,25 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, $card-width);
+  justify-content: center;
+  gap: 48px;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, $card-width);
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, $card-width);
+  }
+  
+  @media (max-width: 488px) {
+    grid-template-columns: $card-width;
+  }
 }
 
 @import "_header.scss";
