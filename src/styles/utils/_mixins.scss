@@ -1,0 +1,5 @@
+@mixin grid-breakpoint($resolution, $columns-count) {
+  @media (min-width: $resolution) {
+    grid-template-columns: repeat($columns-count, $card-width);
+  }
+}
