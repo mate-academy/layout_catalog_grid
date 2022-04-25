@@ -2,9 +2,8 @@
 
 .catalog {
   display: grid;
-  grid-template-columns: $fr;
+  justify-content: center;
   gap: 48px;
-
   &__card {
     display: flex;
     justify-content: center;
@@ -13,12 +12,11 @@
     height: $card-height;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin: 0 auto;
   }
 
   @each $card, $screen-width in $cards {
     @media (min-width: #{$screen-width}) {
-      grid-template-columns: repeat(#{$card}, $fr);
+      grid-template-columns: repeat(#{$card}, $card-width);
     }
   }
 }
