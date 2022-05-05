@@ -4,7 +4,7 @@
   align-content: center;
   gap: 48px;
 
-  @media (min-width: 488px) {
+  @media (max-width: 768px) {
     grid-template-columns: repeat(2, 200px);
   }
 
