@@ -1,12 +1,16 @@
+$width: 488px  2, 768px  3, 1024px  4;
+
 .catalog {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-columns: 200px;
   gap: 48px;
   justify-content: center;
 
-  @media (min-width: 1024px) {
-    & {
-      grid-template-columns: repeat(4, 200px);
+  @each $width-size, $col in $width {
+    @media (min-width: $width-size) {
+      & {
+        grid-template-columns: repeat($col, 200px);
+      }
     }
   }
 
