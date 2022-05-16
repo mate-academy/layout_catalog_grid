@@ -5,16 +5,17 @@
   justify-content: center;
   gap: 48px;
 
-  @media (min-width: 488px) {
-    grid-template-columns: repeat(2, 200px);
-  }
+  $breakpoints:
+    488px 2,
+    768px 3,
+    1024px 4;
 
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 200px);
-  }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 200px);
+  @each $viewport-width, $number-of-columns in $breakpoints {
+    @media (min-width: $viewport-width) {
+      & {
+        grid-template-columns: repeat($number-of-columns, 200px);
+      }
+    }
   }
 
   &__card {
