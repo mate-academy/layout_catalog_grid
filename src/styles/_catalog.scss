@@ -1,3 +1,5 @@
+$widthCol: 488px  2, 768px  3, 1024px  4;
+
 @mixin forGrid($column) {
   grid-template-columns: repeat($column, 200px);
   display: grid;
@@ -11,16 +13,10 @@
     @include forGrid(1);
   }
 
-  @media (min-width: 488px) {
-    @include forGrid(2);
-  }
-
-  @media (min-width: 768px) {
-    @include forGrid(3);
-  }
-
-  @media (min-width: 1024px) {
-    @include forGrid(4);
+  @each $width, $col in $widthCol {
+    @media (min-width: $width) {
+      @include forGrid($col);
+    }
   }
 
   &__card {
