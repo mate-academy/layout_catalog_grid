@@ -1,31 +1,27 @@
 $width-card: 200px;
 $height-card: 300px;
 
+@mixin media-qwery($width, $count-col) {
+  @media (min-width: $width) {
+    grid-template-columns: repeat($count-col, $width-card);
+  }
+}
+
 .catalog {
   display: grid;
-  grid-template-columns: 1, $width-card;
   gap: 48px;
   justify-content: center;
-
+  @include media-qwery(488px, 2);
+  @include media-qwery(768px, 3);
+  @include media-qwery(1024px, 4);
+  
   &__card {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     width: $width-card;
     height: $height-card;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-
-  @media (min-width: 488px) {
-    grid-template-columns: repeat(2, $width-card);
-  }
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, $width-card);
-  }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, $width-card);
   }
 }
