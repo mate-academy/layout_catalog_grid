@@ -11,15 +11,15 @@ $height-card: 300px;
   display: grid;
   gap: 48px;
   justify-content: center;
+  @include media-qwery(0, 1);
   @include media-qwery(488px, 2);
   @include media-qwery(768px, 3);
   @include media-qwery(1024px, 4);
-  
+
   &__card {
     display: grid;
     justify-content: center;
     align-items: center;
-    width: $width-card;
     height: $height-card;
     border: 1px solid #ccc;
     border-radius: 5px;
