@@ -1,0 +1,6 @@
+$card-width: 200px;
+$card-intend: 48px;
+$catalog-width-min: $card-width;
+$catalog-width-488: 2 * $card-width + $card-intend;
+$catalog-width-768: 3 * $card-width + 2 * $card-intend;
+$catalog-width-1024: 4 * $card-width + 3 * $card-intend;
