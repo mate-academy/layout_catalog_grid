@@ -2,8 +2,6 @@
   display: grid;
   grid-template-columns: repeat(1, $card-width);
   justify-content: center;
-  max-width: 944px;
-  margin: 0 auto;
   gap: 48px;
 
   @each $size, $columns in $screen-width {
