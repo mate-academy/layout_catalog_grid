@@ -1,0 +1,17 @@
+.catalog {
+  padding: $gap-size;
+  display: grid;
+  grid-template-columns: repeat(2, $card-width);
+  gap: 48px;
+  justify-content: center;
+
+  @each $viewport-width, $index in $media-collection {
+    @media(min-width: $viewport-width) {
+      grid-template-columns: repeat($index, $card-width);
+    }
+  }
+
+  &--page {
+    margin: 0 auto;
+  }
+}
