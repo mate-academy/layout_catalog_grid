@@ -1,7 +1,7 @@
 .catalog {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(1, $card-width);
+  grid-template-columns: $card-width;
   gap: 48px;
 
   @include catalog-columns(488px, 2);
@@ -16,6 +16,5 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
   }
 }
