@@ -3,6 +3,7 @@
   grid-template-columns: 200px;
   justify-content: center;
   gap: 48px;
+  margin-bottom: 50px;
 
   @media (min-width: 488px) {
     grid-template-columns: repeat(2, 200px);
