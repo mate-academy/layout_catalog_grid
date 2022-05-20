@@ -9,7 +9,7 @@
   @include column(1024px, 4);
 
   &__card {
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 300px;
