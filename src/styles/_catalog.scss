@@ -3,7 +3,6 @@
   grid-template-columns: repeat(2, $cardWidth);
   justify-content: center;
   gap: 48px;
-  flex-wrap: wrap;
 
   @media (min-width:768px) {
     & {
