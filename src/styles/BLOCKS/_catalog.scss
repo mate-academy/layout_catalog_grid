@@ -1,0 +1,19 @@
+.catalog {
+  display: grid;
+  justify-content: center;
+  gap: $gap-between-cards;
+
+  @include mediaScreenWidth (488px, 2, $cardsWidth);
+  @include mediaScreenWidth (768px, 3, $cardsWidth);
+  @include mediaScreenWidth (1024px, 4, $cardsWidth);
+
+  &__card {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: $cardsWidth;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
