@@ -9,6 +9,7 @@
   justify-content: center;
   grid-template-columns: repeat(1, 200px);
   gap: 48px;
+  
   @include cards(2, 488px);
   @include cards(3, 768px);
   @include cards(4, 1024px);
