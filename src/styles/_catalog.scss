@@ -6,7 +6,11 @@
   display: grid;
   justify-content: center;
   gap: 48px;
-  @include columns-count(2);
+  @include columns-count(1);
+
+  @media (min-width: 488px) {
+    @include columns-count(2);
+  }
 
   @media (min-width: 768px) {
     @include columns-count(3);
