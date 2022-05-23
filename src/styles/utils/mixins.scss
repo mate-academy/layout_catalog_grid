@@ -1,0 +1,3 @@
+@mixin setGridColumns($number) {
+  grid-template-columns: repeat($number, $card-width);
+}
