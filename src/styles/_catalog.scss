@@ -13,7 +13,7 @@
     border-radius: 5px;
   }
 
-  @include cards-columns (2, 490px);
+  @include cards-columns (2, 488px);
   @include cards-columns (3, 768px);
   @include cards-columns (4, 1024px);
 }
