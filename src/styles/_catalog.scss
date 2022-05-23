@@ -1,25 +1,23 @@
+@mixin cards($colomns, $width) {
+  @media (min-width: $width) {
+    grid-template-columns: repeat($colomns, 200px);
+  }
+}
+
 .catalog {
   display: grid;
   gap: 48px;
   justify-content: center;
+  grid-template-columns: repeat(1, 200px);
 
-  @media (min-width: 488px) {
-    grid-template-columns: repeat(2, 200px);
-  }
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 200px);
-  }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 200px);
-  }
+  @include cards(2, 488px);
+  @include cards(3, 768px);
+  @include cards(4, 1024px);
 
   &__card {
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
-
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
