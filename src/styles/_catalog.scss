@@ -1,9 +1,23 @@
-.catalog {
-  display: flex;
-  flex-wrap: wrap;
+@import "./variables";
 
-  max-width: 944px;
-  margin: 0 auto;
+.catalog {
+  display: grid;
+  justify-content: center;
+  padding: 0 20px;
+  grid-template-columns: repeat(1, $cardWidth);
+  gap: $gap;
+
+  @media (min-width: 488px) {
+    grid-template-columns: repeat(2, $cardWidth);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, $cardWidth);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, $cardWidth);
+  }
 
   &__card {
     display: flex;
