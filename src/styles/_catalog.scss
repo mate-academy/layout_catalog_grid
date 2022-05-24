@@ -9,13 +9,17 @@ $card-width: 200px;
 .catalog {
   display: grid;
   justify-content: center;
+  grid-template-columns: repeat(1, $card-width);
   gap: 48px;
   @include col-width(488px, 2);
   @include col-width(768px, 3);
   @include col-width(1024px, 4);
 
   &__card {
-
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: $card-width;
     line-height: 300px;
     text-align: center;
     height: 300px;
