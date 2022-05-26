@@ -1,0 +1,7 @@
+@mixin mediaScreenWidth ($screenWidth, $repeteNumber, $cardsWidth) {
+  @media (min-width: $screenWidth) {
+    & {
+      grid-template-columns: repeat($repeteNumber, $cardsWidth);
+    }
+  }
+}
