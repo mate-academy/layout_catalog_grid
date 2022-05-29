@@ -12,11 +12,5 @@ body {
 
 $card-width: 200px;
 
-@mixin grid($screen, $count, $card-width) {
-  @media (min-width: $screen) {
-    grid-template-columns: repeat($count, $card-width);
-  }
-}
-
 @import "_header.scss";
 @import "_catalog.scss";
