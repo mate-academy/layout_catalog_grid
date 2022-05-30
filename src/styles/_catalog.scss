@@ -4,6 +4,10 @@
   grid-template-columns: repeat(2, $cardsize);
   gap: 48px;
 
+  @media (min-width: 300px) {
+    grid-template-columns: repeat(1, $cardsize);
+  }
+
   @media (min-width: 768px) {
     grid-template-columns: repeat(3, $cardsize);
   }
