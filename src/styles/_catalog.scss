@@ -5,15 +5,15 @@
   justify-content: center;
 
   @media (min-width:488px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 200px 200px;
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 200px 200px 200px;
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 200px 200px 200px 200px;
   }
 
   &__card {
