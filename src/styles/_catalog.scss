@@ -2,21 +2,16 @@
   max-width: ($card-width + $gap) * 4 - $gap;
   margin: 0 auto;
 
-  &__title {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-
   &__block {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: $gap;
 
-    @media (min-width: 768px) {
+    @include onTablet {
       grid-template-columns: repeat(3, 1fr);
     }
 
-    @media (min-width: 1024px) {
+    @include onDesktop {
       grid-template-columns: repeat(4, 1fr);
     }
   }
