@@ -1,22 +1,38 @@
-.catalog {
-  display: flex;
-  flex-wrap: wrap;
+//local variables
 
-  max-width: 944px;
-  margin: 0 auto;
+$cardWidth:200px;
+$cardHeight:300px;
+
+//media related , key = min-width of screen , value = column`s number
+$dimansions:(488px: 2, 768px: 3, 1024px: 4); 
+//styles
+
+.catalog {
+  display: grid;
+  grid-template-columns: $cardWidth;
+  grid-template-rows: repeat(auto-fill, $cardHeight );
+  justify-content: center;
+  gap: 48px;
+  
+  @each $key , $value in $dimansions {
+    @media screen and (min-width: #{$key}) {
+    
+      & {
+        grid-template-columns: repeat(#{$value} , $cardWidth);
+      }
+  
+    }
+
+  }
 
   &__card {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 300px;
+    width: $cardWidth;
+    height: $cardHeight;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
-  }
 }
