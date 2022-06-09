@@ -3,6 +3,8 @@
 $cardWidth:200px;
 $cardHeight:300px;
 
+//media related , key = min-width of screen , value = column`s number
+$dimansions:(488px: 2, 768px: 3, 1024px: 4); 
 //styles
 
 .catalog {
@@ -12,28 +14,15 @@ $cardHeight:300px;
   justify-content: center;
   gap: 48px;
   
-  @media screen and (min-width: 488px) {
+  @each $key , $value in $dimansions {
+    @media screen and (min-width: #{$key}) {
     
-    & {
-      grid-template-columns: repeat(2 , $cardWidth);
+      & {
+        grid-template-columns: repeat(#{$value} , $cardWidth);
+      }
+  
     }
 
-  }
-
-  @media screen and (min-width: 768px) {
-    
-    & {
-      grid-template-columns: repeat(3 , $cardWidth);
-    }
-    
-  }
-
-  @media screen and (min-width: 1024px) {
-    
-    & {
-      grid-template-columns: repeat(4, $cardWidth);
-    }
-    
   }
 
   &__card {
