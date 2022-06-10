@@ -1,8 +1,22 @@
 .catalog {
+  --catalog-columns: 1;
+
   display: grid;
   grid-template-columns: repeat(var(--catalog-columns), $card-width);
   gap: 48px;
   justify-content: center;
+
+  @media (min-width: 488px) {
+    --catalog-columns: 2;
+  }
+
+  @media (min-width: 768px) {
+    --catalog-columns: 3;
+  }
+
+  @media (min-width: 1024px) {
+    --catalog-columns: 4;
+  }
 
   &__card {
     display: grid;
