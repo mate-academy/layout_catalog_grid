@@ -1,11 +1,11 @@
 .catalog {
   display: grid;
   gap: 48px;
-  grid-template-columns: 1 200px;
+  grid-template-columns: 200px;
   justify-content: center;
 
   max-width: 944px;
-  margin: 0 auto 48px;
+  margin: 0 auto;
 
   &__card {
     display: flex;
