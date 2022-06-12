@@ -1,0 +1,31 @@
+.catalog {
+  display: grid;
+
+  --columns-count: 1;
+
+  grid-template-columns: repeat(var(--columns-count), $card-width);
+  justify-content: center;
+  gap: 48px;
+
+  @media (min-width: 488px) {
+    --columns-count: 2;
+  }
+
+  @media (min-width: 768px) {
+    --columns-count: 3;
+  }
+
+  @media (min-width: 1024px) {
+    --columns-count: 4;
+  }
+
+  &__card {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: $card-width;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
