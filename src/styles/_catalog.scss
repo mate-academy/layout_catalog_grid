@@ -1,22 +1,29 @@
 .catalog {
-  display: flex;
+  display: grid;
   flex-wrap: wrap;
+  justify-content: center;
+  @include media(1);
+  gap: 48px;
 
-  max-width: 944px;
-  margin: 0 auto;
+  @media (min-width: 488px) {
+    @include media(2);
+  }
+
+  @media (min-width: 768px) {
+    @include media(3);
+  }
+  
+  @media (min-width: 1024px) {
+    @include media(4);
+  }
 
   &__card {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     width: 200px;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
-  }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
   }
 }
