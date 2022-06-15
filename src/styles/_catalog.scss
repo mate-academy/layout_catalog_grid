@@ -1,20 +1,23 @@
+$widthCard: 200px;
+
 .catalog {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fill, $widthCard);
   gap: 48px;
-  justify-items: center;
-  align-items: center;
+  justify-content: center;
   padding: 0 20px;
-  width: 100%;
+
+  @media (min-width:(#{$widthCard*5})) {
+    grid-template-columns: repeat(4, $widthCard);
+  }
 
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: $widthCard;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
   }
 }
