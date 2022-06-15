@@ -1,10 +1,8 @@
 .catalog {
   display: grid;
+  justify-content: center;
   grid-template-columns: 200px;
   gap: 48px;
-
-  max-width: 944px;
-  margin: 0 auto;
 
   &__card {
     display: flex;
@@ -23,7 +21,6 @@
   @media (min-width: 768px) {
     @include column-size(3);
   }
-
 
   @media (min-width: 1024px) {
     @include column-size(4);
