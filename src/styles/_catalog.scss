@@ -2,20 +2,13 @@
   display: grid;
   flex-wrap: wrap;
   justify-content: center;
-  @include media(1);
+  grid-template-columns: repeat(4, auto);
+  grid-template-rows: repeat(auto-fill, auto);
+  grid-auto-flow: row;
   gap: 48px;
-
-  @media (min-width: 488px) {
-    @include media(2);
-  }
-
-  @media (min-width: 768px) {
-    @include media(3);
-  }
-  
-  @media (min-width: 1024px) {
-    @include media(4);
-  }
+  @include media(768px, 3);
+  @include media(488px, 2);
+  @include media(300px, 1);
 
   &__card {
     display: grid;
