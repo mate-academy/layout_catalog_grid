@@ -14,7 +14,7 @@
   }
 
   @media (max-width: 488px) {
-    grid-template-columns: repeat(1, $catalog-card-space);
+    grid-template-columns: $catalog-card-space;
   }
 
   &__card {
