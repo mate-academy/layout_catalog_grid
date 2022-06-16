@@ -1,47 +1,6 @@
-html {
-  font-family: Roboto, sans-serif;
-}
+@import "./reset";
+@import "./utils/variables";
+@import "./normalize.scss";
 
-body {
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@import "_header.scss";
-// @import "_catalog.scss";
-
-/* #region grid */
-$card-width: 200px;
-$card-higth: 300px;
-$card-gap: 48px;
-$screen-sizes:
-  "0" 1,
-  "488px" 2,
-  "768px" 3,
-  "1024px" 4;
-
-.catalog {
-  display: grid;
-  justify-content: center;
-  gap: $card-gap;
-  padding-bottom: $card-gap;
-
-  @each $screen, $columns in $screen-sizes {
-    @media (min-width: #{$screen}) {
-      grid-template-columns: repeat($columns, $card-width);
-    }
-  }
-
-  &__card {
-    display: grid;
-    justify-content: center;
-    align-content: center;
-    height: $card-higth;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-}
-/* #endregion */
+@import "./blocks/catalog";
+@import "./blocks/header";
