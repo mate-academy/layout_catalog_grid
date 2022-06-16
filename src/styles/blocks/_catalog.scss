@@ -12,8 +12,7 @@
 
   &__card {
     display: grid;
-    justify-content: center;
-    align-content: center;
+    place-content: center;
     height: $card-higth;
     border: 1px solid #ccc;
     border-radius: 5px;
