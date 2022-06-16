@@ -6,9 +6,7 @@ body {
   margin: 0;
 }
 
-* {
-  box-sizing: border-box;
-}
+@import "./utils/variables";
 
-@import "_header.scss";
-@import "_catalog.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/header.scss";
