@@ -1,6 +1,7 @@
 .catalog {
   display: grid;
   grid-template-columns: repeat(4, $catalog-card-space);
+  gap: 48px;
 
   justify-content: center;
   justify-items: center;
@@ -25,6 +26,5 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
   }
 }
