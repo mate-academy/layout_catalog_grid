@@ -3,6 +3,8 @@
   gap: 48px;
   justify-content: center;
 
+  padding-bottom: 48px;
+
   @each $viewPort-width, $columns in $viewPort-columns {
     @media (min-width: #{$viewPort-width}) {
       grid-template-columns: repeat($columns, $card-width);
