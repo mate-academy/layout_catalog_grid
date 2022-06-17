@@ -1,4 +1,7 @@
 @import "./utils/normalize";
+@import "./utils/variables";
 
-@import "header.scss";
-@import "catalog.scss";
+@import "./blocks/page.scss";
+@import "./blocks/header.scss";
+@import "./blocks/nav.scss";
+@import "./blocks/catalog.scss";
