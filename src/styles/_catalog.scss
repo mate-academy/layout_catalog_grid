@@ -1,10 +1,14 @@
+$cell-size : 248px;
+
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
-
-  max-width: 944px;
-  margin: 0 auto;
-
+  display: grid;
+  grid-template-columns: repeat(4,$cell-size);
+  @media (max-width: 1023px) {
+    grid-template-columns: repeat(3,$cell-size);
+  }
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2,$cell-size);
+  }
   &__card {
     display: flex;
     justify-content: center;
