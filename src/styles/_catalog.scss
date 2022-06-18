@@ -6,9 +6,9 @@
   grid-template-rows: repeat(auto-fill, auto);
   grid-auto-flow: row;
   gap: 48px;
-  @include media(768px, 3);
-  @include media(488px, 2);
-  @include media(300px, 1);
+  @include media(1023px, 3);
+  @include media(767px, 2);
+  @include media(487px, 1);
 
   &__card {
     display: grid;
