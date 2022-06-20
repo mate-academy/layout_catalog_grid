@@ -1,0 +1,20 @@
+.catalog {
+  display: grid;
+  justify-content: center;
+  gap: $gap;
+
+  @each $width, $cols in $cols-to-viewport {
+    @media (min-width: $width) {
+      grid-template-columns: repeat($cols, $card-width);
+    }
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
