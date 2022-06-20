@@ -1,0 +1,28 @@
+.catalog {
+  display: grid;
+  justify-content: center;
+  gap: 48px;
+  grid-template-columns: repeat(1, $width);
+
+  @media (min-width: $small) {
+    grid-template-columns: repeat(2, $width);
+  }
+
+  @media (min-width: $medium) {
+    grid-template-columns: repeat(3, $width);
+  }
+
+  @media (min-width: $large) {
+    grid-template-columns: repeat(4, $width);
+  }
+
+  &__card {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: $width;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
