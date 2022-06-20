@@ -1,0 +1,10 @@
+$card-width: 200px;
+$card-height: 300px;
+$mobile-screen: 488px;
+$tablet-screen: 768px;
+$descktop-screen: 1024px;
+$card-gap: 48px;
+$screen-width:
+  2 $mobile-screen,
+  3 $tablet-screen,
+  4 $descktop-screen;
