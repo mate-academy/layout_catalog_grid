@@ -1,9 +1,7 @@
 .catalog {
   display: grid;
-
   grid-template-columns: $card-width;
   gap: $card-gap;
-
   justify-content: center;
 
   @each $col, $width in $screen-width {
