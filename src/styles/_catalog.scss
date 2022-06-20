@@ -5,21 +5,15 @@
   justify-content: center;
 
   @media (max-width: 1024px) {
-    & {
-      grid-template-columns: repeat(3, $cardWidth);
-    }
+   grid-template-columns: repeat(3, $cardWidth);
   }
 
   @media (max-width: 768px) {
-    & {
-      grid-template-columns: repeat(2, $cardWidth);
-    }
+    grid-template-columns: repeat(2, $cardWidth);
   }
 
   @media (max-width: 480px) {
-    & {
-      grid-template-columns: repeat(1, $cardWidth);
-    }
+    grid-template-columns: repeat(1, $cardWidth);
   }
 
   &__card {
