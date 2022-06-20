@@ -15,10 +15,6 @@
     border-radius: 5px;
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
-  }
-
   @media (min-width: 488px) {
     grid-template-columns: repeat(2, 200px);
   }
