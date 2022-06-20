@@ -2,9 +2,7 @@
   display: grid;
   justify-content: center;
 
-  margin: 0 auto;
-
-  gap: 48px;
+  gap: $catalog-gap;
 
   &__card {
     display: grid;
