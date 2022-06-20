@@ -3,16 +3,10 @@
   justify-content: center;
   gap: $gap;
 
-  @media (min-width: 488px) {
-    grid-template-columns: repeat(2, $card-width);
-  }
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, $card-width);
-  }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, $card-width);
+  @each $width, $cols in $cols-to-viewport {
+    @media (min-width: $width) {
+      grid-template-columns: repeat($cols, $card-width);
+    }
   }
 
   &__card {
@@ -24,5 +18,4 @@
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-
 }
