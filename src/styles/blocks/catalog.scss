@@ -8,20 +8,14 @@
 
   @media (max-width: $large) {
     grid-template-columns: repeat(3, 1fr);
-  
-    width: 3 * $card_width + 2 * $gap;
   }
 
   @media (max-width: $medium) {
     grid-template-columns: repeat(2, 1fr);
-  
-    width: 2 * $card_width + $gap;
   }
 
   @media (max-width: $small) {
     grid-template-columns: 1fr;
-  
-    width: $card_width;
   }
 
   &__card {
