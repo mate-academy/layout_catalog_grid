@@ -1,9 +1,28 @@
+:root {
+  --column-amount: 4;
+}
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(var(--column-amount), 200px);
+  gap: 48px;
 
   max-width: 944px;
   margin: 0 auto;
+
+  @media (max-width: 1024px) {
+
+    --column-amount: 3;
+  }
+
+  @media (max-width: 768px) {
+
+    --column-amount: 2;
+  }
+
+  @media (max-width: 488px) {
+
+    --column-amount: 1;
+  }
 
   &__card {
     display: flex;
@@ -13,10 +32,5 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
-  }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
   }
 }
