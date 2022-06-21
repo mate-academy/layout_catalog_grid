@@ -5,6 +5,7 @@
 
   max-width: (4 * $card_width) + (3 * $gap);
   margin: 0 auto;
+  padding: $gap;
 
   @media (max-width: $large) {
     grid-template-columns: repeat(3, 1fr);
