@@ -1,10 +1,10 @@
 - check your work using basic recommendations [here](https://github.com/mate-academy/layout_search-bar-airbnb/blob/master/checklist.md)
-- use product item from `product card` task and header from `moyo header` task
-- check your classes, are they ok? do they follow BEM methodology?
-- remember about hover effects
-- one `h1` tag per page
-- don't forget about semantics, div development is not a better option
-- follow BEM naming convention:
+- use product item from `product card` task and header from `moyo header` task +
+- check your classes, are they ok? do they follow BEM methodology?+
+- remember about hover effects+
+- one `h1` tag per page+
+- don't forget about semantics, div development is not a better option+
+- follow BEM naming convention:+
 >**WRONG WAY**
 >```html
 ><div class="product__rating">
@@ -33,15 +33,15 @@
 ></div>
 >```
 
-- BEM block should not use margins, add them as a mix to a parent block's element
-- create a separate file per each BEM block that have the same name as the block
-- if you want to reset default styles, do it in `_reset.scss` file
+- BEM block should not use margins, add them as a mix to a parent block's element+
+- create a separate file per each BEM block that have the same name as the block+
+- if you want to reset default styles, do it in `_reset.scss` file+
 - if you need margins only for bottom side, use `margin-bottom: 20px` not `margin: 0 0 20px`
 - write your code so that the small design changes (like header height or card width) require you to change only 1 value
 - if you want to round corners of an element, the radius shouldn't be greater than a half of a width or a height
-- delete styles that you don't use
+- delete styles that you don't use +
 - if you make a mixin for some kind of font style, consider adding mixins for other font style too
-- write styles for different states of BEM-element inside the element itself
+- write styles for different states of BEM-element inside the element itself +
 >**WRONG WAY**
 >```scss
 >&__buy-link {
@@ -119,8 +119,8 @@
 >
 >    <article data-qa="catd" class="catalog__card">
 >```
-- don't add extra wrappers if you can add styles to the tag itself
-- if you have many sections in a row, add margins either to the bottom or to the top so that it will be easier to identify how to position the next element
+- don't add extra wrappers if you can add styles to the tag itself +
+- if you have many sections in a row, add margins either to the bottom or to the top so that it will be easier to identify how to position the next element+
 - don't split a name of a BEM-element in SCSS, it should be easy to find the element searching by its name like `__element-name`
 >**WRONG WAY**
 >```scss
@@ -143,4 +143,4 @@
 >}
 >```
 
-- are you sure you've polished your code? :)
+- are you sure you've polished your code? :) never can be sure in it
