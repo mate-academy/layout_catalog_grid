@@ -1,6 +1,6 @@
 @media screen and (min-width: 488px) {
   .catalog {
-    width: calc(($card-width * 2) + $base-shift);
+    width: calc((#{$card-width} * 2) + #{$base-shift});
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(auto);
   }
@@ -8,7 +8,7 @@
 
 @media screen and (min-width: 768px) {
   .catalog {
-    width: calc(($card-width * 3) + ($base-shift * 2));
+    width: calc((#{$card-width} * 3) + (#{$base-shift} * 2));
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: repeat(auto);
   }
@@ -16,7 +16,7 @@
 
 @media screen and (min-width: 1024px) {
   .catalog {
-    width: calc(($card-width * 4) + ($base-shift * 3));
+    width: calc((#{$card-width} * 4) + (#{$base-shift} * 3));
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: repeat(auto);
   }

@@ -1,12 +1,12 @@
 .catalog {
-  width: $card-width;
+  width: #{$card-width};
   margin: 0 auto;
 
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(auto);
-  gap: $base-shift;
-  margin-bottom: $base-shift;
+  gap: #{$base-shift};
+  margin-bottom: #{$base-shift};
   justify-items: center;
   align-items: center;
   justify-content: space-around;
@@ -16,7 +16,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: $card-width;
+    width: #{$card-width};
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
