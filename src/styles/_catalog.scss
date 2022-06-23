@@ -4,20 +4,19 @@ $width: 200px;
   display: grid;
   justify-content: center;
   gap: 48px;
-  grid-template-columns: repeat(1, $width);
+  grid-template-columns: repeat($small, $width);
 
-  @media (min-width:488px) {
-    grid-template-columns: repeat(2, $width);
+  @include medium {
+    grid-template-columns: repeat($medium, $width);
   }
 
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, $width);
+  @include large {
+    grid-template-columns: repeat($large, $width);
   }
 
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, $width);
+  @include xlarge {
+    grid-template-columns: repeat($xlarge, $width);
   }
-  
 
   &__card {
     display: flex;
