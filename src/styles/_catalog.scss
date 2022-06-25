@@ -4,6 +4,7 @@ $card-size: 200px;
   display: grid;
   grid-template-columns: $card-size;
   gap: 48px;
+  justify-content: center;
 
   &__card {
     display: grid;
