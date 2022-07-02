@@ -5,16 +5,13 @@
   box-sizing: border-box;
 
   &__card {
+    width: 200px;
     display: grid;
     justify-content: center;
     align-items: center;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-
-  @media (max-width: 487px) {
-    grid-template-columns: repeat(1, 200px);
   }
   
   @media (min-width: 488px) {
