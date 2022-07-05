@@ -1,0 +1,5 @@
+@mixin media-grid-t-clms ($min-width, $coloms) {
+  @media (min-width: $min-width) {
+    grid-template-columns: repeat($coloms, $card-size);
+  }
+}
