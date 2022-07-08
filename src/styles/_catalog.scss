@@ -1,4 +1,4 @@
-$dimensions: (3: 1024px, 2: 768px, 1: 488px);
+$dimensions: (1: 488px, 2: 768px, 3: 1024px);
 
 .catalog {
   display: grid;
@@ -8,7 +8,7 @@ $dimensions: (3: 1024px, 2: 768px, 1: 488px);
   max-width: 944px;
   margin: 0 auto;
   @each $index, $dim in $dimensions {
-    @media only screen and (max-width: $dim) {
+    @media only screen and (min-width: $dim) {
       grid-template-columns: repeat($index, 200px);
     }
   }
