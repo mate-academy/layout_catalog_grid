@@ -1,6 +1,6 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 48px;
 
   max-width: 944px;
   margin: 0 auto;
@@ -9,14 +9,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: $cardWidth;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
+    margin-bottom: 0;
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
+  @each $nColumn, $wColumn in $columns {
+    @media (min-width: #{$wColumn}) {
+      grid-template-columns: repeat(#{$nColumn}, minmax($cardWidth, 1fr));
+    }
   }
 }

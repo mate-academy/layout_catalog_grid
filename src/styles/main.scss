@@ -10,5 +10,9 @@ body {
   box-sizing: border-box;
 }
 
-@import "_header.scss";
-@import "_catalog.scss";
+// columns, min-width
+$columns: 2 488px, 3 768px, 4 1024px;
+$cardWidth: 200px;
+
+@import "header";
+@import "catalog";
