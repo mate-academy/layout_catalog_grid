@@ -1,3 +1,7 @@
+// columns, min-width
+$columns: 2 488px, 3 768px, 4 1024px;
+$cardWidth: 200px;
+
 .catalog {
   display: grid;
   gap: 48px;
