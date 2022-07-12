@@ -1,6 +1,18 @@
+$min-widths:
+  "2" 488px,
+  "3" 768px,
+  "4" 1024px;
+
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  justify-content: center;
+  gap: 48px;
+
+  @each $cards, $width in $min-widths {
+    @media (min-width: #{$width}) {
+      grid-template-columns: repeat(#{$cards}, 200px);
+    }
+  }
 
   max-width: 944px;
   margin: 0 auto;
