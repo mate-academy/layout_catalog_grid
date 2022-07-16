@@ -1,9 +1,7 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
-
-  max-width: 944px;
-  margin: 0 auto;
+  display: grid;
+  gap: 48px;
+  margin: 0;
 
   &__card {
     display: flex;
@@ -14,6 +12,34 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 48px;
+
+    &--grid_area__1 {
+      grid-area: first;
+    }
+
+    &--grid_area__2 {
+      grid-area: second;
+    }
+
+    &--grid_area__3 {
+      grid-area: third;
+    }
+
+    &--grid_area__4 {
+      grid-area: forth;
+    }
+
+    &--grid_area__5 {
+      grid-area: fifth;
+    }
+
+    &--grid_area__6 {
+      grid-area: six;
+    }
+
+    &--grid_area__7 {
+      grid-area: seven;
+    }
   }
 
   &__card:not(:nth-child(4n)) {
