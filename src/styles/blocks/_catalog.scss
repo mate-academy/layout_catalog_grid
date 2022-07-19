@@ -1,0 +1,30 @@
+.catalog {
+  display: grid;
+  justify-content: center;
+  gap: 48px;
+
+  @include minimum() {
+    grid-template-columns: repeat(1, 200px)
+  }
+
+  @include on488 {
+    grid-template-columns: repeat(2, 200px);
+  }
+
+  @include on768 {
+    grid-template-columns: repeat(3, 200px);
+  }
+
+  @include on1024 {
+    grid-template-columns: repeat(4, 200px);
+  }
+
+  &__card {
+    display: grid;
+    place-items: center;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
+
