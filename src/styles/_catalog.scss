@@ -1,9 +1,14 @@
 .catalog {
   display: grid;
-  grid-template-columns: repeat(2, 200px);
+  grid-template-columns: 200px;
   gap: 48px;
-  min-width: 488px;
+  min-width: 487px;
   margin-bottom: 48px;
+  justify-content: center;
+  
+  @media (min-width: 488px) {
+    grid-template-columns: repeat(2, 200px);
+  }
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(3, 200px);
@@ -11,10 +16,6 @@
 
   @media (min-width: 1024px) {
     grid-template-columns: repeat(4, 200px);
-  }
-
-  @media (max-width: 487px) {
-    grid-template-columns: 200px;
   }
 
   &__card {
