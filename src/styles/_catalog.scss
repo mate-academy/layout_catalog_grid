@@ -3,11 +3,11 @@
   justify-content: center;
   gap: 48px;
 
-  @media (min-width:0px) {
-    grid-template-columns: repeat(1, 200px)
+  @media (min-width:0) {
+    grid-template-columns: repeat(1, 200px);
   }
 
-  @media (min-width:488px){
+  @media (min-width:488px) {
     grid-template-columns: repeat(2, 200px);
   }
 
@@ -27,4 +27,3 @@
     border-radius: 5px;
   }
 }
-
