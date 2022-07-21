@@ -2,9 +2,8 @@
   display: grid;
   grid-template-columns: 200px;
   gap: 48px;
-  min-width: 487px;
-  margin-bottom: 48px;
   justify-content: center;
+  margin-bottom: 48px;
   
   @media (min-width: 488px) {
     grid-template-columns: repeat(2, 200px);
@@ -19,7 +18,7 @@
   }
 
   &__card {
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 200px;
