@@ -1,13 +1,12 @@
 .catalog {
   display: grid;
   gap: 48px;
-
-  max-width: 944px;
-  margin: 0 auto;
+  grid-template-columns: $col-width;
+  justify-content: center;
 
   @each $width, $cols in $media {
     @media (min-width: $width) {
-      grid-template-columns: repeat($cols, 1fr);
+      grid-template-columns: repeat($cols, $col-width);
     }
   }
   
