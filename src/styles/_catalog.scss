@@ -5,6 +5,12 @@
   max-width: 944px;
   margin: 0 auto;
 
+  @each $width, $cols in $media {
+    @media (min-width: $width) {
+      grid-template-columns: repeat($cols, 1fr);
+    }
+  }
+  
   &__card {
     display: flex;
     justify-content: center;
@@ -13,13 +19,5 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-}
-
-@each $width, $cols in $media {
-  @media (min-width: $width) {
-    .catalog {
-      grid-template-columns: repeat($cols, 1fr);
-    }
   }
 }
