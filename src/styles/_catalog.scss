@@ -2,21 +2,18 @@
   display: grid;
   gap: 48px;
   justify-content: center;
-  align-items: center;
-
   grid-template-columns: repeat(4, 200px);
-  grid-auto-flow: row;
 
 
-  @media (max-width: 1024px) {
+  @media (max-width: 1023px) {
     grid-template-columns: repeat(3, 200px);
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     grid-template-columns: repeat(2, 200px);
   }
 
-  @media (max-width: 468px) {
+  @media (max-width: 487px) {
     grid-template-columns: repeat(1, 200px);
   }
 
