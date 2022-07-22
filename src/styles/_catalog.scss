@@ -3,10 +3,10 @@
   justify-content: center;
   gap: 48px;
 
-    @each $columns, $width in $media-width {
-      @media (min-width:$width) {
-        grid-template-columns: repeat($columns, 200px);
-      }
+  @each $columns, $width in $media-width {
+    @media (min-width: $width) {
+      grid-template-columns: repeat($columns, 200px);
+    }
   }
 
   &__card {
