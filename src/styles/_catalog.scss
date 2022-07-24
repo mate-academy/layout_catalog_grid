@@ -1,9 +1,10 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  gap: $gap;
 
   max-width: 944px;
   margin: 0 auto;
+  @extend %media-requests;
 
   &__card {
     display: flex;
