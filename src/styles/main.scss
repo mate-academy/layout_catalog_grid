@@ -11,4 +11,34 @@ body {
 }
 
 @import "_header.scss";
-@import "_catalog.scss";
+// @import "_catalog.scss";
+
+.catalog {
+  display: grid;
+  gap: 48px;
+  grid-template-columns: repeat(4, 200px);
+  justify-content: center;
+  background-color: white;
+
+  @media (max-width: 1023px) {
+    grid-template-columns: repeat(3, 200px);
+  }
+
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, 200px);
+  }
+
+  @media (max-width: 487px) {
+    grid-template-columns: repeat(1, 200px);
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
