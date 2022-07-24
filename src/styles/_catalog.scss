@@ -12,7 +12,7 @@ $each-media:  768px 1023px 3 2, 488px 767px 2 1, 0 487px 1 0;
   @each $min-width, $max-width, $columns, $gaps  in $each-media {
     @media (min-width: $min-width) and (max-width: $max-width) {
       grid-template-columns: repeat($columns, minmax(200px, 248px));
-       max-width: $card-width * $columns + $card-gap * $gaps;
+      max-width: $card-width * $columns + $card-gap * $gaps;
     }
   }
 
