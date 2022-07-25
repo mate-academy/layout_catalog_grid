@@ -1,0 +1,29 @@
+.catalog {
+  --columns-number: 1;
+
+  display: grid;
+  grid-template-columns: repeat(var(--columns-number), 200px);
+  gap: 48px;
+  justify-content: center;
+  align-content: center;
+
+  @media (min-width: 488px) {
+    --columns-number: 2;
+  }
+  @media (min-width: 768px) {
+    --columns-number: 3;
+  }
+  @media (min-width: 1024px) {
+    --columns-number: 4;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
