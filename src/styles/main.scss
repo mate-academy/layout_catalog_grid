@@ -19,12 +19,6 @@ body {
 
   margin: 0 auto ;
 
-  @media (max-width: 488px) {
-    & {
-      grid-template-columns: repeat(1, 200px);
-    }
-  }
-
   @media (min-width: 488px) and (max-width: 768px) {
     & {
       grid-template-columns: repeat(2, 200px);
