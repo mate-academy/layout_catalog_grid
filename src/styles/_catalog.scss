@@ -1,12 +1,9 @@
-// * {
-//   box-sizing: border-box;
-// }
-
 .catalog {
   display: grid;
-  grid-template-columns: repeat(4, 200px);
+  justify-content: center;
+  grid-template-columns: repeat(1, 200px);
 
-  max-width: 944px;
+  max-width: 488px;
   margin: 0 auto;
 
   &__card {
@@ -26,13 +23,6 @@
   }
 }
 
-@media (max-width: 488px) {
-  .catalog {
-    justify-content: center;
-    grid-template-columns: repeat(1, 200px);
-  }
-}
-
 @media (min-width: 488px) {
   .catalog {
     justify-content: center;
@@ -44,5 +34,11 @@
 @media (min-width: 768px) {
   .catalog {
     grid-template-columns: repeat(3, 200px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .catalog {
+    grid-template-columns: repeat(4, 200px);
   }
 }
