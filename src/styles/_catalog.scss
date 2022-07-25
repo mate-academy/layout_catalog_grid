@@ -4,10 +4,6 @@
 
   gap: 48px;
 
-  @media (max-width: 487px) {
-    grid-template-columns: auto;
-  }
-
   @media (min-width: 488px) {
     grid-template-columns: repeat(2, auto);
   }
