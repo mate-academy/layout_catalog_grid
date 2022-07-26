@@ -1,7 +1,7 @@
 .catalog {
   display: grid;
-  justify-items: center;
-  align-items: center;
+  max-width: 944px;
+  margin: 0 auto;
   grid-template-columns: repeat(4, 1fr);
   gap: 48px;
 
