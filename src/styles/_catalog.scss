@@ -14,10 +14,6 @@
     border-radius: 5px;
   }
 
-  @media (max-width: 487px) {
-    grid-template-columns: repeat(1, 200px);
-  }
-
   @media (min-width: 488px) and (max-width: 767px) {
     grid-template-columns: repeat(2, 200px);
   }
