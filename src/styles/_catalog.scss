@@ -3,6 +3,7 @@
   place-items: center;
   justify-content: center;
   gap: 48px;
+  grid-template-columns: repeat(1, auto);
 
   &__card {
     display: flex;
@@ -14,27 +15,21 @@
     border-radius: 5px;
   }
 
-  @media (min-width: 1024px) {
-    & {
-      grid-template-columns: repeat(4, auto);
-    }
-  }
-
-  @media (min-width: 768px) and (max-width: 1023px) {
-    & {
-      grid-template-columns: repeat(3, auto);
-    }
-  }
-
-  @media (min-width: 488px) and (max-width: 767px) {
+  @media (min-width: 488px) {
     & {
       grid-template-columns: repeat(2, auto);
     }
   }
 
-  @media (max-width: 487px) {
+  @media (min-width: 768px) {
     & {
-      grid-template-columns: repeat(1, auto);
+      grid-template-columns: repeat(3, auto);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    & {
+      grid-template-columns: repeat(4, auto);
     }
   }
 }
