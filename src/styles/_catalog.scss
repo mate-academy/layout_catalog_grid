@@ -17,9 +17,6 @@
     border-radius: 5px;
   }
 
-  @media (max-width: 487px) {
-    grid-template-columns: repeat(1, 1fr) ;
-  }
   @media (min-width: 488px) {
     grid-template-columns: repeat(2, 1fr) ;
   }
