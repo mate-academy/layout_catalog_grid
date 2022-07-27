@@ -4,13 +4,11 @@
   justify-content: center;
   gap: 48px;
 
-  @media (min-width: 488px),
-    (max-width: 768px) {
+  @media (min-width: 488px) {
     grid-template-columns: repeat(2, 200px);
   }
 
-  @media (min-width: 768px),
-    (max-width: 1024px) {
+  @media (min-width: 768px) {
     grid-template-columns: repeat(3, 200px);
   }
 
