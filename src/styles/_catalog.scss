@@ -1,22 +1,27 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
-
-  max-width: 944px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  max-width: (4*$cardwidth)+(3*$cataloggap);
+  justify-content: center;
+  gap: $cataloggap;
   margin: 0 auto;
 
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
+  @media (max-width: 1024px) {
+    max-width: (3*$cardwidth)+(2*$cataloggap);
+  }
+  @media (max-width: 768px) {
+    max-width: (2*$cardwidth)+($cataloggap);
+  }
+  @media (max-width: 488px) {
+    max-width: $cardwidth;
   }
 }
