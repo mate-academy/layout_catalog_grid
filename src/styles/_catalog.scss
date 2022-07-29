@@ -3,20 +3,20 @@
   gap: 48px;
   justify-content: center;
 
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, auto);
+  @media (max-width: 487px) {
+    grid-template-columns: repeat((1,minmax(200px, auto)));
   }
 
-  @media (min-width: 768px) and (max-width: 1023px) {
-    grid-template-columns: repeat(3, minmax(200px, auto));
-  }
-
-  @media (min-width: 488px) and (max-width: 767px) {
+  @media (min-width: 488px) {
     grid-template-columns: repeat(2, minmax(200px, auto));
   }
 
-  @media (max-width: 487px) {
-    grid-template-columns: repeat(1, minmax(200px, auto));
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, minmax(200px, auto));
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, minmax(200px, auto));
   }
 
   &__card {
@@ -36,8 +36,4 @@
       color: #34568b;
     }
   }
-
-  // &__card:not(:nth-child(4n)) {
-  //   margin-right: 48px;
-  // }
 }
