@@ -1,7 +1,7 @@
 .catalog {
   display: grid;
   gap: 48px;
-  justify-content: flex-start;
+  justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 
   &__card {
@@ -23,24 +23,24 @@
 
 @media (max-width: 487px) {
   .catalog {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 200px);
   }
 }
 
 @media (min-width: 488px) and (max-width: 767px) {
   .catalog {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 200px);
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .catalog {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 200px);
   }
 }
 
 @media (min-width: 1024px) {
   .catalog {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 200px);
   }
 }
