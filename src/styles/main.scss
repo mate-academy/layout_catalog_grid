@@ -4,6 +4,9 @@ html {
 
 body {
   margin: 0;
+  display: grid;
+  grid-template-rows: 60px 1fr;
+  row-gap: 50px;
 }
 
 * {
@@ -12,3 +15,27 @@ body {
 
 @import "_header.scss";
 @import "_catalog.scss";
+
+@media (min-width: 0) AND (max-width: 487.99px) {
+  .catalog {
+    grid-template-columns: repeat(1, 200px);
+  }
+}
+
+@media (min-width: 488px) AND (max-width: 767.99px) {
+  .catalog {
+    grid-template-columns: repeat(2, 200px);
+  }
+}
+
+@media (min-width: 768px) AND (max-width: 1023.99px) {
+  .catalog {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .catalog {
+    grid-template-columns: repeat(4, 200px);
+  }
+}
