@@ -1,0 +1,23 @@
+.nav {
+  &__list {
+    @include display(flex, center);
+  }
+
+  &__item {
+    color: #060b35;
+    line-height: $header-height;
+    list-style: none;
+
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__link {
+    font-size: 12px;
+    font-weight: 500;
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}

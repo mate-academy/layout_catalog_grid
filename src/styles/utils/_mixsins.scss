@@ -1,0 +1,12 @@
+@mixin media ($cards-amount, $width) {
+  $cards-amount: $cards-amount + 1;
+  @media (min-width: $width) {
+    grid-template-columns: repeat($cards-amount, $card-width);
+  }
+}
+
+@mixin display ($type, $content) {
+  display: $type;
+  align-items: center;
+  justify-content: $content;
+}
