@@ -8,14 +8,13 @@
 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 
-  overflow: hidden;
-
   &__logo {
     height: 40px;
   }
 }
 
 .nav {
+
   &__list {
     display: flex;
     margin: 0;
@@ -39,5 +38,10 @@
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 500;
+    transition: color 300ms;
+
+    &:hover {
+      color: #00acdc;
+    }
   }
 }
