@@ -1,0 +1,16 @@
+.catalog {
+  @include display(grid, center);
+  gap: $card-gap;
+
+  @each $width in $width-points {
+    @include media (index($width-points, $width), $width);
+  }
+
+  &__card {
+    @include display(flex, center);
+    width: $card-width;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
