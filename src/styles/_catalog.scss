@@ -6,6 +6,24 @@
   max-width: 944px;
   margin: 0 auto;
 
+  @media (min-width: 488px) {
+    .catalog {
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .catalog {
+      grid-template-columns: repeat(3, minmax(200px, 1fr));
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .catalog {
+      grid-template-columns: repeat(4, minmax(200px, 1fr));
+    }
+  }
+
   &__card {
     display: flex;
     box-sizing: border-box;
@@ -20,23 +38,5 @@
 
   &__card:not(:nth-child(4n)) {
     margin-right: 48px;
-  }
-}
-
-@media (min-width: 488px) {
-  .catalog {
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-  }
-}
-
-@media (min-width: 768px) {
-  .catalog {
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
-  }
-}
-
-@media (min-width: 1024px) {
-  .catalog {
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
   }
 }
