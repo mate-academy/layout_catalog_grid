@@ -8,6 +8,7 @@
 
   &__card {
     display: grid;
+    grid-template-columns: auto;
     justify-items: center;
     align-items: center;
     width: 200px;
@@ -16,19 +17,19 @@
     border-radius: 5px;
   }
 
+  @media screen and (min-width: 488px) {
+    grid-template-columns: auto auto;
+    margin-left: 36px;
+    margin-right: 36px;
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: auto auto auto;
+    margin-left: 44px;
+    margin-right: 44px;
+  }
+
   @media screen and (min-width: 1024px) {
     grid-template-columns: auto auto auto auto;
   }
-
-  @media screen and (max-width: 1023px) and (min-width: 768px) {
-      grid-template-columns: auto auto auto;
-      margin-left: 44px;
-      margin-right: 44px;
-  }
-  @media screen and (max-width: 767px) and (min-width: 488px) {
-      grid-template-columns: auto auto;
-      margin-left: 36px;
-      margin-right: 36px;
-  }
 }
-
