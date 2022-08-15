@@ -11,10 +11,10 @@ body {
 }
 
 $screen-columns:
-"0" "488" 1,
-"488px" "768px" 2,
-"768px" "1024px" 3,
-"1024px" "20000px" 4;
+  "0" "488" 1,
+  "488px" "768px" 2,
+  "768px" "1024px" 3,
+  "1024px" "20000px" 4;
 
 @import "_header.scss";
 @import "_catalog.scss";
