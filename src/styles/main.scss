@@ -15,25 +15,21 @@ body {
 .catalog {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fill);
-  grid-auto-rows: 300px;
+  margin: 48px 0;
+  grid-template-columns: none;
   gap: 48px;
   padding-left: 48px;
 
-  @media (max-width: 487px) {
-    grid-template-columns: repeat(1, 1fr);
-  }
-
   @media (min-width: 488px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 200px);
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 200px);
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 200px);
   }
 
   &__card {
