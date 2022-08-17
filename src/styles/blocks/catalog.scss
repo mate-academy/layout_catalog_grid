@@ -1,0 +1,25 @@
+.catalog {
+  display: grid;
+  gap: $gap;
+  justify-content: center;
+
+  $widths:
+    "488px" 2,
+    "768px" 3,
+    "1024px" 4;
+  @each $width, $column in $widths {
+    @media (min-width: $width) {
+      grid-template-columns: repeat($column, $width-card);
+    }
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $width-card;
+    height: $height-card;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
