@@ -1,6 +1,6 @@
 # Frontend practice with catalog page using grid
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://<your_account>.github.io/layout_catalog_grid/)
+- [DEMO LINK](https://yevhenii-stanchenko.github.io/layout_catalog_grid/)
 
 > Follow [this instructions](https://github.com/mate-academy/layout_task-guideline#how-to-solve-the-layout-tasks-on-github)
 
@@ -28,3 +28,28 @@ Implement layout using grid layout
 - **IMPORTANT** Save and push your changes to GitHub manually after `deploy`
 - Do not use tabs. Use 2 spaces for indentation.
 - Don't use repeated styles.
+
+
+Реализовать макет с использованием макета сетки
+
+- Замените `flex` на `grid`
+- Медиа-запросы
+  - Должно быть четыре столбца, начиная с `1024px`
+  - Должно быть три столбца, начинающиеся с `768px`
+  - Должны быть две колонки, начинающиеся с `488px`
+  - Должен быть один столбец ниже `488px`
+- Промежуток между карточками должен быть `48 пикселей`
+- Не изменять заголовок
+- Блоки должны начинаться слева
+
+
+## Требования:
+- прописать стили в `src/styles/main.scss`
+- использовать SCSS в этой задаче
+- обратите внимание на отзывчивого
+- ширина карты составляет `200 пикселей`, включая границы
+
+## Распространенные ошибки
+- **ВАЖНО** Сохраните и отправьте свои изменения на GitHub вручную после `deploy`
+- Не используйте вкладки. Используйте 2 пробела для отступа.
+- Не используйте повторяющиеся стили.
