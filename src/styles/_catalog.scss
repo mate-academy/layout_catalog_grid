@@ -4,6 +4,8 @@
   align-items: center;
   grid-template-columns: repeat(4, 1fr);
   gap: 48px;
+  padding: 0 50px;
+
 
   @media (max-width: 1023px) {
     grid-template-columns: repeat(3, 1fr);
@@ -19,9 +21,10 @@
     display: grid;
     justify-content: center;
     align-content: center;
+    box-sizing: border-box;
     width: 200px;
     height: 300px;
-    max-width: 944px;
+    // max-width: 944px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
