@@ -2,19 +2,18 @@ $card-height: 300px;
 $card-width: 200px;
 $gap-size: 48px;
 $catalog-max-width: $card-width * 4 + $gap-size * 3;
+$text-hover-color: #34568b;
 
 .catalog {
   display: grid;
   justify-content: center;
+  align-content: center;
   justify-items: center;
   align-items: center;
 
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: repeat(4, $card-width);
   grid-auto-rows: $card-height;
   gap: $gap-size;
-
-  max-width: $catalog-max-width;
-  min-width: $card-width;
 
   &__card {
     display: flex;
@@ -24,6 +23,14 @@ $catalog-max-width: $card-width * 4 + $gap-size * 3;
     height: $card-height;
     border: 1px solid #ccc;
     border-radius: 5px;
+
+    transform-origin: center;
+    transition: color 0.3s, transform 0.3s;
+
+    &:hover {
+      color: $text-hover-color;
+      transform: scale(1.2);
+    }
   }
 
   @media (max-width: 487px) {
