@@ -4,7 +4,9 @@
   align-items: center;
   grid-template-columns: repeat(4, 1fr);
   gap: 48px;
-  padding: 0 50px;
+  max-width: 944px;
+  margin: 0 auto;
+
 
 
   @media (max-width: 1023px) {
@@ -24,7 +26,6 @@
     box-sizing: border-box;
     width: 200px;
     height: 300px;
-    // max-width: 944px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
