@@ -1,0 +1,3 @@
+@mixin margins($sides) {
+  margin: 0 $sides $cards-gap;
+}
