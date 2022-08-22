@@ -1,3 +1,6 @@
+@import "_header.scss";
+@import "_catalog.scss";
+
 html {
   font-family: Roboto, sans-serif;
 }
@@ -10,5 +13,23 @@ body {
   box-sizing: border-box;
 }
 
-@import "_header.scss";
-@import "_catalog.scss";
+.catalog {
+  column-gap: 24px;
+  justify-items: center;
+  align-items: center;
+
+  grid-template-columns: 1fr;
+  grid-column: auto;
+
+  @media (min-width: 488px) and (max-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 1024px) and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
