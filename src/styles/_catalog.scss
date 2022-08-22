@@ -1,7 +1,9 @@
 $card-height: 300px;
 $card-width: 200px;
 $gap-size: 48px;
-$catalog-max-width: $card-width * 4 + $gap-size * 3;
+$cards-counts: 4;
+$gap-counts: $cards-counts - 1;
+$catalog-max-width: $card-width * $cards-counts + $gap-size * $gap-counts;
 $text-hover-color: #34568b;
 
 .catalog {
@@ -31,17 +33,14 @@ $text-hover-color: #34568b;
     }
   }
 
+  //Media queries:
+  @media (max-width: 1023px) {
+    grid-template-columns: repeat(3, $card-width);
+  }
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, $card-width);
+  }
   @media (max-width: 487px) {
     grid-template-columns: $card-width;
   }
-  @media (min-width: 488px) and (max-width: 767px) {
-    grid-template-columns: repeat(2, $card-width);
-  }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    grid-template-columns: repeat(3, $card-width);
-  }
-  //doesn"t work correctly:
-  //@media (max-width: 1023px) {
-  //  grid-template-columns: repeat(auto-fill, $card-width);
-  //}
 }
