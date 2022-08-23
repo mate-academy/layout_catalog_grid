@@ -6,19 +6,15 @@
   max-width: 944px;
   margin: 0 auto;
 
-  @media (max-width: 488px) {
+  @media (min-width: 100px) and (max-width: 487px) {
     grid-template-columns: repeat(1, 200px);
   }
 
-  @media (min-width: 488px) {
+  @media (min-width: 488px) and (max-width: 767px) {
     grid-template-columns: repeat(2, 200px);
   }
 
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 200px);
-  }
-
-  @media (min-width: 768px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
     grid-template-columns: repeat(3, 200px);
   }
 
