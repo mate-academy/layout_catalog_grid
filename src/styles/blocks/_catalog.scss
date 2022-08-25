@@ -16,9 +16,6 @@
     grid-template-columns: repeat(4, $card-width);
   }
 
-  max-width: 944px;
-  margin: 0 auto;
-
   &__card {
     @extend %grid-content-center;
     align-items: center;
