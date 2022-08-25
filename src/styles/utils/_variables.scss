@@ -1,4 +1,5 @@
 $card-width: 200px;
 $card-height: 300px;
 $catalog-gap: 48px;
-$catalog-max-width: $card-width * 4 + $catalog-gap * 3;
+$cards-in-row: 4;
+$catalog-max-width: $cards-in-row * ($card-width + $catalog-gap) - $catalog-gap;
