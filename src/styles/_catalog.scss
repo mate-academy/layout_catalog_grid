@@ -5,18 +5,17 @@
   &__container {
     display: grid;
     place-content: center;
-    max-width: 944px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 200px);
     gap: 48px;
 
     @media (max-width: 1023px) {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 200px);
     }
     @media (max-width: 767px) {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 200px);
     }
     @media (max-width: 487px) {
-      grid-template-columns: 1fr;
+      grid-template-columns: 200px ;
     }
   }
 
