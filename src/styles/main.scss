@@ -21,11 +21,11 @@ body {
   grid-template-columns: 1fr;
   grid-column: auto;
 
-  @media (min-width: 488px) and (max-width: 768px) {
+  @media (min-width: 488px) {
     grid-template-columns: 1fr 1fr;
   }
 
-  @media (max-width: 1024px) and (min-width: 768px) {
+  @media (min-width: 768px) {
     grid-template-columns: 1fr 1fr 1fr;
   }
 

@@ -1,11 +1,10 @@
 .catalog {
   display: grid;
-  flex-wrap: wrap;
-
+  // min-width: 488px;
   max-width: 944px;
 
   &__card {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     width: 200px;
