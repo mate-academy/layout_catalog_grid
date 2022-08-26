@@ -1,7 +1,5 @@
 $c-link: #060b35;
 $c-link-hover: #3b4acc;
 $gap: 48px;
-$count-of-cards: 4;
 $w-card: 200px;
-$w-catalog:
-  $count-of-cards * $w-card + $gap * ($count-of-cards - 1);
+$h-card: 300px;
