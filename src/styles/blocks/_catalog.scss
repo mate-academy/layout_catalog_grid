@@ -1,0 +1,22 @@
+.catalog {
+  display: grid;
+  justify-content: center;
+  gap: 48px;
+
+  &__card {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: $card-width;
+    height: 300px;
+
+    border: 1px solid $c-card-border;
+    border-radius: 5px;
+  }
+
+  @each $number-of-cards, $value in $screen-width {
+    @media (min-width: #{$value}) {
+      grid-template-columns: repeat($number-of-cards, $card-width);
+    }
+  }
+}
