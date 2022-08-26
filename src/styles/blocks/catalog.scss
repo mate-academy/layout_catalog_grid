@@ -1,0 +1,38 @@
+.catalog {
+  display: grid;
+  justify-content: center;
+  grid-auto-rows: $h-card;
+  gap: $gap;
+  padding: 0 20px;
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $w-card;
+    height: $h-card;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    transition: transform 0.3s, color 0.3s;
+
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+      color: $c-link-hover;
+    }
+  }
+
+  @media (min-width: 488px) {
+    grid-template-columns: repeat(2, $w-card);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, $w-card);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, $w-card);
+  }
+}
