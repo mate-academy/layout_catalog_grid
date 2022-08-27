@@ -1,0 +1,7 @@
+@each $width, $columns in $media-width {
+  .catalog {
+    @media (min-width: #{$width}) {
+      grid-template-columns: repeat($columns, 200px);
+    }
+  }
+}
