@@ -1,9 +1,12 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(1, 200px);
+  gap: 48px;
 
-  max-width: 944px;
-  margin: 0 auto;
+  @include mediaColumns(488px, 2);
+  @include mediaColumns(768px, 3);
+  @include mediaColumns(1024px, 4);
 
   &__card {
     display: flex;
@@ -13,10 +16,5 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
-  }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
   }
 }
