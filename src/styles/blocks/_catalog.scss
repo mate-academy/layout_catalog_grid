@@ -9,12 +9,13 @@
   }
 
   &__card {
-    display: grid;
-    place-content: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     width: $card-width;
     height: $card-height;
-    
+
     border: 1px solid #ccc;
     border-radius: 5px;
   }
