@@ -1,6 +1,10 @@
 # Frontend practice with catalog page using grid
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
+<<<<<<< HEAD
 - [DEMO LINK](https://andrew-satyr.github.io/layout_catalog_grid/)
+=======
+- [DEMO LINK](https://andrew-satyr.github.io/layout_catalog_grid/)
+>>>>>>> c867be941c0396bd667b8ab1669592d5ff74d5ce
 
 > Follow [this instructions](https://github.com/mate-academy/layout_task-guideline#how-to-solve-the-layout-tasks-on-github)
 
