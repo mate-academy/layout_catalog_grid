@@ -25,6 +25,11 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-bottom: 48px;
+
+    @media (min-width: 488px) {
+      margin-bottom: 0;
+    }
   }
 
   &__card:not(:nth-child(4n)) {
