@@ -3,8 +3,6 @@ $card-height: 300px;
 $cards-in-row: 4;
 $cards-gap: 48px;
 $card-border-color: #ccc;
-$cards-container-width:
-  $card-width * $cards-in-row + $cards-gap * ($cards-in-row - 1);
 $queries:
   1023px 3,
   767px 2,
