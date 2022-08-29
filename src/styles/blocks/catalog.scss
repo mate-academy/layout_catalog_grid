@@ -1,0 +1,41 @@
+.catalog {
+  display: grid;
+
+  justify-content: center;
+  max-width: $max-w;
+  gap: $card-gap;
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $card-width;
+    height: $card-height;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+    transition: color $duration linear, transform $duration linear;
+
+    &:hover {
+      color: $card-hover-color;
+      transform: scale(1.2);
+    }
+  }
+}
+
+@media (min-width: 488px) {
+  .catalog {
+    grid-template-columns: repeat(2, auto);
+  }
+}
+
+@media(min-width: 768px) {
+  .catalog {
+    grid-template-columns: repeat(3, auto);
+  }
+}
+
+@media(min-width: 1024px) {
+  .catalog {
+    grid-template-columns: repeat(4, auto);
+  }
+}
