@@ -21,26 +21,18 @@
   }
 
   @media (min-width: 1024px) {
-    & {
-      @include column(4, $card-width);
-    }
+    @include grid-col(4);
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
-    & {
-      @include column(3, $card-width);
-    }
+    @include grid-col(3);
   }
 
   @media (min-width: 488px) and (max-width: 767px) {
-    & {
-      @include column(2, $card-width);
-    }
+    @include grid-col(2);
   }
 
   @media (max-width: 487px) {
-    & {
-      @include column(1, $card-width);
-    }
+    @include grid-col(1);
   }
 }
