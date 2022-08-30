@@ -1,0 +1,21 @@
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-content: center;
+
+  padding: $paddingY $paddingX;
+  row-gap: $gapX;
+  column-gap: $gapY;
+
+  @media (max-width: 487px) {
+    grid-template-columns: repeat(1, auto);
+  }
+
+  @media (min-width: 488px) and (max-width: 767px) {
+    grid-template-columns: repeat(2, auto);
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    grid-template-columns: repeat(3, auto);
+  }
+}
