@@ -1,19 +1,20 @@
+$cardWidth: 200px;
+
 .catalog {
-  $cardWidth: 200px;
   display: grid;
   grid-template-columns: repeat(4, $cardWidth);
   gap: 48px;
   justify-content: center;
 
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (max-width: 1023px) {
     grid-template-columns: repeat(3, $cardWidth);
   }
 
-  @media (min-width: 488px) and (max-width: 768px) {
+  @media (max-width: 767px) {
     grid-template-columns: repeat(2, $cardWidth);
   }
 
-  @media (max-width: 488px) {
+  @media (max-width: 487px) {
     grid-template-columns: $cardWidth;
   }
 
