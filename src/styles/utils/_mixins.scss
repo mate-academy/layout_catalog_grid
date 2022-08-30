@@ -1,0 +1,8 @@
+@mixin column($times, $unit) {
+  grid-template-columns: repeat($times, $unit);
+}
+
+@mixin card($height, $width) {
+  height: $height;
+  width: $width;
+}

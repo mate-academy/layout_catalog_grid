@@ -1,0 +1,46 @@
+.catalog {
+  display: grid;
+  justify-content: center;
+  gap: $card-gap;
+
+  &__card {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    @include card($card-height, $card-width);
+    border: 1px solid $color-border;
+    border-radius: 5px;
+    color: $color-primary;
+    transition: background-color $duration, color $duration;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $color-primary;
+      color: $color-secondary;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    & {
+      @include column(4, $card-width);
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1023px) {
+    & {
+      @include column(3, $card-width);
+    }
+  }
+
+  @media (min-width: 488px) and (max-width: 767px) {
+    & {
+      @include column(2, $card-width);
+    }
+  }
+
+  @media (max-width: 487px) {
+    & {
+      @include column(1, $card-width);
+    }
+  }
+}
