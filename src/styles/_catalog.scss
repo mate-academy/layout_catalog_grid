@@ -1,9 +1,10 @@
 .catalog {
   display: grid;
+  justify-content: center;
   grid-template-columns: repeat(1, 200px);
   gap: 48px;
   max-width: 1024px;
-  margin: 0 auto;
+  margin: 0 ;
   padding: 48px 0;
 
   &__card {
