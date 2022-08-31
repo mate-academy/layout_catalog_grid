@@ -6,7 +6,8 @@
   gap: 48px;
 
   &__card {
-    max-width: 200px;
+    box-sizing: border-box;
+    width: 200px;
   }
 }
 
