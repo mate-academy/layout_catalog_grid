@@ -2,8 +2,8 @@
   display: grid;
   justify-items: center;
   gap: 48px;
-  max-width: 1024px;
-  margin: 0 auto;
+  max-width: 100%;
+  margin: auto;
 
   @media screen and (max-width: 487px) {
     & {
@@ -13,19 +13,19 @@
 
   @media screen and (min-width: 488px) {
     & {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 200px 200px;
     }
   }
 
   @media screen and (min-width: 768px) {
     & {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: 200px 200px 200px;
     }
   }
 
   @media screen and (min-width: 1024px) {
     & {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 200px 200px 200px 200px;
     }
   }
 
