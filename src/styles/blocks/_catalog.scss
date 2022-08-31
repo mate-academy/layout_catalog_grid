@@ -1,0 +1,34 @@
+.catalog {
+  display: grid;
+  grid-template-columns: $w-card;
+  justify-content: center;
+  gap: $gap;
+
+  &__card {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: $w-card;
+    height: $h-card;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
+
+@media (min-width: 488px) {
+  .catalog {
+    grid-template-columns: repeat(2, $w-card);
+  }
+}
+
+@media (min-width: 768px) {
+  .catalog {
+    grid-template-columns: repeat(3, $w-card);
+  }
+}
+
+@media (min-width: 1024px) {
+  .catalog {
+    grid-template-columns: repeat(4, $w-card);
+  }
+}
