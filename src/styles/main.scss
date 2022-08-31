@@ -1,14 +1,36 @@
-html {
-  font-family: Roboto, sans-serif;
+@import "catalog";
+@import "header";
+
+.catalog {
+  display: grid;
+  gap: 48px;
+
+  &__card {
+    box-sizing: border-box;
+    width: 200px;
+  }
 }
 
-body {
-  margin: 0;
+@media (max-width: 487px) {
+  .catalog {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
 
-* {
-  box-sizing: border-box;
+@media (min-width: 488px) {
+  .catalog {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@import "_header.scss";
-@import "_catalog.scss";
+@media (min-width: 768px) {
+  .catalog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .catalog {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
