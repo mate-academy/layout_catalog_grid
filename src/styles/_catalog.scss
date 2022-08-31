@@ -1,5 +1,6 @@
 .catalog {
   display: grid;
+  $gap : 48px;
   gap: 48px;
   $card-width: 200px;
   justify-content: center;
@@ -27,7 +28,7 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
+    margin-bottom: $gap;
   }
 
   &__card:not(:nth-child(4n)) {
