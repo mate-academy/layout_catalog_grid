@@ -1,0 +1,24 @@
+.catalog {
+  display: grid;
+  justify-content: center;
+  max-width: 4 * $card-width + 3 * $card-gap;
+  @include auto-fill($card-width);
+  gap: $card-gap;
+
+  &__card {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    @include card($card-height, $card-width);
+    border: 1px solid $color-border;
+    border-radius: 5px;
+    color: $color-primary;
+    transition: background-color $duration, color $duration;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $color-primary;
+      color: $color-secondary;
+    }
+  }
+}

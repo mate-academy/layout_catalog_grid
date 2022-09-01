@@ -1,0 +1,8 @@
+@mixin auto-fill($unit) {
+  grid-template-columns: repeat(auto-fill, $unit);
+}
+
+@mixin card($height, $width) {
+  height: $height;
+  width: $width;
+}
