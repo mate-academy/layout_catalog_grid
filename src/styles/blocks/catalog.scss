@@ -1,0 +1,37 @@
+.catalog {
+  --columns-count: 1;
+
+  display: grid;
+  grid-template-columns: repeat(var(--columns-count), $cardWidth);
+  gap: $cardGap;
+  justify-content: center;
+
+  @media (min-width: 488px) {
+    --columns-count: 2;
+  }
+
+  @media (min-width: 768px) {
+    --columns-count: 3;
+  }
+
+  @media (min-width: 1024px) {
+    --columns-count: 4;
+  }
+
+  &__card {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    height: $cardHeight;
+    border: 1px solid $cardBorderColor;
+    border-radius: 5px;
+
+    transition: transform 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+  }
+}
