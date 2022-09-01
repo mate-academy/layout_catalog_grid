@@ -1,6 +1,8 @@
 .catalog {
   display: grid;
   justify-content: center;
+  max-width: 4 * $card-width + 3 * $card-gap;
+  @include auto-fill($card-width);
   gap: $card-gap;
 
   &__card {
@@ -18,21 +20,5 @@
       background-color: $color-primary;
       color: $color-secondary;
     }
-  }
-
-  @media (min-width: 1024px) {
-    @include grid-col(4);
-  }
-
-  @media (min-width: 768px) and (max-width: 1023px) {
-    @include grid-col(3);
-  }
-
-  @media (min-width: 488px) and (max-width: 767px) {
-    @include grid-col(2);
-  }
-
-  @media (max-width: 487px) {
-    @include grid-col(1);
   }
 }

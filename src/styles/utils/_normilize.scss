@@ -6,6 +6,11 @@ html {
   font-family: "Roboto", sans-serif;
 }
 
-body {
+.page {
   margin: 0;
+
+  &__catalog {
+    margin: 0 auto;
+  }
 }
+

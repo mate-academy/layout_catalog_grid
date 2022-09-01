@@ -1,5 +1,5 @@
-@mixin grid-col($times) {
-  grid-template-columns: repeat($times, $card-width);
+@mixin auto-fill($unit) {
+  grid-template-columns: repeat(auto-fill, $unit);
 }
 
 @mixin card($height, $width) {
