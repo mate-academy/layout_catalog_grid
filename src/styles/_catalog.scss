@@ -1,10 +1,15 @@
+
+.main {
+  display: grid;
+  justify-content: center;
+}
+
 .catalog {
   display: grid;
   max-width: 944px;
-  justify-items: center;
+  justify-content: center;
   grid-template-columns: repeat(auto-fill,200px);
   gap: 48px;
-  margin: 0 auto;
 
   &__card {
     display: grid;
