@@ -5,9 +5,11 @@ $card-width: 200px;
   grid-template-columns: $card-width;
   justify-content: center;
   gap: 48px;
+  max-width: 944px;
+  margin: 0 auto;
 
   @media (min-width: 488px) {
-    grid-template-columns: $card-width $card-width;
+    grid-template-columns: repeat(2, $card-width);
   }
 
   @media (min-width: 768px) {
@@ -17,9 +19,6 @@ $card-width: 200px;
   @media (min-width: 1024px) {
     grid-template-columns: repeat(4, $card-width);
   }
-
-  max-width: 944px;
-  margin: 0 auto;
 
   &__card {
     display: flex;
