@@ -4,29 +4,18 @@
   gap: 48px;
   max-width: 1024px;
   margin: 0 auto;
-
-  @media screen and (max-width: 487px) {
-    & {
-      grid-template-columns: 1fr;
-    }
-  }
+  grid-template-columns: 1fr;
 
   @media screen and (min-width: 488px) {
-    & {
-      grid-template-columns: 200px 200px;
-    }
+    grid-template-columns: 200px 200px;
   }
 
   @media screen and (min-width: 768px) {
-    & {
-      grid-template-columns: 200px 200px 200px;
-    }
+    grid-template-columns: 200px 200px 200px;
   }
 
   @media screen and (min-width: 1024px) {
-    & {
-      grid-template-columns: 200px 200px 200px 200px;
-    }
+    grid-template-columns: 200px 200px 200px 200px;
   }
 
   &__card {
