@@ -1,3 +1,7 @@
+html {
+  font-family: Roboto, sans-serif;
+}
+
 body {
   box-sizing: border-box;
 }
@@ -6,3 +10,4 @@ body {
 @import "./blocks/header";
 @import "./blocks/catalog";
 @import "./utilits/media";
+@import "./blocks/page__catalog.scss";
