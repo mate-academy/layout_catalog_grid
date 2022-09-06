@@ -10,20 +10,5 @@ body {
   box-sizing: border-box;
 }
 
-$screen-columns:
-  "0" "488" 1,
-  "488px" "768px" 2,
-  "768px" "1024px" 3,
-  "1024px" "20000px" 4;
-
 @import "_header.scss";
 @import "_catalog.scss";
-
-@each $size-min, $size-max, $columns in $screen-columns {
-  @media (min-width: $size-min) and (max-width: $size-max) {
-    .catalog {
-
-      grid-template-columns: repeat($columns, 200px);
-    }
-  }
-}
