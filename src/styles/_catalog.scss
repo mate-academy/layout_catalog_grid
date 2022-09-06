@@ -8,16 +8,16 @@
   &--margins--bottom {
     @include margins(auto);
 
-    @media (max-width: 1024px) {
-      @include margins(40px);
+    @media (max-width: 1023.9px) {
+      grid-template-columns: repeat(3, $card-width);
     }
 
-    @media (max-width: 788px) {
-      @include margins(36px);
+    @media (max-width: 767.9px) {
+      grid-template-columns: repeat(2, $card-width);
     }
 
-    @media (max-width: 528px) {
-      @include margins(20px);
+    @media (max-width: 487.9px) {
+      grid-template-columns: $card-width;
     }
   }
 
