@@ -1,5 +1,5 @@
 .header {
-  display: flex;
+  display: grid;
   align-items: center;
   justify-content: space-between;
   height: 60px;
@@ -17,7 +17,7 @@
 
 .nav {
   &__list {
-    display: flex;
+    display: grid;
     margin: 0;
     padding: 0;
   }
