@@ -7,6 +7,16 @@
   grid-template-columns: repeat(4, 1fr);
   justify-items: center;
   gap: 48px;
+  
+  @media screen and (max-width: 1024px)  {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  @media screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  @media screen and (max-width: 488px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
   &__card {
     display: flex;
@@ -20,25 +30,4 @@
     
   }
 
-}
-
-@media screen and (max-width: 1024px)  {
-  .catalog {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-}
-
-@media screen and (max-width: 768px) {
-  .catalog {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  
-}
-
-@media screen and (max-width: 488px) {
-  .catalog {
-    grid-template-columns: repeat(1, 1fr);
-  }
-  
 }
