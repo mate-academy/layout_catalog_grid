@@ -6,7 +6,7 @@
   grid-template-columns: repeat(var(--columns), $card-width);
   gap: $catalog-gap;
 
-  @media (min-width: 448px) and (max-width: 767px) {
+  @media (min-width: 488px) and (max-width: 767px) {
     --columns: 2;
   }
 
