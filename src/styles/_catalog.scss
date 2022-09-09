@@ -1,8 +1,4 @@
 $width-card: 200px;
-@mixin size-card {
-  width: $width-card;
-  height: 300px;
-}
 
 .catalog {
   display: grid;
@@ -13,7 +9,8 @@ $width-card: 200px;
   justify-content: center;
 
   &__card {
-    @include size-card;
+    width: $width-card;
+    height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
