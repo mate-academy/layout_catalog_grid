@@ -2,29 +2,7 @@ html {
   font-family: Roboto, sans-serif;
 }
 
-body {
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
+@import "./utilits/reset";
 @import "./utilits/variables";
-
-@import "_header.scss";
-
-@import "_catalog.scss";
-
-.catalog {
-  display: grid;
-  grid-template-columns: repeat(4, 200px);
-  gap: $gap;
-  justify-content: center;
-
-  @media (max-width: $card-width*4 + $gap*3 + 80px) {
-    & {
-      grid-template-columns: repeat(auto-fill, $card-width);
-    }
-  }
-}
+@import "header.scss";
+@import "catalog.scss";

@@ -1,5 +1,6 @@
 $card-width: 200px;
-
+$card-count: 4;
+$gap-count: $card-count - 1;
 $gap: 48px;
 
 $card-hover-color:  #34568b;
