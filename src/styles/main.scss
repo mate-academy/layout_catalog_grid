@@ -1,3 +1,7 @@
+@import "./utils/variables";
+@import url(./block/_catalog.scss);
+@import url(./block/_header.scss);
+
 html {
   font-family: Roboto, sans-serif;
 }
@@ -13,19 +17,15 @@ body {
 .catalog {
   display: grid;
   gap: 48px;
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 200px);
-  }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    grid-template-columns: repeat(3, 200px);
-  }
-  @media (min-width: 488px) and (max-width: 767px) {
-    grid-template-columns: repeat(2, 200px);
-  }
-  @media (max-width: 488px) {
-    grid-template-columns: repeat(1, 200px);
-  }
-}
 
-@import "_header.scss";
-@import "_catalog.scss";
+  @media (min-width: 488px) {
+    grid-template-columns: repeat(2, $width);
+  }
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, $width);
+  }
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, $width);
+  }
+
+}
