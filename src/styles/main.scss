@@ -17,6 +17,7 @@ $cell-size: 200px;
 .catalog {
   display: grid;
   justify-content: center;
+  grid-template-columns: repeat(1, 200px);
   gap: 48px;
 
   &__card {
@@ -26,12 +27,6 @@ $cell-size: 200px;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-}
-
-@media (max-width: 488px) {
-  .catalog {
-    grid-template-columns: repeat(1, 200px);
   }
 }
 
