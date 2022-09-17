@@ -5,8 +5,7 @@
   margin: 0 auto;
 
   grid-template-columns: repeat(4, 200px);
-  gap: 0 48px ;
-  justify-content: center;
+  gap: 0 48px;
 
   &__card {
     display: grid;
@@ -19,19 +18,19 @@
     margin-bottom: 48px;
   }
 
-  @media screen and  (max-width: 488px) {
-    grid-template-columns: repeat(1, 200px);
+  @media screen and (max-width: 488px) {
+    grid-template-columns: 1fr;
   }
 
   @media screen and (min-width: 488px) {
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: 1fr 1fr;
   }
 
   @media screen and (min-width: 768px) {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   @media screen and (min-width: 1024px) {
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
