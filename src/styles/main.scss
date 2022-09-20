@@ -11,4 +11,37 @@ body {
 }
 
 @import "_header.scss";
-@import "_catalog.scss";
+// @import "_catalog.scss";
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 48px;
+  justify-content: center;
+
+  &__card {
+    height: 300px;
+    text-align: center;
+    line-height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .catalog {
+    grid-template-columns: repeat(3, 200px);
+  }
+}
+
+@media (max-width: 768px) and (min-width: 488px) {
+  .catalog {
+    grid-template-columns: repeat(2, 200px);
+  }
+}
+
+@media (max-width: 487px) {
+  .catalog {
+    grid-template-columns: repeat(1, 200px);
+  }
+}
