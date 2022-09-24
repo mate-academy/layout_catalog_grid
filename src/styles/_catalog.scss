@@ -15,28 +15,20 @@
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-}
 
-@media (max-width: $catalog-size-1) {
-  .catalog {
+  @media (max-width: $catalog-size-1) {
     grid-template-columns: repeat(1, $card-width);
   }
-}
 
-@media (min-width: $catalog-size-1) {
-  .catalog {
+  @media (min-width: $catalog-size-1) {
     grid-template-columns: repeat(2, $card-width);
   }
-}
 
-@media (min-width: $catalog-size-2) {
-  .catalog {
+  @media (min-width: $catalog-size-2) {
     grid-template-columns: repeat(3, $card-width);
   }
-}
 
-@media (min-width: $catalog-size-3) {
-  .catalog {
+  @media (min-width: $catalog-size-3) {
     grid-template-columns: repeat(4, $card-width);
   }
 }
