@@ -16,3 +16,27 @@
     border-radius: 5px;
   }
 }
+
+@media (max-width: $catalog-size-1) {
+  .catalog {
+    grid-template-columns: repeat(1, $card-width);
+  }
+}
+
+@media (min-width: $catalog-size-1) {
+  .catalog {
+    grid-template-columns: repeat(2, $card-width);
+  }
+}
+
+@media (min-width: $catalog-size-2) {
+  .catalog {
+    grid-template-columns: repeat(3, $card-width);
+  }
+}
+
+@media (min-width: $catalog-size-3) {
+  .catalog {
+    grid-template-columns: repeat(4, $card-width);
+  }
+}
