@@ -1,6 +1,6 @@
 .catalog {
   display: grid;
-  grid-template-columns: repeat(auto-fill, $card-width);
+  grid-template-columns: repeat(1, $card-width);
   justify-content: center;
   gap: 48px;
 
@@ -14,10 +14,6 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-
-  @media (max-width: $catalog-size-1) {
-    grid-template-columns: repeat(1, $card-width);
   }
 
   @media (min-width: $catalog-size-1) {
