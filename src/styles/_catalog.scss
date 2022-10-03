@@ -5,6 +5,30 @@
   line-height: 300px;
   gap: 48px;
 
+  @media (min-width: 1024px) {
+    & {
+      grid-template-columns: repeat(4, 200px);
+    }
+  }
+
+  @media (max-width: 1023px) {
+    & {
+      grid-template-columns: repeat(3, 200px);
+    }
+  }
+
+  @media (max-width: 767px) {
+    & {
+      grid-template-columns: repeat(2, 200px);
+    }
+  }
+
+  @media (max-width: 487px) {
+    & {
+      grid-template-columns: 200px;
+    }
+  }
+
   &__card {
     width: 200px;
     height: 300px;
