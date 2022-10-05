@@ -1,6 +1,7 @@
 .catalog {
   display: grid;
   flex-wrap: wrap;
+  place-items: center;
   grid-template-columns: repeat(4, 1fr);
   max-width: 944px;
   margin: 0 auto;
@@ -14,10 +15,6 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 48px;
-  }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
   }
 }
 
