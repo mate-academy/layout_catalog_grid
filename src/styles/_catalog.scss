@@ -1,6 +1,5 @@
 .catalog {
   display: grid;
-  flex-wrap: wrap;
   place-items: center;
   grid-template-columns: repeat(4, 1fr);
   max-width: 944px;
