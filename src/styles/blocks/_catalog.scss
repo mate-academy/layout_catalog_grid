@@ -4,18 +4,17 @@
   display: grid;
   justify-content: center;
   gap: 48px;
-  grid-template-columns: repeat(4, $card-width);
 
-  @media (max-width: 1023px) {
-    grid-template-columns: repeat(3, $card-width);
-  }
-
-  @media (max-width: 767px) {
+  @media (min-width: 488px) {
     grid-template-columns: repeat(2, $card-width);
   }
 
-  @media (max-width: 487px) {
-    grid-template-columns: repeat(1, $card-width);
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, $card-width);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, $card-width);
   }
 
   &__card {
