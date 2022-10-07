@@ -1,8 +1,10 @@
-html {
+@import "./utils/variables";
+
+.page {
   font-family: Roboto, sans-serif;
 }
 
-body {
+.page__content {
   margin: 0;
 }
 
