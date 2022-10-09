@@ -4,7 +4,6 @@ $card-width: 200px;
   display: grid;
   justify-content: center;
   gap: 48px;
-
   grid-template-columns: repeat(4, $card-width);
 
   @media (min-width: 768px) and (max-width: 1023px) {
