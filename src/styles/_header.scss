@@ -1,5 +1,6 @@
 .header {
-  display: flex;
+  display: grid;
+  grid-template-columns: 40px auto;
   align-items: center;
   justify-content: space-between;
   height: 60px;
@@ -17,7 +18,8 @@
 
 .nav {
   &__list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(8, auto);
     margin: 0;
     padding: 0;
   }
