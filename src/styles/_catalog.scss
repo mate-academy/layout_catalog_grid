@@ -15,7 +15,7 @@ $cardWidth: 200px;
   }
 
   @media (max-width: 487px) {
-    grid-template-columns: repeat(1, $cardWidth);
+    grid-template-columns: $cardWidth;
   }
 
   &__card {
