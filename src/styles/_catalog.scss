@@ -1,7 +1,9 @@
+$cardWidth: 200px;
+
 .catalog {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(4, 200px);
+
   gap: 48px;
 
   &__card {
@@ -9,20 +11,21 @@
     align-items: center;
     justify-content: center;
 
+    width: $cardWidth;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
 
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(3, 200px);
+  @media (min-width: 488px) {
+    grid-template-columns: repeat(2, $cardWidth);
   }
 
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 200px);
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, $cardWidth);
   }
 
-  @media (max-width: 488px) {
-    grid-template-columns: repeat(1, 200px);
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, $cardWidth);
   }
 }
