@@ -1,5 +1,6 @@
 .catalog {
   display: grid;
+  justify-content: center;
   grid-template-columns: $cardWidth;
   gap: $cardGap;
 
@@ -11,34 +12,20 @@
     height: $cardHeight;
     border: 1px solid #ccc;
     border-radius: 5px;
-    // margin-bottom: $cardGap;
     
     line-height: $cardHeight;
     text-align: center;
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: $cardGap;
+  @media (min-width: 488px) {
+      grid-template-columns: repeat(2, $cardWidth);
   }
-}
-
-@media (min-width: 488px) {
-  .catalog {
-    display: grid;
-    grid-template-columns: repeat(2, $cardWidth);
+  
+  @media (min-width: 768px) {
+      grid-template-columns: repeat(3, $cardWidth);
   }
-}
-
-@media (min-width: 768px) {
-  .catalog {
-    display: grid;
-    grid-template-columns: repeat(3, $cardWidth);
-  }
-}
-
-@media (min-width: 1024px) {
-  .catalog {
-    display: grid;
-    grid-template-columns: repeat(4, $cardWidth);
+  
+  @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, $cardWidth);
   }
 }
