@@ -4,6 +4,7 @@ $cardWidth: 200px;
   display: grid;
   justify-content: center;
   gap: 48px;
+  grid-template-columns: repeat(1, $cardWidth);
 
   @media (min-width: 488px) {
     grid-template-columns: repeat(2, $cardWidth);
@@ -21,7 +22,6 @@ $cardWidth: 200px;
     display: grid;
     justify-content: center;
     align-items: center;
-    width: $cardWidth;
     height: 300px;
 
     border: 1px solid #ccc;
