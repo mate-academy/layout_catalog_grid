@@ -1,0 +1,27 @@
+.catalog {
+  @extend %grid-center;
+  @include template-columns(1);
+  gap: 48px;
+
+  @media (min-width: 488px) {
+    @include template-columns(2);
+  }
+
+  @media (min-width: 768px) {
+    @include template-columns(3);
+  }
+
+  @media (min-width: 1024px) {
+    @include template-columns(4);
+  }
+
+  &__card {
+    @extend %grid-center;
+    align-items: center;
+    width: $card-width;
+    height: 300px;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
