@@ -1,9 +1,9 @@
 .catalog {
   display: grid;
-  grid-template-columns: repeat(1, $card-width);
+  grid-template-columns: $card-width;
   justify-content: center;
 
-  gap: $margin;
+  gap: 48px;
 
   @media (min-width: 488px) {
     grid-template-columns: repeat(2, $card-width);
@@ -21,14 +21,8 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    width: $card-width;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: $margin;
-  }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: $margin;
   }
 }
