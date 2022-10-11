@@ -3,7 +3,6 @@ $cardWidth: 200px;
 .catalog {
   display: grid;
   justify-content: center;
-  align-items: center;
   gap: 48px;
 
   @media (min-width: 488px) {
@@ -24,7 +23,6 @@ $cardWidth: 200px;
     align-items: center;
     width: $cardWidth;
     height: 300px;
-    margin-bottom: 48px;
 
     border: 1px solid #ccc;
     border-radius: 5px;
