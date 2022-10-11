@@ -1,0 +1,25 @@
+.container {
+  display: grid;
+  grid-template-columns: repeat(1, $full-card-width);
+  gap: 48px;
+  justify-content: center;
+
+  margin: 0 auto;
+  padding-top: 50px;
+
+  @media (min-width: 488px) {
+    grid-template-columns: repeat(2, $full-card-width);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, $full-card-width);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, $full-card-width);
+  }
+
+  &__card {
+    margin-right: $card-gap;
+  }
+}
