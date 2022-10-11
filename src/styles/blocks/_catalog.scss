@@ -13,7 +13,7 @@
   }
 
   @media (max-width: 488px) {
-    grid-template-columns: repeat(1, $cardWidth);
+    grid-template-columns: $cardWidth;
   }
 
   &__card {
@@ -21,7 +21,6 @@
     justify-content: center;
     align-content: center;
 
-    width: $cardWidth;
     height: 300px;
 
     border: 1px solid #ccc;
