@@ -1,18 +1,18 @@
 .catalog {
   @extend %grid-center;
-  @include template-columns(4);
+  @include template-columns(1);
   gap: 48px;
 
-  @media (min-width: 768px) and (max-width:1023px) {
-    @include template-columns(3);
-  }
-
-  @media (min-width: 488px) and (max-width:767px) {
+  @media (min-width: 488px) {
     @include template-columns(2);
   }
 
-  @media (max-width:487px) {
-    @include template-columns(1);
+  @media (min-width: 768px) {
+    @include template-columns(3);
+  }
+
+  @media (min-width: 1024px) {
+    @include template-columns(4);
   }
 
   &__card {
