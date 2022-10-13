@@ -2,8 +2,6 @@
   display: grid;
   grid-template-columns: repeat(4, 200px);
   justify-content: center;
-  max-width: 944px;
-  margin: 0 auto;
   gap: 48px;
 
   @media (min-width: 768px) and (max-width: 1023px) {
@@ -15,7 +13,7 @@
   }
 
   @media (max-width: 487px) {
-    grid-template-columns: repeat(1, 200px);
+    grid-template-columns: 200px;
   }
 
   &__card {
