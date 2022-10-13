@@ -12,3 +12,21 @@ body {
 
 @import "_header.scss";
 @import "_catalog.scss";
+
+@media (min-width: 488px) {
+  .catalog {
+    grid-template-columns: 200px 200px;
+  }
+}
+
+@media (min-width: 768px) {
+  .catalog {
+    grid-template-columns: 200px 200px 200px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .catalog {
+    grid-template-columns: 200px 200px 200px 200px;
+  }
+}
