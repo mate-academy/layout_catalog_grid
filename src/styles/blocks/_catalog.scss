@@ -4,9 +4,8 @@
   gap: 48px;
 
   &__card {
-    box-sizing: border-box;
-    text-align: center;
-    line-height: $card-height-size;
+    display: grid;
+    place-content: center;
     width: $card-width-size;
     height: $card-height-size;
     border: 1px solid #ccc;
