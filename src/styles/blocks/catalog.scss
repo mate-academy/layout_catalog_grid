@@ -4,11 +4,6 @@
   grid-template-columns: 200px;
   gap: 48px;
 
-  $sizes:
-    2 488px,
-    3 768px,
-    4 1024px;
-
   @each $columns, $size in $sizes {
     @media (min-width: $size) {
       grid-template-columns: repeat($columns, 200px);
