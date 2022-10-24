@@ -1,22 +1,27 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(4, 200px);
+  gap: 48px;
 
   max-width: 944px;
   margin: 0 auto;
 
   &__card {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     width: 200px;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
   }
+}
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
+@each $breakpoint, $number in $breakpoints {
+  @media screen and (max-width: $breakpoint) {
+    .catalog {
+      grid-template-columns: repeat(#{$number}, 200px);
+    }
   }
 }
