@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  height: $header-height;
   padding: 0 50px;
   margin-bottom: 50px;
 
@@ -11,25 +11,28 @@
   overflow: hidden;
 
   &__logo {
-    height: 40px;
+    height: $logo-heigth;
   }
 }
 
 .nav {
   &__list {
     display: flex;
-    margin: 0;
     padding: 0;
+  }
+
+  &--position {
+    margin: 0;
   }
 
   &__item {
     position: relative;
-    color: #060b35;
+    color: $color-nav__item;
     list-style: none;
     line-height: 60px;
   }
 
-  &__item:not(:last-child) {
+  &__item--position:not(:last-child) {
     margin-right: 20px;
   }
 
