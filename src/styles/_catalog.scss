@@ -23,23 +23,17 @@
   }
 
   @media (max-width: 1023px) {
-    .catalog {
-      grid-template-columns: repeat(3, $columns-width);
-      margin: 0 auto;
-    }
+    grid-template-columns: repeat(3, $columns-width);
+    margin: 0 auto;
   }
   
   @media (max-width: 767px) {
-    .catalog {
-      grid-template-columns: repeat(2, $columns-width);
-      margin: 0 auto;
-    }
+    grid-template-columns: repeat(2, $columns-width);
+    margin: 0 auto;
   }
   
   @media (max-width: 487px) {
-    .catalog {
-      grid-template-columns: repeat(1, $columns-width);
-      margin: 0 auto;
-    }
+    grid-template-columns: repeat(1, $columns-width);
+    margin: 0 auto;
   }
 }
