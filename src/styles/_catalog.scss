@@ -1,6 +1,19 @@
+@import "./var";
+
 .catalog {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 210px);
+  grid-template-columns: repeat(4, $cell-width);
+
+  @media (max-width: 1023px) {
+    grid-template-columns: repeat(3, $cell-width);
+  }
+  @media (max-width: 767px) {
+    grid-template-columns: repeat(2, $cell-width);
+  }
+  @media (max-width: 487px) {
+    grid-template-columns: repeat(1, $cell-width);
+  }
+
   gap: 48px;
   justify-content: center;
 
@@ -8,7 +21,6 @@
     display: grid;
     justify-items: center;
     align-items: center;
-    width: 200px;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
