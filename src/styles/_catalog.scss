@@ -13,22 +13,16 @@
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-}
 
-@media (max-width: 1024px) {
-  .catalog {
+  @media (max-width: 1024px) {
     grid-template-columns: repeat(3, $card-width);
   }
-}
 
-@media (max-width: 768px) {
-  .catalog {
+  @media (max-width: 768px) {
     grid-template-columns: repeat(2, $card-width);
   }
-}
-
-@media (max-width: 488px) {
-  .catalog {
+  
+  @media (max-width: 488px) {
     grid-template-columns: repeat(1, $card-width);
   }
 }
