@@ -1,6 +1,7 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(1, 200px);
+  gap: 48px;
 
   max-width: 944px;
   margin: 0 auto;
