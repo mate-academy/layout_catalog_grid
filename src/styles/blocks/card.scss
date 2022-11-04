@@ -1,24 +1,17 @@
 .card {
-  display: flex;
-  justify-content: center;
-  box-sizing: border-box;
   width: #{$card-width};
+  padding: 32px 16px 16px;
 
-  &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 32px 16px 16px;
-
-    background-color: #fff;
-    border: 1px solid #f3f3f3;
-    border-radius: 5px;
-  }
+  background-color: #fff;
+  border: 1px solid #f3f3f3;
+  border-radius: 5px;
 
   &__product-image {
-    margin-bottom: 40px;
     width: 160px;
     height: 134px;
+    margin: 0 auto 40px;
+
+    display: block;
   }
 
   &__product-name {
@@ -30,7 +23,6 @@
   }
 
   &__product-code {
-    align-self: flex-start;
     margin-bottom: 16px;
 
     font-size: 10px;
@@ -40,11 +32,12 @@
   }
 
   &__product-rating {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
     margin-bottom: 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
   }
 
   &__reviews {
@@ -54,11 +47,12 @@
   }
 
   &__product-cost {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     width: 100%;
     margin-bottom: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__product-price {
@@ -75,19 +69,18 @@
   }
 
   &__product-buy {
-    box-sizing: border-box;
-    align-self: stretch;
+    height: 40px;
+
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 40px;
 
     font-size: 14px;
     line-height: 16px;
     font-weight: 700;
-    color: #fff;
     text-transform: uppercase;
     text-decoration: none;
+    color: #fff;
 
     background-color: #00acdc;
     border: 1px solid #00acdc00;

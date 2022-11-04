@@ -1,13 +1,11 @@
 .catalog {
-  font-family: Roboto, sans-serif;
-  color: #060b35;
+  &__container {
+    padding: 50px 0;
 
-  &__cards-container {
     display: grid;
     grid-template-columns: repeat(4, #{$card-width});
     justify-content: center;
     gap: 48px;
-    padding: 50px 0;
 
     @media screen and (max-width: 1023px) {
       grid-template-columns: repeat(3, #{$card-width});
