@@ -3,28 +3,26 @@
   gap: 48px;
   justify-content: center;
 
-  @media (max-width: 487px) {
-    grid-template-columns: repeat(1, 200px);
-  }
+  grid-template-columns: repeat(1, $catalog-width);
 
   @media (min-width: 488px) {
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, $catalog-width);
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, $catalog-width);
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(4, $catalog-width);
   }
 
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 300px;
+    width: $catalog-width;
+    height: $catalog-height;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
