@@ -4,7 +4,7 @@ $columnSize: 200px;
   display: grid;
   gap: 48px;
   justify-content: center;
-  grid-template-columns: 200px;
+  grid-template-columns: $columnSize;
 
   &__card {
     display: grid;
@@ -18,15 +18,15 @@ $columnSize: 200px;
   }
 
   @media (min-width: 488px) {
-    grid-template-columns: $columnSize $columnSize;
+    grid-template-columns: repeat(2, $columnSize);
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: $columnSize $columnSize $columnSize;
+    grid-template-columns: repeat(3, $columnSize);
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: $columnSize $columnSize $columnSize $columnSize;
+    grid-template-columns: repeat(4, $columnSize);
   }
 }
 
