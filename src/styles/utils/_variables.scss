@@ -1,4 +1,14 @@
-$column-width: 200px;
+// Colors
+$color-main-accent: #060b35;
+$color-secondary: #616070;
+$color-blue-accent: #00acdc;
+$color-main: #fff;
+
+$transition-duration: 0.3s;
+
+// Card
+$cardWidth: 200px;
+$cardsGaps: 48px;
 
 $screen-width-columns:
   "488px" 2,

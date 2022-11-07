@@ -1,6 +1,16 @@
 // Utils
 @import "./utils/reset";
 @import "./utils/variables";
+@import "./utils/mixins";
+@import "./utils/functions";
 
-@import "_header.scss";
-@import "_catalog.scss";
+// Header
+@import "./blocks/header";
+@import "./blocks/logo";
+@import "./blocks/nav";
+
+// Catalog
+@import "./blocks/main";
+@import "./blocks/catalog";
+@import "./blocks/product";
+@import "./blocks/stars";
