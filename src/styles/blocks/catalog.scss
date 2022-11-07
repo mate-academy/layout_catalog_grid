@@ -2,29 +2,21 @@
   &__container {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(
-      #{$grid-columns-default-value}, #{$card-width}
-    );
+    --card-amount: 4;
+    grid-template-columns: repeat(var(--card-amount), #{$card-width});
     gap: 48px;
     padding: 50px 0;
 
-    $grid-columns:
-      1023px 3,
-      767px 2,
-      487px 1;
+    @media screen and (max-width: 1023px) {
+      --card-amount: 3;
+    }
 
-    @each $max-width, $columns in $grid-columns {
-      @media screen and (max-width: #{$max-width}) {
-        grid-template-columns: repeat(#{$columns}, #{$card-width});
-      }
+    @media screen and (max-width: 767px) {
+      --card-amount: 2;
+    }
 
-      @media screen and (max-width: #{$max-width}) {
-        grid-template-columns: repeat(#{$columns}, #{$card-width});
-      }
-
-      @media screen and (max-width: #{$max-width}) {
-        grid-template-columns: repeat(#{$columns}, #{$card-width});
-      }
+    @media screen and (max-width: 487px) {
+      --card-amount: 1;
     }
   }
 }
