@@ -83,7 +83,6 @@ body {
   height: 300px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  margin-bottom: 48px;
 }
 
 .catalog__card:not(:nth-child(4n)) {
