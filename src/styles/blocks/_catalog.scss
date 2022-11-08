@@ -1,0 +1,22 @@
+.catalog {
+  display: grid;
+  gap: $gap-width;
+  margin: 0 auto;
+
+  @each $amount, $med in $cards-per-row {
+    @media (min-width: $med) {
+      @include grid-template($amount)
+    }
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $card-width;
+    height: 300px;
+    
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
