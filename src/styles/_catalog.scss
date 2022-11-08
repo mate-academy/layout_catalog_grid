@@ -9,18 +9,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    // width: 200px;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
 
 }
+
 @media(max-width: 1024px) {
   .catalog {
     grid-template-columns: repeat(4, 256px);
     grid-template-rows: repeat(1fr, 1fr);
-    justify-content: center;
   }
  
 }
@@ -29,14 +28,14 @@
   .catalog {
     grid-template-columns: repeat(2, 256px);
     grid-template-rows: repeat(1fr, 1fr);
-    justify-content: center;
   }
+
 }
 
 @media(max-width: 488px) {
   .catalog {
     grid-template-columns: repeat(1, 256px);
     grid-template-rows: repeat(1fr, 1fr);
-    justify-content: center;
   }
+
 }
