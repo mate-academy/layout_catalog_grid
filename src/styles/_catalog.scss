@@ -27,10 +27,12 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
-  }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
+    transition: transform ease-in-out 0.3s, color ease-in-out 0.3s;
+
+    &:hover {
+      transform: scale(110%);
+      color: #34568b;
+    }
   }
 }
