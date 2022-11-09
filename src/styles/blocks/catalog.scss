@@ -1,20 +1,18 @@
-$card-width: 200px;
-
 .catalog {
   display: grid;
   justify-content: center;
   grid-template-columns: $card-width;
   gap: 48px;
 
-  @media (min-width: 488px) {
+  @include onMobile {
     grid-template-columns: repeat(2, $card-width);
   }
 
-  @media (min-width: 768px) {
+  @include onTablet {
     grid-template-columns: repeat(3, $card-width);
   }
 
-  @media (min-width: 1024px) {
+  @include onDesktop {
     grid-template-columns: repeat(4, $card-width);
   }
 
@@ -24,6 +22,7 @@ $card-width: 200px;
     align-items: center;
     width: $card-width;
     height: 300px;
+
     border: 1px solid #ccc;
     border-radius: 5px;
   }
