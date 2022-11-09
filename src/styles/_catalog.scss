@@ -10,7 +10,6 @@
     justify-content: center;
     align-items: center;
     height: 300px;
-    width: 200px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
@@ -19,24 +18,21 @@
 
 @media(max-width: 1024px) {
   .catalog {
-    grid-template-columns: repeat(4, 256px);
-    grid-template-rows: repeat(1fr, 1fr);
+    grid-template-columns: repeat(4, 200px);
   }
  
 }
 
 @media(max-width: 768px) {
   .catalog {
-    grid-template-columns: repeat(2, 256px);
-    grid-template-rows: repeat(1fr, 1fr);
+    grid-template-columns: repeat(2, 200px);
   }
 
 }
 
 @media(max-width: 488px) {
   .catalog {
-    grid-template-columns: repeat(1, 256px);
-    grid-template-rows: repeat(1fr, 1fr);
+    grid-template-columns: repeat(1, 200px);
   }
 
 }
