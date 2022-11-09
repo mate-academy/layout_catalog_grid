@@ -5,7 +5,8 @@
 
   @each $amount, $med in $cards-per-row {
     @media (min-width: $med) {
-      @include grid-template($amount)
+      @include grid-template($amount);
+      
     }
   }
 
@@ -15,7 +16,7 @@
     align-items: center;
     width: $card-width;
     height: 300px;
-    
+
     border: 1px solid #ccc;
     border-radius: 5px;
   }
