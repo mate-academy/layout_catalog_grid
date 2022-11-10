@@ -1,8 +1,7 @@
 .header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  height: 60px;
+  align-items: center;
   padding: 0 50px;
   margin-bottom: 50px;
 
@@ -16,6 +15,8 @@
 }
 
 .nav {
+  margin-left: auto;
+
   &__list {
     display: flex;
     margin: 0;
