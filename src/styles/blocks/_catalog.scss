@@ -1,0 +1,33 @@
+$cardGap: 48px;
+$cardWidth: 200px;
+$media: (488px, 768px, 1024px);
+
+.catalog {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+
+  grid: auto-flow / $cardWidth;
+  gap: $cardGap;
+  padding: 40px 0;
+
+  @each $min in $media {
+    $index: index($media, $min);
+
+    @media (min-width: $min) {
+      grid: none / repeat($index + 1, $cardWidth);
+    }
+  }
+
+  &__card {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    width: $cardWidth;
+    height: 300px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
