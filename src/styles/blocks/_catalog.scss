@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 200px;
   justify-content: center;
-  
+
   gap: 48px;
 
   &__card {
@@ -25,5 +25,4 @@
   @media screen and (min-width: 1024px) {
     grid-template-columns: repeat(4, 200px);
   }
-
 }
