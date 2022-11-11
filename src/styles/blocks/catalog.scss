@@ -1,0 +1,15 @@
+.catalog {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: $card-width;
+  gap: 48px;
+  margin-bottom: 48px;
+}
+
+@each $col-count, $size in $scrin-size {
+  @media (min-width: #{$size}) {
+    .catalog {
+      grid-template-columns: repeat(#{$col-count}, $card-width);
+    }
+  }
+}
