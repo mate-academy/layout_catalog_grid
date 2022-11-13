@@ -1,0 +1,25 @@
+.catalog {
+  display: flex;
+  justify-content: center;
+
+  padding-top: #{$catalog-container-top-margin};
+  padding-bottom: #{$catalog-container-bottom-margin};
+
+  &-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, #{$card-width});
+    gap: 48px;
+
+    @media screen and (min-width: 488px) {
+      grid-template-columns: repeat(2, #{$card-width});
+    }
+
+    @media screen and (min-width: 768px) {
+      grid-template-columns: repeat(3, #{$card-width});
+    }
+
+    @media screen and (min-width: 1024px) {
+      grid-template-columns: repeat(4, #{$card-width});
+    }
+  }
+}
