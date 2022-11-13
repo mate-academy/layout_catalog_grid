@@ -1,7 +1,7 @@
 .catalog {
   display: grid;
   grid-template-columns: repeat(4,$card-size);
-  gap:48px;
+  gap: 48px;
   justify-content: center;
 
   @media (max-width:1023px) {
