@@ -8,7 +8,6 @@ $media: (488px, 768px, 1024px);
 
   grid: auto-flow / $cardWidth;
   gap: 48px;
-  padding: 40px 0;
 
   @each $min in $media {
     $i: index($media, $min);
@@ -28,5 +27,12 @@ $media: (488px, 768px, 1024px);
     box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 5px;
+
+    transition: transform 0.3s, color 0.3s;
+
+    &:hover {
+      transform: scale(1.2);
+      color: #34568b;
+    }
   }
 }
