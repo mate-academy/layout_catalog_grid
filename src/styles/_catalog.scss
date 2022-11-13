@@ -1,13 +1,14 @@
 .catalog {
   display: grid;
+  justify-content: center;
 
-  grid-template-columns: 1;
+  grid-template-columns: 1fr;
 
-  @media (min-width: 489px) and (max-width:767px) {
+  @media (min-width: 489px) {
     grid-template-columns: repeat(2,1fr);
   }
 
-  @media (min-width: 768px) and (max-width:1023px) {
+  @media (min-width: 768px) {
     grid-template-columns: repeat(3,1fr);
   }
 
