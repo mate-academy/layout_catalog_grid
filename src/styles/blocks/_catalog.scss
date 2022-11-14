@@ -23,12 +23,6 @@
     }
   }
 
-  @media (max-width: 488px) {
-    & {
-      grid-template-columns: repeat(1, $card-width);
-    }
-  }
-
   @media (min-width: 488px) {
     & {
       grid-template-columns: repeat(2, $card-width);
