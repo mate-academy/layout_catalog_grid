@@ -1,0 +1,36 @@
+.catalog {
+  display: grid;
+
+  grid-template-columns: repeat(4, $width-card);
+  gap: 48px;
+  justify-items: center;
+  justify-content: center;
+
+  @media (max-width: 488px) {
+    grid-template-columns: repeat(1, $width-card);
+  }
+
+  @media (min-width: 488px) and (max-width: 768px) {
+    grid-template-columns: repeat(2, $width-card);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, $width-card);
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, $width-card);
+  }
+
+  &__card {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: $width-card;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
+
+
