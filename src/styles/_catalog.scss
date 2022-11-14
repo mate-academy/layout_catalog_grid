@@ -10,9 +10,7 @@
   @each $resolution, $columns in $resolutions {
     @media screen and (max-width: #{$resolution}) {
       grid-template-columns: repeat(#{$columns}, $cardWidth);
-
     }
-
   }
 
   &__card {
