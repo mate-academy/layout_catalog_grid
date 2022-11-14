@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(4, $card-width);
   justify-content: center;
-  gap: $card-gap;
+  gap: 48px;
 
   @media (max-width: 1023px) {
     grid-template-columns: repeat(3, $card-width);
@@ -21,7 +21,7 @@
     justify-content: center;
     align-items: center;
     width: $card-width;
-    height: $card-height;
+    height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
