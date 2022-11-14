@@ -1,22 +1,33 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
-
-  max-width: 944px;
+  display: grid;
+  gap: $gap;
+  justify-content: center;
+  align-content: center;
   margin: 0 auto;
 
   &__card {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     width: 200px;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
+
+    transition: transform $trans-speed;
+
+    &:hover {
+      transform: scale(1.2);
+      color: $color-grey;
+    }
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
+  $min-width: 448px 2, 768px 3, 1024px 4;
+
+  @each $width, $n in $min-width {
+    @media (min-width: $width) {
+      grid-template-columns: repeat($n, 1fr);
+      width: getCatalogWidth($cardWidth, $n);
+    }
   }
 }
