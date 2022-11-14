@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 60px;
+  height: $header-height;
   padding: $header-height;
   margin-bottom: 50px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -23,7 +23,7 @@
     position: relative;
     color: $color-nav__item;
     list-style: none;
-    line-height: 60px;
+    line-height: $header-height;
   }
 
   &__item--position:not(:last-child) {
