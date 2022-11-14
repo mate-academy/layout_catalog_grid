@@ -1,0 +1,23 @@
+.catalog {
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 48px;
+  margin: 0 auto;
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.3s, color 0.3s;
+
+    &:hover {
+      color: #34568b;
+      transform: scale(1.2);
+    }
+  }
+}

@@ -1,14 +1,28 @@
-html {
-  font-family: Roboto, sans-serif;
+@import "./utils/normalize";
+
+@import "./blocks/header";
+@import "./blocks/catalog";
+
+@media (max-width: 487px) {
+  .catalog {
+    grid-template-columns: 1fr;
+  }
 }
 
-body {
-  margin: 0;
+@media (min-width: 488px) {
+  .catalog {
+    grid-template-columns: 1fr 1fr;
+  }
 }
 
-* {
-  box-sizing: border-box;
+@media (min-width: 768px) {
+  .catalog {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 }
 
-@import "_header.scss";
-@import "_catalog.scss";
+@media (min-width: 1024px) {
+  .catalog {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
