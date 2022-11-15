@@ -4,10 +4,6 @@
   gap: 48px;
   justify-content: center;
 
-  @media (max-width: 488px) {
-    grid-template-columns: repeat(1, $width-card);
-  }
-
   @media (min-width: 488px) and (max-width: 768px) {
     grid-template-columns: repeat(2, $width-card);
   }
