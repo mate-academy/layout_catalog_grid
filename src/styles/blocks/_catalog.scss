@@ -1,43 +1,43 @@
 .catalog {
+  display: grid;
   max-width: 944px;
   margin: 0 auto;
-  display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fill, 200px);
+  grid-template-columns: repeat(auto-fill, $card-width);
   gap: 48px;
 
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: $card-width;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    transition-duration: $trans-speed;
+    transition-timing-function: ease;
 
-  }
-
-  @media (max-width: 488px) {
-    & {
-      grid-template-columns: 1fr;
+    &:hover {
+      scale: 1.2;
+      color: #34568b;
     }
   }
 
   @media (min-width: 488px) {
     & {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(2, $card-width);
     }
   }
 
   @media (min-width: 768px) {
     & {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, $card-width);
     }
   }
 
   @media (min-width: 1024px) {
     & {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(4, $card-width);
     }
   }
 }
