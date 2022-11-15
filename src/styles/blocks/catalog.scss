@@ -4,21 +4,13 @@
 
   justify-content: center;
 
-  grid-template-columns: 200px;
+  grid-template-columns: $widthCard;
   grid-auto-rows: 300px;
 
-  margin: 0 auto;
-
-  @media (min-width: 488px) {
-    grid-template-columns: repeat(2, 200px);
-  }
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 200px);
-  }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 200px);
+  @each $minWidth, $col in $screensMinWidth {
+    @media (min-width: $minWidth) {
+      grid-template-columns: repeat($col, $widthCard);
+    }
   }
 
   &__card {
@@ -36,6 +28,7 @@
 
     &:hover {
       color: #34568b;
+
       transform: scale(1.2);
 
       cursor: pointer;
