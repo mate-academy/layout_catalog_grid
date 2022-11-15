@@ -14,7 +14,7 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    transition-duration: $trans-speed;
+    transition-duration: $transition-duration;
     transition-timing-function: ease;
 
     &:hover {
@@ -38,6 +38,8 @@
   @media (min-width: 1024px) {
     & {
       grid-template-columns: repeat(4, $card-width);
+      min-width: ;
     }
   }
 }
+
