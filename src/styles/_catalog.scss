@@ -1,9 +1,22 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
-
+  display: grid;
+  justify-content: center;
   max-width: 944px;
   margin: 0 auto;
+  gap: 48px;
+  margin-bottom: 48px;
+
+  @media (min-width:488px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width:768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media (min-width:1024px) {
+    grid-template-columns: repeat(4, 1fr);
+  }
 
   &__card {
     display: flex;
@@ -13,10 +26,13 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
+    transition: 0.5s;
+
+    &:hover {
+      cursor: pointer;
+      transform: scale(120%);
+      color: rgb(0, 183, 255);
+    }
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
-  }
 }
