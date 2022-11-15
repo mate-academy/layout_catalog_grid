@@ -1,0 +1,33 @@
+.catalog {
+  display: grid;
+  justify-content: center;
+  --cardsAmount: 4;
+  grid-template-columns: repeat(var(--cardsAmount), 200px);
+  gap: 48px;
+
+  padding-top: 50px;
+
+  @media screen and (max-width: 1023px) {
+    --cardsAmount: 3;
+  }
+
+  @media screen and (max-width: 767px) {
+    --cardsAmount: 2;
+  }
+
+  @media screen and (max-width: 487px) {
+    --cardsAmount: 1;
+  }
+
+  &__card {
+    transition: 0.3s transform ease, 0.3s color ease;
+
+    &:hover {
+      transform: scale(1.2);
+
+      .card__product-name {
+        color: #34568b;
+      }
+    }
+  }
+}
