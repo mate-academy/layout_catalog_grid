@@ -3,7 +3,7 @@
   grid-template-columns: repeat(1, 200px);
   justify-content: center;
   gap: 48px;
-  
+
   margin: 0 auto;
   padding: 20px;
 
@@ -26,6 +26,13 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 48px;
+
+    transition: background-color 0.5s, transform 0.5s;
+
+    &:hover {
+      background-color: pink;
+      transform: scale(1.2);
+    }
   }
 
   &__card:not(:nth-child(4n)) {
