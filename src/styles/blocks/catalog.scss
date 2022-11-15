@@ -1,6 +1,6 @@
 .catalog {
   display: grid;
-  grid-template-rows: repeat(autofill, $card-height);
+  grid-template-rows: $card-height;
   justify-content: center;
   gap: $gap-size;
   padding: 50px 0;
