@@ -1,21 +1,15 @@
 .catalog {
   display: grid;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: flex-start;
   gap: 48px;
   grid-template-columns: repeat(4, $card-width);
 
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(3, $card-width);
-  }
-
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(2, $card-width);
-  }
-
-  @media (max-width: 488px) {
-    grid-template-columns: repeat(1, $card-width);
+  @each $minWidth,
+    $col in $screensMinWidth {
+    @media (min-width: $minWidth) {
+      grid-template-columns: repeat($col, $card-width);
+    }
   }
 
   &__card {
