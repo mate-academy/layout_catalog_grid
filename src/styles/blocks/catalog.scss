@@ -20,11 +20,7 @@
     border: 1px solid #ccc;
     border-radius: 5px;
 
-    /* stylelint-disable */
-    transition:
-      color $transition,
-      transform $transition;
-    /* stylelint-enable */
+    transition: color $transition, transform $transition;
 
     &:hover {
       color: #34568b;
