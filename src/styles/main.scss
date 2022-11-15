@@ -5,9 +5,8 @@ html {
 * {
   box-sizing: border-box;
 }
-
-@import "block/header.scss";
-@import "blocks/catalog.scss";
-
 @import "utils/_variables";
 @import "utils/_reset";
+
+@import "./blocks/header.scss";
+@import "./blocks/catalog.scss";
