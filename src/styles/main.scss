@@ -1,28 +1,25 @@
 @import "./utils/normalize";
+@import "./utils/vars";
 
 @import "./blocks/header";
 @import "./blocks/catalog";
-
-@media (max-width: 487px) {
-  .catalog {
-    grid-template-columns: 1fr;
-  }
-}
+@import "./blocks/card.scss";
+@import "./blocks/stars.scss";
 
 @media (min-width: 488px) {
   .catalog {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 200px);
   }
 }
 
 @media (min-width: 768px) {
   .catalog {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 200px);
   }
 }
 
 @media (min-width: 1024px) {
   .catalog {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 200px);
   }
 }
