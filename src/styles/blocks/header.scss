@@ -21,12 +21,12 @@
 
   &__item {
     position: relative;
-    color: $color-nav__item;
+    color: $color-blue;
     list-style: none;
     line-height: $header-height;
   }
 
-  &__item--position:not(:last-child) {
+  &__item:not(:last-child) {
     margin-right: 20px;
   }
 
