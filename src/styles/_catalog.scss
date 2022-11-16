@@ -1,12 +1,12 @@
 .catalog {
   display: grid;
-  grid-template-columns: repeat(auto-fill, $card-height);
+  grid-template-columns: $card-width;
   gap: 48px;
   justify-content: center;
 
   @each $media, $cols in $media-queries {
     @media (min-width: #{$media}) {
-      grid-template-columns: repeat($cols, 200px);
+      grid-template-columns: repeat($cols, $card-width);
     }
   }
 
