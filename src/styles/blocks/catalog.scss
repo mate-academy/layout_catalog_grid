@@ -9,22 +9,22 @@
   gap: 48px;
 
   @media (min-width: 488px) {
-    grid-template-columns: repeat(2, 200px)
+    grid-template-columns: repeat(2, $section-width)
   }
 
   @media (min-width:768px) {
-    grid-template-columns: repeat(3, 200px)
+    grid-template-columns: repeat(3, $section-width)
   }
 
   @media (min-width:1024px) {
-    grid-template-columns: repeat(4, 200px)
+    grid-template-columns: repeat(4, $section-width)
   }
 
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: $section-width;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
