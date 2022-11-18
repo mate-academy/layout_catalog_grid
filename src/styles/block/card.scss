@@ -7,7 +7,6 @@
   border-radius: 5px;
 
   transition: transform $transition-duration $transition-type;
-  color: $transition-duration $transition-type;
 
   &:hover {
     transform: scale(1.2);
@@ -92,7 +91,9 @@
     line-height: 40px;
     text-decoration: none;
 
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color $transition-duration $transition-type,
+      color $transition-duration $transition-type;
+
 
     &:hover {
       background-color: $white-color;
