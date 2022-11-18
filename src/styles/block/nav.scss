@@ -8,8 +8,28 @@
   &__item {
     position: relative;
     color: $main-color;
-    list-style: none;
     line-height: 60px;
+
+    &--is-active {
+
+      position: relative;
+      color: $hover-color;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        display: inline-block;
+        height: 5px;
+        width: 100%;
+
+        border-radius: 8px;
+        background-color: $hover-color;
+      }
+    }
   }
 
   &__item:not(:last-child) {
@@ -23,7 +43,6 @@
     font-size: 12px;
     font-weight: 500;
 
-    cursor: pointer;
     transition: color $transition-duration $transition-type;
 
     &:hover {
