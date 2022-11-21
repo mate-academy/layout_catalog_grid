@@ -1,10 +1,7 @@
 .catalog {
   display: grid;
   grid-template-columns: $section-width;
-
-  max-width: 944px;
-  margin: 0 auto;
-
+  
   gap: 48px;
 
   @media (min-width: 488px) {
