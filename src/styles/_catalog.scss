@@ -1,10 +1,8 @@
 .catalog {
   display: grid;
-  grid-template-columns: repeat(auto-fill, $heightCard);
+  grid-template-columns: $widthCard;
   gap: 48px;
-
-  max-width: 944px;
-  margin: 0 auto;
+  justify-content: center;
 
   @each $size, $amount in $media {
     @media (min-width:#{$size}) {
