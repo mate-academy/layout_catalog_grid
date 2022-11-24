@@ -16,3 +16,10 @@
     margin-bottom: 48px;
   }
 }
+
+@media (max-width: 488px) {
+  .catalog {
+    display: grid;
+    grid-template-columns: 200px;
+  }
+}
