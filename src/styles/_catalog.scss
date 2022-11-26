@@ -1,8 +1,10 @@
+@import "./variables";
+
 .catalog {
   box-sizing: border-box;
   padding: 0 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, 200px);
+  grid-template-columns: repeat(auto-fit, $colums-size);
   gap: 48px;
   justify-content: center;
 
@@ -19,18 +21,18 @@
 
 @media screen and (min-width: 488px) {
   .catalog {
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, $colums-size);
   }
 }
   
 @media screen and (min-width: 768px) {
   .catalog {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, $colums-size);
   }
 }
 
 @media screen and (min-width: 1024px) {
   .catalog {
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(4, $colums-size);
   }
 }
