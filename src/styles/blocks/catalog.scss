@@ -2,28 +2,24 @@
   display: grid;
   justify-content: center;
   gap: 48px;
-  grid-template-columns: repeat(auto-fill, 200px);
-
-  @media (max-width: 488px) {
-    grid-template-columns: repeat(1, 200px);
-  }
+  grid-template-columns: $column-size;
 
   @media (min-width: 488px) {
-    grid-template-columns: repeat(2, 200px);
+    grid-template-columns: repeat(2, $column-size);
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 200px);
+    grid-template-columns: repeat(3, $column-size);
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 200px);
+    grid-template-columns: repeat(4, $column-size);
   }
 
   &__card {
     display: grid;
     place-content: center;
-    width: 200px;
+    width: $column-size;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
