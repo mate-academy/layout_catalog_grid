@@ -1,6 +1,8 @@
 .catalog {
+  $size-column: 200px;
+
   display: grid;
-  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(4, $size-column);
   gap: 48px;
   justify-content: center;
   align-content: center;
@@ -16,20 +18,14 @@
   }
 
   @media (max-width: 1023px) {
-    & {
-      grid-template-columns: repeat(3, 200px);
-    }
+    grid-template-columns: repeat(3, $size-column);
   }
 
   @media (max-width: 768px) {
-    & {
-      grid-template-columns: repeat(2, 200px);
-    }
+    grid-template-columns: repeat(2, $size-column);
   }
 
   @media (max-width: 488px) {
-    & {
-      grid-template-columns: repeat(1, 200px);
-    }
+    grid-template-columns: repeat(1, $size-column);
   }
 }
