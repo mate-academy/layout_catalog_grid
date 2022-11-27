@@ -2,17 +2,14 @@
   display: grid;
   gap: 48px;
   grid-template-rows: repeat (2, min-content);
+  grid-template-columns: min-content;
   justify-content: center;
 
-  @media (max-width: 487px) {
-    grid-template-columns: min-content;
-  }
-
-  @media (min-width: 488px) and (max-width: 767px) {
+  @media (min-width: 488px) {
     grid-template-columns: repeat(2, min-content);
   }
 
-  @media (min-width: 768px) and (max-width: 1023px) {
+  @media (min-width: 768px) {
     grid-template-columns: repeat(3, min-content);
   }
 
