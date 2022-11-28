@@ -1,5 +1,33 @@
-.catalog {
-  gap: 48px;
+$card-width: 200px;
+$card-gap: 48px;
+
+.cards-block {
+  display: grid;
+  justify-content: center;
+
+  &__all-cards {
+    display: grid;
+    justify-content: space-between;
+    gap: $card-gap;
+  }
+
+  @media (min-width: 488px) {
+    &__all-cards {
+      grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+  }
+
+  @media (min-width: 768px) {
+    &__all-cards {
+      grid-template-columns: repeat(3, minmax(200px, 1fr));
+    }
+  }
+
+  @media (min-width: 1024px) {
+    &__all-cards {
+      grid-template-columns: repeat(4, minmax(200px, 1fr));
+    }
+  }
 
   &__card {
     display: flex;
@@ -10,26 +38,5 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 48px;
-  }
-}
-
-@media (min-width: 488px) {
-  .catalog {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-  }
-}
-
-@media (min-width: 768px) {
-  .catalog {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
-  }
-}
-
-@media (min-width: 1024px) {
-  .catalog {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
   }
 }
