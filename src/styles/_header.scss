@@ -1,36 +1,29 @@
 .header {
-  display: grid;
-  grid-template-columns: 60px, auto;
+  display: flex;
   align-items: center;
-
+  justify-content: space-between;
+  height: 60px;
   padding: 0 50px;
   margin-bottom: 50px;
 
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
   overflow: hidden;
 
   &__logo {
-    grid-area: 1 / 1;
-
     height: 40px;
   }
 }
 
 .nav {
-  grid-area: 1 / 2;
-
   &__list {
-    display: grid;
-    grid-template-columns: repeat(8, max-content);
-    justify-content: end;
-
+    display: flex;
     margin: 0;
     padding: 0;
   }
 
   &__item {
     position: relative;
-
     color: #060b35;
     list-style: none;
     line-height: 60px;
