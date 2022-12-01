@@ -5,6 +5,25 @@
   max-width: 944px;
   margin: 0 auto;
 
+  &__grid {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(4, 25%);
+    gap: 48px;
+
+    @media (min-width: 488px) {
+      grid-template-columns: repeat(2, 50%);
+    }
+  
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 33.3%);
+    }
+  
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 25%);
+    }
+  }
+
   &__card {
     display: flex;
     justify-content: center;
@@ -14,9 +33,5 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 48px;
-  }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
   }
 }
