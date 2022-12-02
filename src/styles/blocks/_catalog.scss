@@ -1,0 +1,17 @@
+.catalog {
+  display: grid;
+  justify-content: center;
+  @each $size in $sizes {
+    @include for-size($size);
+  }
+  gap: 48px;
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
