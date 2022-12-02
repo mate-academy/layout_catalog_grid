@@ -10,5 +10,29 @@ body {
   box-sizing: border-box;
 }
 
+@media (max-width: 488px) {
+  .catalog {
+    grid-template-columns: repeat(1, 248px);
+  }
+}
+
+@media (min-width: 489px) and (max-width: 768px) {
+  .catalog {
+    grid-template-columns: repeat(2, 248px);
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .catalog {
+    grid-template-columns: repeat(3, 248px);
+  }
+}
+
+@media (min-width: 1025px) {
+  .catalog {
+    grid-template-columns: repeat(4, 248px);
+  }
+}
+
 @import "_header.scss";
 @import "_catalog.scss";
