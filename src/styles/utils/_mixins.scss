@@ -1,0 +1,17 @@
+@mixin for-size($size) {
+  @if $size == phone {
+    @media (max-width: 488px) {
+      grid-template-columns: repeat(1, $grid-item-width);
+    }
+  }
+  @else if $size == big-phone {
+    @media (min-width: 488px) {
+      grid-template-columns: repeat(auto-fit, $grid-item-width);
+    }
+  }
+  @else if $size == lap-top {
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, $grid-item-width);
+    }
+  }
+}
