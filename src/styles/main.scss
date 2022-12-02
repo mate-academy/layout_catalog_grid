@@ -14,7 +14,7 @@ body {
 
 .catalog {
   display: grid;
-  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(1, 200px);
   grid-auto-rows: min-content;
   justify-content: center;
   gap: 48px;
