@@ -9,23 +9,23 @@ $card-gap: 48px;
     display: grid;
     justify-content: space-between;
     gap: $card-gap;
-  }
 
-  @media (min-width: 488px) {
-    &__all-cards {
-      grid-template-columns: repeat(2, minmax(200px, 1fr));
+    @media (min-width: 488px) {
+      & {
+        grid-template-columns: repeat(2, minmax($card-width, 1fr));
+      }
     }
-  }
 
-  @media (min-width: 768px) {
-    &__all-cards {
-      grid-template-columns: repeat(3, minmax(200px, 1fr));
+    @media (min-width: 768px) {
+      & {
+        grid-template-columns: repeat(3, minmax($card-width, 1fr));
+      }
     }
-  }
 
-  @media (min-width: 1024px) {
-    &__all-cards {
-      grid-template-columns: repeat(4, minmax(200px, 1fr));
+    @media (min-width: 1024px) {
+      & {
+        grid-template-columns: repeat(4, minmax($card-width, 1fr));
+      }
     }
   }
 
