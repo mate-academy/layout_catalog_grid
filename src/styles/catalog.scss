@@ -1,9 +1,12 @@
-.catalog {
-  display: flex;
-  flex-wrap: wrap;
+$min-widths:
+  "2" 488px,
+  "3" 768px,
+  "4" 1024px;
 
-  max-width: 944px;
-  margin: 0 auto;
+.catalog {
+  display: grid;
+  justify-content: center;
+  gap: 48px;
 
   &__card {
     display: flex;
@@ -19,4 +22,11 @@
   &__card:not(:nth-child(4n)) {
     margin-right: 48px;
   }
+
+  @each $cards, $width in $min-widths {
+    @media (min-width: #{$width}) {
+      grid-template-columns: repeat(#{$cards}, 200px);
+    }
+  }
+
 }
