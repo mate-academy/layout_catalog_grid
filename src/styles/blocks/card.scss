@@ -4,22 +4,19 @@
   flex-direction: column;
   align-content: space-between;
   width: 200px;
+  padding: 32px 16px 16px;
+
   border: 1px solid #e5e5e5;
   background-color: $color-white;
 
   &__image {
-    margin: 32px 19px 0;
     width: 160px;
     height: 134px;
-  }
-
-  &__info {
-    margin: 40px 16px 16px;
-    display: flex;
-    flex-direction: column;
+    margin: 0 auto;
   }
 
   &__name {
+    margin-top: 40px;
     font-size: 12px;
     line-height: 18px;
     font-weight: 500;
@@ -28,7 +25,6 @@
 
   &__product-code {
     margin-top: 4px;
-    font-weight: 400;
     font-size: 10px;
     line-height: 14px;
     color: $color-secondary;
@@ -71,7 +67,6 @@
     background-color: $color-blue-accent;
     color: $color-white;
     text-align: center;
-    text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
     font-weight: 700;
