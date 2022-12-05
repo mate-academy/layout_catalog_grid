@@ -7,9 +7,18 @@
 
   }
   &__card-container {
+    display: grid;
     max-width: $card-width*4 + $card-gap-side*3;
-    display: flex;
-    flex-wrap: wrap;
+    gap: $card-gap-side;
     padding: $container-padding-top 0 $container-padding-bottom;
+    @media (min-width: 488px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
