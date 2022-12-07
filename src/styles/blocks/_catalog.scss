@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: $card-width;
   justify-content: center;
-  gap: 48px;
+  gap: $card-gap;
 
   @media (min-width: 488px) {
     grid-template-columns: repeat(2, $card-width);
