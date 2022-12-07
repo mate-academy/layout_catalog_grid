@@ -1,12 +1,12 @@
 .catalog {
   display: grid;
-  grid-template-columns: 200px;
+  grid-template-columns: $column-width;
   gap: 48px;
   justify-content: center;
 
-  @include media-columns(488px, 2, 200px);
-  @include media-columns(768px, 3, 200px);
-  @include media-columns(1024px, 4, 200px);
+  @include media-columns(488px, 2, $column-width);
+  @include media-columns(768px, 3, $column-width);
+  @include media-columns(1024px, 4, $column-width);
 
   &__card {
     display: flex;
