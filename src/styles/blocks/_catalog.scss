@@ -1,6 +1,6 @@
 .catalog {
   display: grid;
-  grid-template-columns: repeat(4, $card-width);
+  grid-template-columns: repeat(1, $card-width);
   gap: 48px;
   justify-content: center;
   grid-auto-flow: row;
@@ -15,26 +15,7 @@
   }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
-  .catalog {
-    display: grid;
-    grid-template-columns: repeat(3, $card-width);
-    gap: 48px;
-    justify-content: center;
-    grid-auto-flow: row;
-
-    &__card {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: $card-height;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-    }
-  }
-}
-
-@media (min-width: 488px) and (max-width: 767px) {
+@media (min-width: 488px) {
   .catalog {
     display: grid;
     grid-template-columns: repeat(2, $card-width);
@@ -53,10 +34,29 @@
   }
 }
 
-@media (max-width: 487px) {
+@media (min-width: 768px) {
   .catalog {
     display: grid;
-    grid-template-columns: repeat(1, $card-width);
+    grid-template-columns: repeat(3, $card-width);
+    gap: 48px;
+    justify-content: center;
+    grid-auto-flow: row;
+
+    &__card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: $card-height;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .catalog {
+    display: grid;
+    grid-template-columns: repeat(4, $card-width);
     gap: 48px;
     justify-content: center;
     grid-auto-flow: row;
