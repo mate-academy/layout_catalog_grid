@@ -3,23 +3,17 @@
   gap: 48px;
   justify-content: center;
 
-  @media (min-width:488px) {
-    grid-template-columns: repeat(2, $card_width);
-  }
-
-  @media (min-width:768px) {
-    grid-template-columns: repeat(3, $card_width);
-  }
-
-  @media (min-width:1024px) {
-    grid-template-columns: repeat(4, $card_width);
+  @each $colum,$width in $medias {
+    @media (min-width:$width) {
+      grid-template-columns: repeat($colum, $card-width);
+    }
   }
 
   &__card {
     display: grid;
     justify-content: center;
     align-items: center;
-    width: $card_width;
+    width: $card-width;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
