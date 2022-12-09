@@ -2,22 +2,18 @@
   display: grid;
   grid-auto-flow: row;
   justify-content: center;
-  grid-template-columns: repeat(4, $card-size);
+  grid-template-columns: repeat(1, $card-size);
   gap: $gap;
 
-  @media screen and (min-width:300px) and ( max-width:487.99px) {
-    grid-template-columns: repeat(1, $card-size);
-  }
-
-  @media screen and (min-width:488px) and ( max-width:767.99px) {
+  @media (min-width:488px) {
     grid-template-columns: repeat(2, $card-size);
   }
 
-  @media screen and (min-width:768px) and ( max-width:1023.99px) {
+  @media (min-width:768px) {
     grid-template-columns: repeat(3, $card-size);
   }
 
-  @media screen and ( min-width:1024px) and (max-width:4096px) {
+  @media ( min-width:1024px) {
     grid-template-columns: repeat(4, $card-size);
   }
 
