@@ -1,7 +1,9 @@
 .catalog {
   display: grid;
   grid-template-columns: repeat(1, 200px);
+  justify-content: center;
   gap: 48px;
+  padding-bottom: 48px;
 
   @media (min-width: 488px) {
     & {
@@ -18,7 +20,6 @@
   @media (min-width: 1024px) {
     & {
       grid-template-columns: repeat(4, 200px);
-      justify-content: center;
     }
   }
 
@@ -29,8 +30,8 @@
     border: 1px solid #ccc;
     border-radius: 5px;
 
-    &:last-child {
-      margin-bottom: 48px;
-    }
+    // &:last-child {
+    //   margin-bottom: 48px;
+    // }
   }
 }
