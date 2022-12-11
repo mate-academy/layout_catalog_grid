@@ -11,7 +11,7 @@ $widthCard: 200px;
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: minmax($widthCard, 1fr);
+  grid-template-columns: $widthCard;
   justify-content: center;
   gap: 48px;
 
