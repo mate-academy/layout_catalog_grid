@@ -1,6 +1,6 @@
 @mixin responsive($minWidth, $howRepeat) {
   @media (min-width: #{$minWidth}) {
-    grid-template-columns: repeat($howRepeat, minmax(200px, 1fr));
+    grid-template-columns: repeat($howRepeat, 200px);
   }
 }
 
