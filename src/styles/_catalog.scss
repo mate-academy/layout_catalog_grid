@@ -1,6 +1,8 @@
+$widthCard: 200px;
+
 @mixin responsive($minWidth, $howRepeat) {
   @media (min-width: #{$minWidth}) {
-    grid-template-columns: repeat($howRepeat, 200px);
+    grid-template-columns: repeat($howRepeat, $widthCard);
   }
 }
 
@@ -9,7 +11,8 @@
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: minmax(200px, 1fr);
+  grid-template-columns: minmax($widthCard, 1fr);
+  justify-content: center;
   gap: 48px;
 
   @include responsive(488px, 2);
