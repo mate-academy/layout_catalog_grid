@@ -1,10 +1,15 @@
 $widthCard: 200px;
 
-@mixin responsive($minWidth, $howRepeat) {
+@mixin responsive($minWidth) {
   @media (min-width: #{$minWidth}) {
-    grid-template-columns: repeat($howRepeat, $widthCard);
+    @content;
   }
 }
+
+@mixin gridCol($repeats) {
+  grid-template-columns: repeat($repeats, $widthCard);
+}
+
 
 .catalog {
   max-width: 944px;
@@ -15,9 +20,17 @@ $widthCard: 200px;
   justify-content: center;
   gap: 48px;
 
-  @include responsive(488px, 2);
-  @include responsive(768px, 3);
-  @include responsive(1024px, 4);
+  @include responsive(488px) {
+    @include gridCol(2)
+  };
+
+  @include responsive(768px) {
+    @include gridCol(3)
+  };
+
+  @include responsive(1024px) {
+    @include gridCol(4)
+  };
 
   &__card {
     display: flex;
