@@ -1,3 +1,4 @@
+@import "./utils/mixins";
 @import "./utils/variables";
 
 .catalog {
@@ -6,17 +7,9 @@
   justify-content: center;
   grid-template-columns: repeat(4, $column-width);
 
-  @media (max-width: 1023px) {
-    grid-template-columns: repeat(3, $column-width);
-  }
-
-  @media (max-width: 767px) {
-    grid-template-columns: repeat(2, $column-width);
-  }
-
-  @media (max-width: 487px) {
-    grid-template-columns: repeat(1, $column-width);
-  }
+  @include columns(487px, 1, $column-width);
+  @include columns(767px, 2, $column-width);
+  @include columns(1023px, 3, $column-width);
 
   &__card {
     display: flex;
