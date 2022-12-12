@@ -1,22 +1,42 @@
-.catalog {
-  display: flex;
-  flex-wrap: wrap;
+$widthCard: 200px;
 
+@mixin responsive($minWidth) {
+  @media (min-width: #{$minWidth}) {
+    @content;
+  }
+}
+
+@mixin gridCol($repeats) {
+  grid-template-columns: repeat($repeats, $widthCard);
+}
+
+.catalog {
   max-width: 944px;
   margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: $widthCard;
+  justify-content: center;
+  gap: 48px;
+
+  @include responsive(488px) {
+    @include gridCol(2);
+  }
+
+  @include responsive(768px) {
+    @include gridCol(3);
+  }
+
+  @include responsive(1024px) {
+    @include gridCol(4);
+  }
 
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
-  }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
   }
 }
