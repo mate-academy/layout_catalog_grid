@@ -3,7 +3,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     justify-items: center;
-    justify-content: center;
     gap: 48px;
 
     max-width: 944px;
@@ -13,7 +12,7 @@
       grid-template-columns: repeat(1, minmax(200px, 1fr));
     }
   }
-  
+
   &__card {
     display: flex;
     justify-content: center;
