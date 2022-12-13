@@ -1,5 +1,5 @@
-@mixin columns($maxWidth, $columnNumber, $columnWidth) {
-  @media (max-width: $maxWidth) {
+@mixin columns($minWidth, $columnNumber, $columnWidth) {
+  @media (min-width: $minWidth) {
     grid-template-columns: repeat($columnNumber, $columnWidth);
   }
 }

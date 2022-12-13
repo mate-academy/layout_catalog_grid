@@ -7,9 +7,9 @@
   justify-content: center;
   grid-template-columns: repeat(4, $column-width);
 
-  @include columns(487px, 1, $column-width);
-  @include columns(767px, 2, $column-width);
-  @include columns(1023px, 3, $column-width);
+  @include columns(488px, 2, $column-width);
+  @include columns(768px, 3, $column-width);
+  @include columns(1024px, 4, $column-width);
 
   &__card {
     display: flex;
