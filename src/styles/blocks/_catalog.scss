@@ -1,0 +1,19 @@
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, $column-width);
+  gap: 48px;
+  justify-content: center;
+
+  @include grid-columns (1023px, 3, 200px);
+  @include grid-columns (767px, 2, 200px);
+  @include grid-columns (487px, 1, 200px);
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
