@@ -1,0 +1,3 @@
+@function getCatalogWidth ($width, $gap, $cards-per-row) {
+  @return $width * $cards-per-row + $gap * ($cards-per-row - 1);
+}
