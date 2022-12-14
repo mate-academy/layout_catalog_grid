@@ -5,7 +5,6 @@
   display: grid;
   gap: 48px;
   justify-content: center;
-  grid-template-columns: repeat(4, $column-width);
 
   @include columns(488px, 2, $column-width);
   @include columns(768px, 3, $column-width);
