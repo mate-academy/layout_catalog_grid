@@ -1,0 +1,7 @@
+@import "../utils/variables";
+
+@mixin media-grid-columns ($min-width, $columns) {
+  @media (min-width: $min-width) {
+    grid-template-columns: repeat($columns, $card-width);
+  }
+}
