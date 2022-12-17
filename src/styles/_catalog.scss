@@ -3,9 +3,9 @@
   justify-content: center;
   gap: 48px;
 
-  @include media (2,$cars-width,$width-s);
-  @include media (3,$cars-width,$width-m);
-  @include media (4,$cars-width,$width-l);
+  @include media (2,$cards-width,$width-s);
+  @include media (3,$cards-width,$width-m);
+  @include media (4,$cards-width,$width-l);
 
   &__card {
     display: flex;
