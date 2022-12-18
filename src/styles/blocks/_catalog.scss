@@ -4,9 +4,9 @@
   gap: 48px;
   justify-content: center;
 
-  @include grid-columns (1023px, 3, 200px);
-  @include grid-columns (767px, 2, 200px);
-  @include grid-columns (487px, 1, 200px);
+  @include grid-columns (1023px, 3);
+  @include grid-columns (767px, 2);
+  @include grid-columns (487px, 1);
 
   &__card {
     display: flex;
