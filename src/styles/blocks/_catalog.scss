@@ -1,7 +1,6 @@
 .catalog {
   display: grid;
   grid-template-columns: $card-width;
-  grid-auto-flow: row;
   grid-gap: 48px;
   justify-content: center;
 
