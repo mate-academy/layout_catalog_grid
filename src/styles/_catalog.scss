@@ -19,28 +19,18 @@
   &__card:not(:nth-child(4n)) {
     margin-right: 48px;
   }
-}
 
-@media (min-width: 1024px) {
-  .catalog {
-    grid-template-columns: repeat(4, 200px);
-  }
-}
+  grid-template-columns: repeat(1, 200px);
 
-@media (max-width: 1023px) {
-  .catalog {
-    grid-template-columns: repeat(3, 200px);
-  }
-}
-
-@media (max-width: 767px) {
-  .catalog {
+  @media (min-width: 486px) {
     grid-template-columns: repeat(2, 200px);
   }
-}
 
-@media (max-width: 487px) {
-  .catalog {
-    grid-template-columns: repeat(1, 200px);
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 200px);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 200px);
   }
 }
