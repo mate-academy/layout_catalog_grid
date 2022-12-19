@@ -3,28 +3,26 @@
   justify-content: center;
   grid-gap: 48px;
   flex-wrap: wrap;
-
-  @media (min-width: 488px) {
+  @include small {
     & {
       grid-template-columns: repeat(2, auto);
     }
-  }
-
-  @media (min-width: 768px) {
+  };
+  @include medium {
     & {
       grid-template-columns: repeat(3, auto);
     }
-  }
-
-  @media (min-width: 1024px) {
+  };
+  @include large {
     & {
       grid-template-columns: repeat(4, auto);
     }
-  }
+  };
 
   &__card {
-    display: grid;
-    place-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 200px;
     height: 300px;
     border: 1px solid #ccc;
