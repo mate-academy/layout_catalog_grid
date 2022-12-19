@@ -11,6 +11,7 @@
   @include onTablet() {
     grid-template-columns: repeat(2, $cardWidth);
   }
+
   @include onPhone() {
     grid-template-columns: $cardWidth;
   }
