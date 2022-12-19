@@ -1,0 +1,31 @@
+.catalog {
+  display: grid;
+  justify-content: center;
+  grid-gap: 48px;
+  flex-wrap: wrap;
+  @include small {
+    & {
+      grid-template-columns: repeat(2, auto);
+    }
+  };
+  @include medium {
+    & {
+      grid-template-columns: repeat(3, auto);
+    }
+  };
+  @include large {
+    & {
+      grid-template-columns: repeat(4, auto);
+    }
+  };
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
