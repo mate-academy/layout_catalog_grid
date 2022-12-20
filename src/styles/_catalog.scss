@@ -9,22 +9,22 @@
   width: getCatalogWidth($card-width, $catalog-gap, 1);
 
   @media (min-width: 488px) {
-      grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
-      width: getCatalogWidth($card-width, $catalog-gap, 2);
-    }
+    width: getCatalogWidth($card-width, $catalog-gap, 2);
+  }
 
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(3, 1fr);
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
 
-      width: getCatalogWidth($card-width, $catalog-gap, 3);
-    }
+    width: getCatalogWidth($card-width, $catalog-gap, 3);
+  }
 
-    @media (min-width: 1024px) {
-      grid-template-columns: repeat(4, 1fr);
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
 
-      width: getCatalogWidth($card-width, $catalog-gap, 4);
-    }
+    width: getCatalogWidth($card-width, $catalog-gap, 4);
+  }
 
   &__card {
     display: flex;
