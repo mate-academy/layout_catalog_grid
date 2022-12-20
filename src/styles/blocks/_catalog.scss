@@ -3,7 +3,6 @@
   grid-template-columns: 1fr;
   justify-items: center;
   gap: 48px;
-  max-width: 944px;
   margin: 0 auto;
 
   &__card {
@@ -16,13 +15,9 @@
     border-radius: 5px;
   }
 
-  @media (min-width: 488px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 1fr);
-  }
+  @include media (488px, 2);
+
+  @include media (768px, 3);
+  
+  @include media (1024px, 4);
 }
