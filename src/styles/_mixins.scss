@@ -1,0 +1,7 @@
+@mixin media-column ($width, $columns) {
+  @media (min-width: $width) {
+    .catalog {
+      grid-template-columns: repeat($columns, 1fr);
+    }
+  }
+}
