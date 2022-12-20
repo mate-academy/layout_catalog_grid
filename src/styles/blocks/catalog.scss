@@ -1,20 +1,14 @@
 .catalog {
   display: grid;
   place-content: center;
-  grid-template-columns: $colum-width;
+  grid-template-columns: $card-width;
   gap: 48px;
 
-  @media (min-width: 488px) {
-    grid-template-columns: repeat(2, $colum-width);
-  }
+  @include media(488px, 2);
 
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, $colum-width);
-  }
- 
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, $colum-width);
-  }
+  @include media(768px, 3);
+
+  @include media(1024px, 4);
 
   &__card {
     display: grid;
