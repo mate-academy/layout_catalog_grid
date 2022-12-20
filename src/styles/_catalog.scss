@@ -14,19 +14,18 @@
     margin-bottom: 48px;
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
-  }
-
   @media(min-width: 488px) {
-    @include media(2)
+    @include media(2);
+
   }
 
   @media(min-width: 768px) {
-    @include media(3)
+    @include media(3);
+
   }
 
   @media(min-width: 1024px) {
-    @include media(4)
+    @include media(4);
+
   }
 }
