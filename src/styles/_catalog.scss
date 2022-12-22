@@ -1,7 +1,7 @@
 .catalog {
   display: grid;
   justify-content: center;
-  gap: 48px;
+  gap: $gapSize;
 
   &__card {
     display: flex;
@@ -11,21 +11,20 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
   }
 
   @media(min-width: 488px) {
-    @include media(2);
+    @include media(2, $cardSize);
 
   }
 
   @media(min-width: 768px) {
-    @include media(3);
+    @include media(3, $cardSize);
 
   }
 
   @media(min-width: 1024px) {
-    @include media(4);
+    @include media(4, $cardSize);
 
   }
 }

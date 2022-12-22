@@ -1,5 +1,5 @@
-@mixin media($count) {
+@mixin media($count, $cardSize) {
   & {
-    grid-template-columns: repeat(#{$count}, 200px) ;
+    grid-template-columns: repeat(#{$count}, #{$cardSize}) ;
   }
 }
