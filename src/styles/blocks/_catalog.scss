@@ -1,7 +1,6 @@
 .catalog {
   display: grid;
   grid-template: 300px / repeat(4, 200px);
-  flex-wrap: wrap;
   gap: 48px;
   justify-content: center;
   place-items: center;
@@ -9,9 +8,9 @@
   padding-bottom: 48px;
   margin: 0 auto;
 
-  @include media(1024px, 3);
-  @include media(768px, 2);
-  @include media(488px, 1);
+  @include media(488px, 2);
+  @include media(768px, 3);
+  @include media(1024px, 4);
 
   &__card {
     display: flex;

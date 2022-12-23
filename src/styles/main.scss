@@ -6,12 +6,8 @@ body {
   margin: 0;
 }
 
-* {
-  box-sizing: border-box;
-}
+@import "./utils/variables";
+@import "./utils/mixins";
 
-@import "_variables.scss";
-@import "_mixins.scss";
-
-@import "_header.scss";
-@import "_catalog.scss";
+@import "./blocks/header";
+@import "./blocks/catalog";
