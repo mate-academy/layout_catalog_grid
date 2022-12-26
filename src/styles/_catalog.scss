@@ -1,9 +1,11 @@
 $transition-duration: 300ms;
+$card-width: 200px;
+$card-height: 300px;
 
 .catalog {
   display: grid;
-  grid-template-columns: repeat(auto-fill, 200px);
-  grid-template-rows: repeat(auto-fill, minmax(200px, 4fr));
+  grid-template-columns: repeat(auto-fill, $card-width);
+  grid-template-rows: repeat(auto-fill, minmax($card-width, 4fr));
   gap: 48px;
   max-width: 944px;
   justify-content: center;
@@ -11,29 +13,29 @@ $transition-duration: 300ms;
 
   @media (min-width: 487px) {
     & {
-      grid-template-columns: repeat(1, minmax(200px, 3fr));
-      grid-template-rows: repeat(auto-fill, minmax(200px, auto));
+      grid-template-columns: repeat(1, minmax($card-width, 3fr));
+      grid-template-rows: repeat(auto-fill, minmax($card-width, auto));
     }
   }
 
   @media (min-width: 488px) {
     & {
-      grid-template-columns: repeat(2, minmax(200px, 3fr));
-      grid-template-rows: repeat(auto-fill, minmax(200px, auto));
+      grid-template-columns: repeat(2, minmax($card-width, 3fr));
+      grid-template-rows: repeat(auto-fill, minmax($card-width, auto));
     }
   }
 
   @media (min-width: 768px) {
     & {
-      grid-template-columns: repeat(3, minmax(200px, 3fr));
-      grid-template-rows: repeat(auto-fill, minmax(200px, auto));
+      grid-template-columns: repeat(3, minmax($card-width, 3fr));
+      grid-template-rows: repeat(auto-fill, minmax($card-width, auto));
     }
   }
 
   @media (min-width: 1024px) {
     & {
-      grid-template-columns: repeat(4, minmax(200px, 3fr));
-      grid-template-rows: repeat(auto-fill, minmax(200px, auto));
+      grid-template-columns: repeat(4, minmax($card-width, 3fr));
+      grid-template-rows: repeat(auto-fill, minmax($card-width, auto));
     }
   }
 
@@ -42,8 +44,8 @@ $transition-duration: 300ms;
     justify-items: center;
     align-items: center;
 
-    width: 200px;
-    height: 300px;
+    width: $card-width;
+    height: $card-height;
 
     box-sizing: border-box;
     border: 1px solid #ccc;
