@@ -1,3 +1,5 @@
+$card-width: 200px;
+
 @mixin onWidth1024px {
   @media (max-width: 1024px) {
     @content;
@@ -18,7 +20,7 @@
 
 .catalog {
   display: grid;
-  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(4, $card-width);
   justify-content: center;
   justify-items: center;
   gap: 48px;
@@ -27,21 +29,21 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: $card-width;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
 
   @include onWidth1024px {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, $card-width);
   }
 
   @include onWidth768px {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, $card-width);
   }
 
   @include onWidth487px {
-    grid-template-columns: 1fr;
+    grid-template-columns: $card-width;
   }
 }
