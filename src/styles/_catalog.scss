@@ -16,13 +16,6 @@
 
 }
 
-$card-widtch: 200px;
-$screen-size:
-  1 1px,
-  2 488px,
-  3 768px,
-  4 1024px;
-
 @each $columns, $width in $screen-size {
   @media (min-width: $width) {
     .catalog {
