@@ -1,6 +1,12 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  justify-content: center;
+  gap: 48px;
+  grid-template-columns: $card-size;
+
+  @include gridColumns (488px, 2);
+  @include gridColumns (768px, 3);
+  @include gridColumns (1024px, 4);
 
   max-width: 944px;
   margin: 0 auto;
@@ -9,7 +15,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: $card-size;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
