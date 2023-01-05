@@ -1,17 +1,6 @@
-html {
-  font-family: Roboto, sans-serif;
-}
+@import "./utils/reset";
+@import "./utils/variables";
+@import "./utils/mixins";
 
-body {
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-$card-width: 200px;
-$card-height: 300px;
-
-@import "_header.scss";
-@import "_catalog.scss";
+@import "./blocks/header";
+@import "./blocks/catalog";
