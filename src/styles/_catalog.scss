@@ -9,7 +9,7 @@ $card-width: 200px;
   max-width: 944px;
   margin: 0 auto;
 
-  @media (min-width: 489px) {
+  @media (min-width: 488px) {
     & {
       grid-template-columns: repeat(2, minmax($card-width, 1fr));
     }
@@ -33,6 +33,7 @@ $card-width: 200px;
     align-items: center;
     box-sizing: border-box;
     height: 300px;
+    width: $card-width;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
