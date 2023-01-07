@@ -1,3 +1,5 @@
+@import "./utils/media.scss";
+
 .catalog {
   display: grid;
   flex-wrap: wrap;
@@ -13,23 +15,5 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-}
-
-@media (min-width: 488px) {
-  .catalog {
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
-  }
-}
-
-@media (min-width: 768px) {
-  .catalog {
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
-  }
-}
-
-@media (min-width: 1024px) {
-  .catalog {
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
   }
 }
