@@ -1,11 +1,5 @@
 html {
   font-family: Roboto, sans-serif;
-
-  @media (max-width: 488px) {
-    & {
-      grid-template-columns: 200px;
-    }
-  }
 }
 
 body {
