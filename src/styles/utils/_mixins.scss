@@ -1,0 +1,5 @@
+@mixin screen-size ($min-width, $count, $size) {
+  @media (min-width: $min-width) {
+    grid-template-columns: repeat($count, $size);
+  }
+}
