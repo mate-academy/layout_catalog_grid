@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 html {
   font-family: Roboto, sans-serif;
 }
@@ -6,9 +10,34 @@ body {
   margin: 0;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 @import "_header.scss";
-@import "_catalog.scss";
+
+.catalog {
+  display: grid;
+  grid-template-columns: 200px;
+  grid-auto-rows: min-content;
+  justify-content: center;
+  gap: 48px;
+
+  &__card {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    width: 198px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  @media (min-width: 488px) {
+    grid-template-columns: repeat(2, 200px);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, 200px);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 200px);
+  }
+}
