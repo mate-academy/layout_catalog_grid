@@ -1,22 +1,33 @@
-.catalog {
-  display: flex;
-  flex-wrap: wrap;
+$layout-breakpoint-one-col: 487px;
+$layout-breakpoint-two-col: 767px;
+$layout-breakpoint-three-col: 1023px;
+$card-width: 200px;
 
-  max-width: 944px;
-  margin: 0 auto;
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, $card-width);
+  gap: 48px;
+  justify-content: center;
 
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: $card-width;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
+  @media (max-width: $layout-breakpoint-three-col) {
+    grid-template-columns: repeat(3, $card-width);
+  }
+
+  @media (max-width: $layout-breakpoint-two-col) {
+    grid-template-columns: repeat(2, $card-width);
+  }
+
+  @media (max-width: $layout-breakpoint-one-col) {
+    grid-template-columns: repeat(1, $card-width);
   }
 }
