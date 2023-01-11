@@ -2,17 +2,15 @@
 @import "_variables.scss";
 
 .catalog {
-  display: grid;
-  grid-template-columns: $card-width  $card-width  $card-width  $card-width;
-  grid-template-rows: repeat(2, 400px);
-  gap: 48px;
+  display: flex;
+  align-items: center;
   flex-wrap: wrap;
   width: $card-container-width;
   margin: 0 auto;
   padding: 50px 0 0;
   perspective: 200px;
 
-  .catalog__card {
+  &__card {
     box-sizing: border-box;
     width: $card-width;
     height: 400px;
@@ -30,8 +28,8 @@
   
   &__img {
     width: 160px;
+    height: 134px;
     padding: 32px 19px 36px;
-    margin-left: 16px;
   }
   
   &_describe {
@@ -119,28 +117,4 @@
 
 .card:nth-last-child(-n + 4) {
   margin-top: 0;
-}
-
-@media (max-width: 488px) {
-  .catalog {
-    grid-template-columns: $card-width;
-  }
-}
-
-@media (min-width: 488px) {
-  .catalog {
-    grid-template-columns: $card-width $card-width;
-  }
-}
-
-@media (min-width:768px) {
-  .catalog {
-    grid-template-columns: $card-width $card-width $card-width;
-  }
-}
-
-@media (min-width: 1024px) {
-  .catalog {
-    grid-template-columns: $card-width $card-width $card-width $card-width;
-  }
 }
