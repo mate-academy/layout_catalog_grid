@@ -1,7 +1,6 @@
 .catalog {
   display: grid;
-  grid-template-columns: repeat(4, 200px);
-  grid-auto-rows: max-content;
+  grid-template-columns: repeat(4, 200px)
   gap: 48px;
   place-content: center;
   
