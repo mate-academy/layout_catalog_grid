@@ -4,6 +4,9 @@
 
 # Node
 node_modules
+.linthtmlrc.json
+package-lock.json
+package.json
 
 # MacOS
 .DS_Store
