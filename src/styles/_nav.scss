@@ -2,17 +2,15 @@
 @import "_variables.scss";
 
 .catalog {
-  display: grid;
-  grid-template-columns: $card-width  $card-width  $card-width  $card-width;
-  grid-template-rows: repeat(2, 400px);
-  gap: 48px;
+  display: flex;
+  align-items: center;
   flex-wrap: wrap;
   width: $card-container-width;
   margin: 0 auto;
   padding: 50px 0 0;
   perspective: 200px;
 
-  .catalog__card {
+  &__card {
     box-sizing: border-box;
     width: $card-width;
     height: 400px;
@@ -24,10 +22,14 @@
     transition: transform $transform-time;
   }
 
+  &__card:hover {
+    transform: scale(1.2);
+  }
+  
   &__img {
     width: 160px;
+    height: 134px;
     padding: 32px 19px 36px;
-    margin-left: 16px;
   }
   
   &_describe {
@@ -38,6 +40,10 @@
     padding: 0 16px 4px;
     margin: 0;
     transition: color 300ms;
+  }
+  
+  .catalog__card:hover > .catalog_describe:nth-child(n) {
+    color: #34568b;
   }
 
   &_product-code {
@@ -53,7 +59,7 @@
     padding: 0 16px;
     margin-bottom: 16px;
     
-    &-label {
+    &__text {
       width: 31px;
       font-size: 12px;
       font-weight: 400;
@@ -62,7 +68,7 @@
       margin: 0;
     }
     
-    &-cost {
+    &__number {
       font-style: normal;
       font-size: 16px;
       font-weight: 700;
@@ -87,19 +93,18 @@
     padding: 12px;
     margin-left: 16px;
     margin-bottom: 2px;
-    
-    &:hover {
-      color: $button-color;
-      width: 166px;
-      height: 40px;
-      font-weight: 700;
-      font-size: 14px;
-      background-color: $background-color;
-      border-radius: 5px;
-      border: 1px solid $button-color;
-    }
   }
   
+  &_button:hover {
+    color: $button-color;
+    width: 166px;
+    height: 40px;
+    font-weight: 700;
+    font-size: 14px;
+    background-color: $background-color;
+    border-radius: 5px;
+    border: 1px solid $button-color;
+  }
 }
 
 .card:nth-child(4) {
@@ -112,28 +117,4 @@
 
 .card:nth-last-child(-n + 4) {
   margin-top: 0;
-}
-
-@media (max-width: 488px) {
-  .catalog {
-    grid-template-columns: $card-width;
-  }
-}
-
-@media (min-width: 488px) {
-  .catalog {
-    grid-template-columns: $card-width $card-width;
-  }
-}
-
-@media (min-width:768px) {
-  .catalog {
-    grid-template-columns: $card-width $card-width $card-width;
-  }
-}
-
-@media (min-width: 1024px) {
-  .catalog {
-    grid-template-columns: $card-width $card-width $card-width $card-width;
-  }
 }
