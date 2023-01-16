@@ -1,6 +1,6 @@
 .catalog {
   display: grid;
-  gap: 48px;
+  gap: $grid-gap;
   justify-content: center;
 
   @media screen and (min-width:488px) {
@@ -27,9 +27,5 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 48px;
-  }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
   }
 }
