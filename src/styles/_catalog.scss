@@ -1,7 +1,7 @@
 .catalog {
   display: grid;
   max-width: 944px;
-  margin: 0 auto;
+  margin: 50px auto;
   gap: 48px;
   grid-template-columns: repeat(4, $card-width);
 
