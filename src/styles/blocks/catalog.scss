@@ -1,0 +1,16 @@
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, $cardWidth);
+  gap: 48px;
+  justify-content: center;
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $cardWidth;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
