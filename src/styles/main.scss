@@ -1,5 +1,10 @@
+$black: #060b35;
+$grey: #616070;
+$blue: #00acdc;
+
 html {
   font-family: Roboto, sans-serif;
+
 }
 
 body {
@@ -7,8 +12,11 @@ body {
 }
 
 * {
+  margin: 0;
   box-sizing: border-box;
 }
 
 @import "_header.scss";
 @import "_catalog.scss";
+@import "_block-stars.scss";
+@import "_product-card.scss";
