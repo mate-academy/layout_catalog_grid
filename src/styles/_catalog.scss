@@ -26,12 +26,14 @@
   @media (min-width: 768px) and (max-width: 1023px) {
     & {
       grid-template-columns: repeat(3, 1fr);
+      max-width: 696px;
     }
   }
 
   @media (min-width: 488px) and (max-width: 767px) {
     & {
       grid-template-columns: 1fr 1fr;
+      max-width: 448px;
     }
   }
 }
