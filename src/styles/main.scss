@@ -11,34 +11,4 @@ body {
 }
 
 @import "_header.scss";
-// @import "_catalog.scss";
-
-.catalog {
-  display: grid;
-  grid-auto-flow: row;
-  grid-template: 300px / 200px;
-  grid-auto-rows: 300px;
-  justify-content: center;
-  gap: 48px;
-
-  @media(min-width: 488px) {
-    grid-template: 300px / repeat(2, 200px);
-  }
-
-  @media(min-width: 768px) {
-    grid-template: 300px / repeat(3, 200px);
-  }
-
-  @media(min-width:1024px) {
-    grid-template: 300px / repeat(4, 200px);
-  }
-
-  &__card {
-    display: grid;
-    place-items: center;
-    width: 200px;
-    height: 300px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-}
+@import "_catalog.scss";
