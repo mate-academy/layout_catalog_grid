@@ -1,0 +1,19 @@
+.catalog {
+  display: grid;
+  justify-content: $content-center;
+  gap: 48px;
+
+  @include min-width-488;
+  @include min-width-768;
+  @include min-width-1024;
+
+  &__card {
+    display: flex;
+    justify-content: $content-center;
+    align-items: $content-center;
+    width: $width;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
