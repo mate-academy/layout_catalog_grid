@@ -12,3 +12,10 @@ body {
 
 @import "_header.scss";
 @import "_catalog.scss";
+
+.catalog {
+  display: grid;
+  flex-wrap: wrap;
+  grid-template: repeat(auto-fill, 200px);
+
+}
