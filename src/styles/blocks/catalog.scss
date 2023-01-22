@@ -1,0 +1,37 @@
+.catalog {
+  display: grid;
+  justify-content: center;
+  gap: 48px;
+
+  max-width: 944px;
+
+  @media (min-width: 1024px) {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  @media (max-width: 1024px) {
+    grid-template-columns: auto auto auto;
+  }
+
+  @media (max-width: 768px) {
+    grid-template-columns: auto auto;
+  }
+
+  @media (max-width: 488px) {
+    grid-template-columns: auto;
+  }
+
+  &--position {
+    margin: 0 auto;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $card-width;
+    height: $card-height;
+    border: 1px solid $color-border;
+    border-radius: 5px;
+  }
+}
