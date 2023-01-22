@@ -1,11 +1,11 @@
 .catalog {
+  @include media;
+  
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 48px;
   max-width: 944px;
   margin: 0 auto;
-  
-  @include media;
   
   &__card {
     display: grid;
