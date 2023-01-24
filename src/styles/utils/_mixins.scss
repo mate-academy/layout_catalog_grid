@@ -1,0 +1,10 @@
+@mixin positioning {
+  display: grid;
+  justify-content: center;
+}
+
+@mixin mediaQueries ($columns, $brake-point) {
+  @media screen and (min-width: $brake-point) {
+    grid-template-columns: repeat($columns, $card-width);
+  }
+}
