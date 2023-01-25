@@ -45,7 +45,7 @@
 >**WRONG WAY**
 >```scss
 >&__buy-link {
->  display: flex;
+>  display: grid;
 >  margin-top: 20px;
 >}
 >
@@ -56,7 +56,7 @@
 >**RIGHT WAY**
 >```scss
 >&__buy-link {
->  display: flex;
+>  display: grid;
 >  margin-top: 20px;
 >
 >  &:hover {
@@ -97,10 +97,10 @@
 >```scss
 >.card__rating {
 >  height: 15px;
->  display: flex;
+>  display: grid;
 >
 >  .card__stars {
->    display: flex;
+>    display: grid;
 >
 >    .card__star {
 >      height: 15px;
