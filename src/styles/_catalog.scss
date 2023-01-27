@@ -1,11 +1,16 @@
 .catalog {
-
-  @include media;
-  
   display: grid;
-  gap: 48px;
-  max-width: 944px;
-  margin: auto;
+  justify-content: center;
+  align-items: center;
+  
+  &__grid {
+    @include media;
+  
+    display: grid;
+    gap: 48px;
+    max-width: 944px;
+    margin: auto;
+  }
   
   &__card {
     display: grid;
