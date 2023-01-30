@@ -1,9 +1,9 @@
 .catalog {
   display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
   justify-content: center;
   justify-items: center;
   gap: 48px;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   padding: 20px;
 
   &__card {
@@ -20,18 +20,18 @@
 
 @media (min-width: 488px) and (max-width: 767px) {
   .catalog {
-    grid-template-columns: repeat(2, minmax(200px, 1fr));
+    grid-template-columns: repeat(2, 200px);
   }
 }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .catalog {
-    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 200px);
   }
 }
 
 @media (min-width: 1024px) {
   .catalog {
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-columns: repeat(4, 200px);
   }
 }
