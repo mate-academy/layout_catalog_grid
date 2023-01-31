@@ -11,7 +11,7 @@ $card-width: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: $card-width;
+
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -26,6 +26,6 @@ $card-width: 200px;
   }
 
   @media (max-width:487px) {
-    grid-template-columns: repeat(1, $card-width);
+    grid-template-columns: $card-width;
   }
 }
