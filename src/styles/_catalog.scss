@@ -1,12 +1,24 @@
 .catalog {
   display: grid;
-  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(4, $height-card);
   flex-wrap: wrap;
   justify-content: center;
   gap: 48px;
 
   max-width: 944px;
   margin: 0 auto;
+
+  @media (max-width: 1023px) {
+      grid-template-columns: repeat(3, $height-card);
+  }
+
+  @media (max-width: 767px) {
+      grid-template-columns: repeat(2, $height-card);
+  }
+
+  @media (max-width: 487px) {
+      grid-template-columns: $height-card;
+  }
 
   &__card {
     display: flex;
@@ -17,22 +29,3 @@
     border-radius: 5px;
   }
 }
-
-@media (max-width: 1023px) {
-  .catalog {
-    grid-template-columns: repeat(3, 200px);
-  }
-}
-
-@media (max-width: 767px) {
-  .catalog {
-    grid-template-columns: repeat(2, 200px);
-  }
-}
-
-@media (max-width: 487px) {
-  .catalog {
-    grid-template-columns: repeat(1, 200px);
-  }
-}
-
