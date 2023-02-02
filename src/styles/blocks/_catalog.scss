@@ -3,8 +3,7 @@
     display: grid;
     grid-template-columns: repeat(4, $column-width);
     justify-content: center;
-    row-gap: $cards-gap;
-    column-gap: $cards-gap;
+    gap: $cards-gap;
 
     max-width: 944px;
     margin: 0 auto;
