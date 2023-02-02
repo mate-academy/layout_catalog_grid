@@ -1,0 +1,27 @@
+.catalog {
+  display: grid;
+  grid-template-columns: $card-width;
+  justify-content: center;
+  gap: $card-gap;
+
+  @include small-breakpoint {
+    grid-template-columns: repeat(2, $card-width);
+  }
+
+  @include medium-breakpoint {
+    grid-template-columns: repeat(3, $card-width);
+  }
+
+  @include large-breakpoint {
+    grid-template-columns: repeat(4, $card-width);
+  }
+
+  &__product-card {
+    transition: transform $transition-duration, color $transition-duration;
+
+    &:hover {
+      color: #34568b;
+      transform: scale(1.07);
+    }
+  }
+}
