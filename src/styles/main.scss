@@ -4,11 +4,14 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
 }
 
 * {
   box-sizing: border-box;
 }
 
-@import "_header.scss";
-@import "_catalog.scss";
+@import "utils/variables";
+
+@import "blocks/header";
+@import "blocks/catalog";
