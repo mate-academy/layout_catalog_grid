@@ -13,15 +13,15 @@
     border-radius: 5px;
   }
 
-  @media (min-width:768px) and (max-width:1023.9px) {
+  @media (max-width:1023px) {
     grid-template-columns: repeat(3, $-width);
   }
 
-  @media (min-width:488px) and (max-width:767.9px) {
+  @media (max-width:767px) {
     grid-template-columns: repeat(2, $-width);
   }
 
-  @media (max-width:487.9px) {
+  @media (max-width:487px) {
     grid-template-columns: $-width;
   }
 }
