@@ -1,4 +1,4 @@
-
-@import "_reset.scss";
-@import "_header.scss";
-@import "_catalog.scss";
+@import "./utils/variables";
+@import "./utils/reset";
+@import "./blocks/catalog";
+@import "./blocks/header";
