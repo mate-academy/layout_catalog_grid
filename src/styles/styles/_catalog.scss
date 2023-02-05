@@ -1,8 +1,11 @@
 .catalog {
   display: grid;
+  margin: auto;
   justify-content: center;
+  align-items: center;
   grid-template-columns: repeat(auto-fill, 200px);
   gap: 48px;
+  max-width: 1024px;
 
   &__card {
     display: flex;
@@ -13,5 +16,4 @@
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-
 }
