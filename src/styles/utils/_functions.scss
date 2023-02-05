@@ -1,0 +1,4 @@
+@function catalogWidth ($cardWidth, $gap, $cardsInRow) {
+  @return ($cardsInRow * $cardWidth + ($cardsInRow - 1)
+  * $gap);
+}
