@@ -1,0 +1,5 @@
+@mixin mediaStartGrid ($brakepoint, $columns) {
+  @media (max-width: $brakepoint) {
+    grid-template-columns: repeat($columns, $width-card);
+  }
+}
