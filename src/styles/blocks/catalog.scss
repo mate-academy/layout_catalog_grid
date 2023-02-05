@@ -1,17 +1,12 @@
 .catalog {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(1, 200px);
+  grid-template-columns: repeat(1, $cardWidth);
   gap: 48px;
-
-  $pageStructure:
-    488px 2,
-    768px 3,
-    1024px 4;
 
   @each $width, $column in $pageStructure {
     @media (min-width: $width) {
-      grid-template-columns: repeat($column, 200px);
+      grid-template-columns: repeat($column, $cardWidth);
     }
   }
 
@@ -19,10 +14,9 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: $cardWidth;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
   }
 }
