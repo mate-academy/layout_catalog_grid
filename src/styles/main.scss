@@ -12,3 +12,23 @@ body {
 
 @import "_header.scss";
 @import "_catalog.scss";
+
+$columnWidth: 200px;
+
+.catalog {
+  display: grid;
+  gap: 48px;
+  justify-content: center;
+
+  $medias:
+    '0' repeat(1, $columnWidth),
+    '488px' repeat(2, $columnWidth),
+    '768px' repeat(3, $columnWidth),
+    '1024px' repeat(4, $columnWidth);
+
+  @each $pixels, $columns in $medias {
+    @media (min-width: $pixels) {
+      grid-template-columns: $columns;
+    }
+  }
+}
