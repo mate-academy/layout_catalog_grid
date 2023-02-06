@@ -11,7 +11,7 @@
     border-radius: 5px;
   }
 
-  @include mediaQueries(2, 488px);
-  @include mediaQueries(3, 768px);
-  @include mediaQueries(4, 1024px);
+  @include columnTemplates(2, 488px);
+  @include columnTemplates(3, 768px);
+  @include columnTemplates(4, 1024px);
 }
