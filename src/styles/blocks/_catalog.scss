@@ -4,6 +4,18 @@
   grid-template-columns: repeat(4, $-width);
   gap: 48px;
 
+  @include up-to-1024px {
+    grid-template-columns: repeat(3, $-width);
+  }
+
+  @include up-to-768px {
+    grid-template-columns: repeat(2, $-width);
+  }
+
+  @include up-to-488px {
+    grid-template-columns: $-width;
+  }
+
   &__card {
     display: flex;
     justify-content: center;
@@ -11,17 +23,5 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-  }
-
-  @media (max-width:1023px) {
-    grid-template-columns: repeat(3, $-width);
-  }
-
-  @media (max-width:767px) {
-    grid-template-columns: repeat(2, $-width);
-  }
-
-  @media (max-width:487px) {
-    grid-template-columns: $-width;
   }
 }
