@@ -1,0 +1,3 @@
+@mixin grid-template-columns ($repeatCount) {
+  grid-template-columns: repeat($repeatCount, $card-width);
+}
