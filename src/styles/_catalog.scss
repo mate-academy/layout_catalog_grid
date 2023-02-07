@@ -1,7 +1,6 @@
 .catalog {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(auto-fill, 200px);
   gap: 48px;
 
   @media (min-width: 1024px) {
