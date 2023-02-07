@@ -11,6 +11,7 @@ body {
 }
 
 @import "./utils/variables";
+@import "./utils/mixins";
 
 @import "./blocks/header";
 @import "./blocks/catalog";

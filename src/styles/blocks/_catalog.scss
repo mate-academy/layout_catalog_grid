@@ -5,18 +5,17 @@
     justify-content: center;
     gap: $cards-gap;
 
-    max-width: 944px;
     margin: 0 auto;
 
-    @media (max-width: 1024px) {
+    @include onLaptop {
       grid-template-columns: repeat(3, $column-width);
     }
 
-    @media (max-width: 768px) {
+    @include onTablet {
       grid-template-columns: repeat(2, $column-width);
     }
 
-    @media (max-width: 488px) {
+    @include onMobile {
       grid-template-columns: $column-width;
     }
   }
@@ -25,7 +24,6 @@
     display: grid;
     justify-content: center;
     align-items: center;
-    width: 200px;
     height: 300px;
 
     border: 1px solid #ccc;
