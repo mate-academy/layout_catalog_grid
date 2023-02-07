@@ -14,7 +14,7 @@ body {
 
 .catalog__cards {
   display: grid;
-  grid-template-columns: 200px 200px 200px 200px;
+  grid-template-columns: repeat(4, 200px);
   column-gap: 48px;
   row-gap: 47px;
   justify-content: center;
@@ -26,13 +26,13 @@ body {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .catalog__cards {
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: repeat(3, 200px);
   }
 }
 
 @media (min-width: 488px) and (max-width: 767px) {
   .catalog__cards {
-    grid-template-columns: 200px 200px;
+    grid-template-columns: repeat(2, 200px);
   }
 }
 
