@@ -1,14 +1,9 @@
 .catalog {
   display: grid;
   gap: $gap;
-  max-width: catalogWidth($cardWidth,
-  $gap, $cardsInRow);
+  grid-template-columns: $cardWidth;
   justify-content: center;
   margin: 0 auto;
-
-  @media (max-width: 488px) {
-    grid-template-columns: $cardWidth;
-  }
 
   @media (min-width: 488px) {
     grid-template-columns: repeat(2, $cardWidth);
