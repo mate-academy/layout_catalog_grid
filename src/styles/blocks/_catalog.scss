@@ -1,25 +1,25 @@
 .catalog {
   display: grid;
-  grid-template-columns: repeat(1, minmax(200px,1fr));
+  grid-template-columns: repeat(1, minmax($size-card,1fr));
   gap: 48px;
 
   @media (min-width:488px) and (max-width:767px) {
-    grid-template-columns: repeat(2, minmax(200px,1fr));
+    grid-template-columns: repeat(2, minmax($size-card,1fr));
   }
 
   @media (min-width:768px) and (max-width:1023px) {
-    grid-template-columns: repeat(3, minmax(200px,1fr));
+    grid-template-columns: repeat(3, minmax($size-card,1fr));
   }
 
   @media (min-width:1024px) {
-    grid-template-columns: repeat(4, minmax(200px,1fr));
+    grid-template-columns: repeat(4, minmax($size-card,1fr));
   }
 
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: $size-card;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
