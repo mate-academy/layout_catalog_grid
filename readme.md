@@ -1,6 +1,7 @@
 # Frontend practice with catalog page using grid
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://<your_account>.github.io/layout_catalog_grid/)
+- [DEMO LINK](https://Ambulence
+.github.io/layout_catalog_grid/)
 
 > Follow [this instructions](https://github.com/mate-academy/layout_task-guideline#how-to-solve-the-layout-tasks-on-github)
 
@@ -22,7 +23,7 @@ Implement layout using grid layout
 - write styles in `src/styles/main.scss`
 - use SCSS in this task
 - pay attention to the responsive
-- card's width is `200px` including borders
+- card's width is `$card-width` including borders
 
 ## Common mistakes
 - Do not use tabs. Use 2 spaces for indentation.
