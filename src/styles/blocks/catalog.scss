@@ -1,0 +1,38 @@
+@import "../utils/variables";
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, $catalog-card-width);
+  gap: 48px;
+
+  max-width: 944px;
+  margin: 0 auto;
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: $catalog-card-width;
+    height: 300px;
+
+    border: 1px solid $catalog-card-color-gray-elements;
+    border-radius: 5px;
+  }
+
+  @media (max-width: $break-point-small-screen) {
+    grid-template-columns: repeat(1, $catalog-card-width);
+  }
+
+  @media (min-width: $break-point-small-screen) and (max-width: $break-point-medium-screen) {
+    grid-template-columns: repeat(2, $catalog-card-width);
+  }
+
+  @media (min-width: $break-point-medium-screen) and (max-width: $break-point-large-screen) {
+    grid-template-columns: repeat(3, $catalog-card-width);
+  }
+
+  @media (min-width: $break-point-large-screen) {
+    grid-template-columns: repeat(4, $catalog-card-width);
+  }
+}
