@@ -1,28 +1,22 @@
 .catalog {
-  &__wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, $column-width);
-    justify-content: center;
-    gap: $cards-gap;
+  @extend %gridCenter;
+  grid-template-columns: repeat(4, $column-width);
+  gap: $cards-gap;
 
-    margin: 0 auto;
+  @include onLaptop {
+    grid-template-columns: repeat(3, $column-width);
+  }
 
-    @include onLaptop {
-      grid-template-columns: repeat(3, $column-width);
-    }
+  @include onTablet {
+    grid-template-columns: repeat(2, $column-width);
+  }
 
-    @include onTablet {
-      grid-template-columns: repeat(2, $column-width);
-    }
-
-    @include onMobile {
-      grid-template-columns: $column-width;
-    }
+  @include onMobile {
+    grid-template-columns: $column-width;
   }
 
   &__card {
-    display: grid;
-    justify-content: center;
+    @extend %gridCenter;
     align-items: center;
     height: 300px;
 
