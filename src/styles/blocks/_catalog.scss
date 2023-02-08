@@ -1,0 +1,28 @@
+.catalog {
+  display: grid;
+  gap: $catalog-gap;
+  justify-content: center;
+  grid-template-columns: $card-width;
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $card-width;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  @media (min-width: 488px) {
+    @include columns-for-media(2);
+  }
+
+  @media (min-width: 768px) {
+    @include columns-for-media(3);
+  }
+
+  @media (min-width: 1024px) {
+    @include columns-for-media(4);
+  }
+}
