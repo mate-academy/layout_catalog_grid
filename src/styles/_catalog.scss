@@ -1,6 +1,6 @@
 .catalog {
-  display: grid;
-  justify-content: center;
+  @extend %gridTemplate;
+
   gap: 48px;
 
   @each $viewportWidth, $columns in $howColumns {
@@ -10,8 +10,8 @@
   }
 
   &__card {
-    display: grid;
-    justify-content: center;
+    @extend %gridTemplate;
+
     align-items: center;
 
     width: $cardsWidth;
