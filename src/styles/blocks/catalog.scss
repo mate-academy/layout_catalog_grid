@@ -1,0 +1,23 @@
+.catalog {
+  display: grid;
+  grid-template-columns: $card-width;
+  justify-content: center;
+  justify-items: center;
+  gap: 48px;
+
+  @each $i, $breakpoint in $breakpoints {
+    @media (min-width: #{$breakpoint}) {
+      grid-template-columns: repeat(#{$i}, $card-width);
+    }
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
