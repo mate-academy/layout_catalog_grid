@@ -1,16 +1,6 @@
-html {
-  font-family: Roboto, sans-serif;
-}
+@import "./utils/normalize";
+@import "./utils/variables";
+@import "./utils/mixins";
 
-body {
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@import "mixins";
-
-@import "header";
-@import "catalog";
+@import "./blocks/header";
+@import "./blocks/catalog";

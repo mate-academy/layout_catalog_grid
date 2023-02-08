@@ -1,14 +1,14 @@
 .catalog {
   display: grid;
-  gap: 48px;
+  gap: $catalog-gap;
   justify-content: center;
-  grid-template-columns: 200px;
+  grid-template-columns: $card-width;
 
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: $card-width;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;

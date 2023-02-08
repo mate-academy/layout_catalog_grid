@@ -1,0 +1,3 @@
+@mixin columns-for-media ($n-columns) {
+  grid-template-columns: repeat($n-columns, $card-width);
+}
