@@ -1,22 +1,21 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
 
-  max-width: 944px;
-  margin: 0 auto;
+  grid-template-columns: repeat(4, $width-card);
+  gap: 48px;
+  justify-content: center;
+
+  @include grid-columns(3, 1023px);
+  @include grid-columns(2, 767px);
+  @include grid-columns(1, 487px);
 
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: $width-card;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
-  }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
   }
 }
