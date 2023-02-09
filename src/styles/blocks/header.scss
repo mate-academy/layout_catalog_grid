@@ -1,12 +1,15 @@
+@import "../utils/variables";
+
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   height: 60px;
   padding: 0 50px;
   margin-bottom: 50px;
 
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 2px 4px $header-color-gray-elements;
 
   overflow: hidden;
 
@@ -24,7 +27,7 @@
 
   &__item {
     position: relative;
-    color: #060b35;
+    color: $header-color-main-accent;
     list-style: none;
     line-height: 60px;
   }
