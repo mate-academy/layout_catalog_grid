@@ -1,5 +1,6 @@
 @import "_reset.scss";
+@import "./normalize.scss";
 @import "./utils/variables";
+@import "./utils/extends";
 @import "./blocks/header";
 @import "./blocks/catalog";
-
