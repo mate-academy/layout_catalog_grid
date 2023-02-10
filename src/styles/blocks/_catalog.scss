@@ -1,0 +1,20 @@
+.catalog {
+  display: grid;
+  grid-template-columns: $card-width;
+  justify-content: center;
+  gap: 48px;
+
+  @include columnTemplates(2, 488px);
+  @include columnTemplates(3, 768px);
+  @include columnTemplates(4, 1024px);
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
