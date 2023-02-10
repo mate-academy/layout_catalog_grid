@@ -14,9 +14,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: $cardWidth;
     height: 300px;
-    border: 1px solid #ccc;
+    border: 1px solid $c-white;
     border-radius: 5px;
   }
 }
