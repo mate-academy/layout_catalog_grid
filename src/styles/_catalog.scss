@@ -1,8 +1,5 @@
 .catalog {
   display: grid;
-  flex-wrap: wrap;
-  justify-items: center;
-  align-items: center;
   grid-template-columns: repeat(4, minmax(200px , 1fr));
   gap: 48px;
 
