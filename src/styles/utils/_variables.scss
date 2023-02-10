@@ -1,0 +1,8 @@
+$column-width: 200px;
+
+$columns-by-breakpoints: (
+  "0": $column-width,
+  "488px": repeat(2, $column-width),
+  "768px": repeat(3, $column-width),
+  "1024px": repeat(4, $column-width)
+);

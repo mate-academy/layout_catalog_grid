@@ -1,10 +1,6 @@
-$card-width: 200px;
-
 .catalog {
   display: grid;
   justify-content: center;
-
-  grid-template-columns: repeat(4, $card-width);
   gap: 48px;
 
   &__card {
@@ -16,15 +12,9 @@ $card-width: 200px;
     border-radius: 5px;
   }
 
-  @media (max-width: 1023px) {
-    grid-template-columns: repeat(3, $card-width);
-  }
-
-  @media (max-width: 767px) {
-    grid-template-columns: repeat(2, $card-width);
-  }
-
-  @media (max-width: 487px) {
-    grid-template-columns: $card-width;
+  @each $pixels, $columns in $columns-by-breakpoints {
+    @media (min-width: $pixels) {
+      grid-template-columns: $columns;
+    }
   }
 }
