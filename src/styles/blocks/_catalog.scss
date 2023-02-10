@@ -4,17 +4,9 @@
   justify-content: center;
   gap: 48px;
 
-  @media (min-width: 488px) {
-    grid-template-columns: repeat(2, $card-width);
-  }
-
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(3, $card-width);
-  }
-
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, $card-width);
-  }
+  @include columnTemplates(2, 488px);
+  @include columnTemplates(3, 768px);
+  @include columnTemplates(4, 1024px);
 
   &__card {
     display: flex;
