@@ -1,0 +1,17 @@
+.header {
+  display: grid;
+  justify-items: space-between;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  height: 60px;
+  padding: 0 50px;
+  margin-bottom: 50px;
+
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+
+  overflow: hidden;
+
+  &__logo {
+    height: 40px;
+  }
+}
