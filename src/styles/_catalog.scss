@@ -4,17 +4,10 @@
   align-content: center;
   gap: 48px;
 
-  @media (max-width: 487px) {
-    grid-template-columns: 200px;
-  }
-  @media (min-width: 488px) and (max-width: 767px) {
-    grid-template-columns: 200px 200px;
-  }
-  @media (min-width: 768px) and (max-width: 1023px) {
-    grid-template-columns: repeat(3, 200px);
-  }
-  @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 200px);
+  @each $columns, $breakpoint in $breakpoints {
+    @media (min-width: #{$breakpoint}) {
+      grid-template-columns:  repeat(#{$columns}, #{$card-width});
+    }
   }
 
   &__card {
