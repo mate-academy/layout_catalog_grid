@@ -1,6 +1,21 @@
+$columnWidth: 200px;
+
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 48px;
+  justify-content: center;
+
+  $columns-by-breakpoints:
+    '0' $columnWidth,
+    '488px' repeat(2, $columnWidth),
+    '768px' repeat(3, $columnWidth),
+    '1024px' repeat(4, $columnWidth);
+
+  @each $pixels, $columns in $columns-by-breakpoints {
+    @media (min-width: $pixels) {
+      grid-template-columns: $columns;
+    }
+  }
 
   max-width: 944px;
   margin: 0 auto;
@@ -14,4 +29,6 @@
     border: 1px solid #ccc;
     border-radius: 5px;
   }
+
 }
+
