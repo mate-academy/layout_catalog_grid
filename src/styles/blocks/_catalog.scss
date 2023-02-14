@@ -1,12 +1,10 @@
 .catalog {
-  display: grid;
-  justify-content: center;
+  @extend %grid-center;
   @include grid-template-columns(1);
   gap: 48px;
 
   &__card {
-    display: grid;
-    justify-content: center;
+    @extend %grid-center;
     align-items: center;
     height: 300px;
     border: 1px solid #ccc;
