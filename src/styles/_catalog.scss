@@ -1,10 +1,9 @@
-
 .catalog {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(auto-fill, 200px);
-  grid-auto-flow: row;
   gap: 48px;
+  padding: 0 15px;
      
   &__card {
     display: flex;
@@ -16,9 +15,7 @@
     border-radius: 5px;
   }
 
-  @media (max-width: 488px) {
-    & {
-      padding: 0 20px;
-    }
-  }
+  @include media-padding(1024px, 40px);
+  @include media-padding(768px, 15px);
+  @include media-padding(487px, 30px);
 }
