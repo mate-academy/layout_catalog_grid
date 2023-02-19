@@ -1,0 +1,20 @@
+.catalog {
+  @extend %grid-center;
+  @include grid-template-columns(4);
+  gap: 48px;
+
+  &__card {
+    @extend %grid-center;
+    align-items: center;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  @each $max-width, $columns in $catalog-media-settings {
+    @media (max-width: $max-width) {
+      @include grid-template-columns($columns);
+    }
+  }
+
+}
