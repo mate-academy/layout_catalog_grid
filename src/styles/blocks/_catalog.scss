@@ -1,6 +1,6 @@
 .catalog {
   @extend %grid-center;
-  @include grid-template-columns(1);
+  @include grid-template-columns(4);
   gap: 48px;
 
   &__card {
@@ -11,16 +11,10 @@
     border-radius: 5px;
   }
 
-  @media (min-width: 488px) {
-    @include grid-template-columns(2);
-  }
-
-  @media (min-width: 768px) {
-    @include grid-template-columns(3);
-  }
-
-  @media (min-width: 1024px) {
-    @include grid-template-columns(4);
+  @each $max-width, $columns in $catalog-media-settings {
+    @media (max-width: $max-width) {
+      @include grid-template-columns($columns);
+    }
   }
 
 }
