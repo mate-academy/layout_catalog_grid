@@ -11,4 +11,43 @@ body {
 }
 
 @import "_header.scss";
-@import "_catalog.scss";
+
+$box-width: 200px;
+$box-height: 300px;
+$gap-size:48px;
+$screen-widths:
+    "2" 488px,
+    "3" 768px,
+    "4" 1024px;
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, $box-width);
+  grid-auto-rows: $box-height;
+  justify-content: center;
+  gap: $gap-size;
+
+  &__card {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  @media (max-width: 488px) {
+    & {
+      grid-template-columns: repeat(1, $box-width);
+    }
+  }
+
+  @each $width, $value in $screen-widths {
+    @media (min-width: #{$value}) {
+      & {
+        grid-template-columns: repeat(#{$width}, $box-width);
+      }
+    }
+  }
+}
+
