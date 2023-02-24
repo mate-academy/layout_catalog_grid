@@ -1,4 +1,28 @@
-@include oneColumn;
-@include twoColumns;
-@include threeColumns;
-@include fourColumns;
+.catalog {
+  display: grid;
+  justify-content: center;
+  max-width: 944px;
+  margin: 0 auto;
+  gap: $gapCards;
+  padding-bottom: $gapCards;
+
+  &__card {
+    @include card;
+  }
+
+  @media (min-width: 0) and (max-width: 488px) {
+    grid-template-columns: 1;
+  }
+
+  @media (min-width: 488px) and (max-width: 768px) {
+    grid-template-columns: repeat(2, 200px);
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+    grid-template-columns: repeat(3, 200px);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, 200px);
+  }
+}

@@ -1,91 +1,9 @@
-@mixin oneColumn {
-  @media (min-width: 0) and (max-width: 488px) {
-    .catalog {
-      display: grid;
-      justify-content: center;
-      max-width: 944px;
-      margin: 0 auto;
-      gap: 48px;
-      grid-template-columns: 1;
-
-      &__card {
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        width: 200px;
-        height: 300px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-    }
-  }
-}
-
-@mixin twoColumns {
-  @media (min-width: 488px) and (max-width: 768px) {
-    .catalog {
-      display: grid;
-      justify-content: center;
-      max-width: 944px;
-      margin: 0 auto;
-      gap: 48px;
-      grid-template-columns: repeat(2, 200px);
-
-      &__card {
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        width: 200px;
-        height: 300px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-    }
-  }
-}
-
-@mixin threeColumns {
-  @media (min-width: 768px) and (max-width: 1024px) {
-    .catalog {
-      display: grid;
-      justify-content: center;
-      max-width: 944px;
-      margin: 0 auto;
-      gap: 48px;
-      grid-template-columns: repeat(3, 200px);
-
-      &__card {
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        width: 200px;
-        height: 300px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-    }
-  }
-}
-
-@mixin fourColumns {
-  @media (min-width: 1024px) {
-    .catalog {
-      display: grid;
-      justify-content: center;
-      max-width: 944px;
-      margin: 0 auto;
-      gap: 48px;
-      grid-template-columns: repeat(4, 200px);
-
-      &__card {
-        display: grid;
-        justify-content: center;
-        align-items: center;
-        width: 200px;
-        height: 300px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-      }
-    }
-  }
+@mixin card {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
