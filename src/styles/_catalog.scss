@@ -2,8 +2,9 @@ $card-size: 200px;
 
 .catalog {
   display: grid;
+  grid-template-columns: repeat(1, $card-size);
   justify-content: center;
-  gap: 45px;
+  gap: 48px;
 
   &__card {
     display: flex;
@@ -18,10 +19,6 @@ $card-size: 200px;
 
   &__card:not(:nth-child(4n)) {
     margin-right: 48px;
-  }
-
-  @media (max-width: 487px) {
-    grid-template-columns: repeat(1, $card-size);
   }
 
   @media (min-width: 488px) {
