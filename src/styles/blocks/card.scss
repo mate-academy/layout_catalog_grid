@@ -9,7 +9,6 @@
   transition: all $duration-time $timing-function;
 
   &:hover {
-    color: $color-title-hov;
     transform: scale(1.2);
   }
 

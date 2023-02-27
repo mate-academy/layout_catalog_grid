@@ -1,19 +1,20 @@
 .catalog {
-  width: $card-width * $card-count-row + 
-    $gap-X * ($card-count-row - 1);
   margin: 0 auto;
   padding: $padding-Y $padding-X;
+  grid-template-columns: repeat(1, $card-width);
+  display: grid;
+  gap: $card-gap;
+  justify-content: center;
 
-  @include flexAlign(start);
-  flex-wrap: wrap;
+  @media (min-width: $width-two-column) {
+    grid-template-columns: repeat(2, $card-width);
+  }
 
-  &__card {
-    &:not(:nth-child(#{$card-count-row}n)) {
-      margin-right: $gap-X;
-    }
+  @media (min-width: $width-three-column) {
+    grid-template-columns: repeat(3, $card-width);
+  }
 
-    &:not(:nth-last-child(-n + #{$card-count-row})) {
-      margin-bottom: $gap-Y;
-    }
+  @media (min-width: $width-four-column) {
+    grid-template-columns: repeat(4, $card-width);
   }
 }
