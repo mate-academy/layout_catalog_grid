@@ -6,6 +6,7 @@ $cardWidth: 200px;
   display: grid;
   grid-template-columns: repeat(4, $cardWidth);
   gap: 48px;
+  justify-content: center;
 
   &__card {
     display: flex;
