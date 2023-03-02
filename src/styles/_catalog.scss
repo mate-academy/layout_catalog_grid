@@ -2,7 +2,7 @@
   display: grid;
   gap: 48px;
   justify-content: center;
-  grid-template-columns: repeat(1, $cardWids);
+  grid-template-columns: repeat(1, $cardWidth);
 
   &__card {
     display: flex;
@@ -15,14 +15,14 @@
   }
 
   @media(min-width: 488px) {
-    grid-template-columns: repeat(2, $cardWids);
+    grid-template-columns: repeat(2, $cardWidth);
   }
 
   @media(min-width: 768px) {
-    grid-template-columns: repeat(3, $cardWids);
+    grid-template-columns: repeat(3, $cardWidth);
   }
 
   @media(min-width: 1024px) {
-    grid-template-columns: repeat(4, $cardWids);
+    grid-template-columns: repeat(4, $cardWidth);
   }
 }
