@@ -1,0 +1,5 @@
+@mixin media-col ($maxWidth, $columns) {
+  @media (max-width: $maxWidth) {
+    grid-template-columns: repeat($columns, $cardWidth);
+  }
+}

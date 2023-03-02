@@ -1,0 +1,21 @@
+$cardWidth: 200px;
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, $cardWidth);
+  gap: 48px;
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $cardWidth;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+ }
+
+ @include media-col(1023px, 4);
+ @include media-col(767px, 3);
+ @include media-col(487px, 2);
+}
