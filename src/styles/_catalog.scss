@@ -6,7 +6,6 @@ $card_width: 200px;
   display: grid;
   grid-gap: 48px;
   justify-items: center;
-  justify-content: center;
 
   @media screen and (min-width: 1024px) {
     & {
