@@ -22,10 +22,9 @@ $card-width: 200px;
   }
 
   &__card {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
-    width: $card-width;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
