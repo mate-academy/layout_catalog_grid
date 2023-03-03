@@ -3,12 +3,12 @@ $card-width: 200px;
 .catalog {
   display: grid;
   grid-template-columns: repeat(4, $card-width);
-
+  margin: 0 auto;
   max-width: 944px;
-  justify-content: center;
   gap: 48px;
 
   @media (max-width: 1023px) {
+    justify-content: center;
     grid-template-columns: repeat(3, $card-width);
   }
 
