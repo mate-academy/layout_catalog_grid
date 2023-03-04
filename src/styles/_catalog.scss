@@ -1,9 +1,10 @@
 .catalog {
   display: grid;
   grid-template-columns: repeat(4, $card-width);
-  justify-content: space-between;
+  justify-content: center;
   max-width: 944px;
   margin: 0 auto;
+  gap: 48px;
 
   &__card {
     display: flex;
@@ -13,40 +14,23 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
-  }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .catalog {
     grid-template-columns: repeat(3, $card-width);
-
-    &__card:not(:nth-child(3n)) {
-      margin-right: 48px;
-    }
   }
 }
 
 @media screen and (max-width: 768px) {
   .catalog {
     grid-template-columns: repeat(2, $card-width);
-
-    &__card:not(:nth-child(2n)) {
-      margin-right: 48px;
-    }
   }
 }
 
 @media screen and (max-width: 488px) {
   .catalog {
     grid-template-columns: repeat(1, $card-width);
-
-    &__card:not(:nth-child(1n)) {
-      margin-right: 48px;
-    }
   }
 }
