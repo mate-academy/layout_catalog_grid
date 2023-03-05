@@ -1,4 +1,9 @@
 $card-width: 200px;
+$screens:
+  "1px" 1,
+  "488px" 2,
+  "768px" 3,
+  "1024px" 4;
 
 .catalog {
   display: grid;
@@ -6,7 +11,13 @@ $card-width: 200px;
   gap: 48px;
   max-width: 944px;
   margin: 0 auto;
-
+  @each $width, $blocks in $screens {
+    @media (min-width: $width) {
+      & {
+        grid-template-columns: repeat($blocks, $card-width);
+      }
+    }
+  }
   &__card {
     display: flex;
     justify-content: center;
@@ -20,29 +31,5 @@ $card-width: 200px;
 
   &__card:not(:nth-child(4n)) {
     margin-right: 48px;
-  }
-}
-
-@media (min-width: 1px) {
-  .catalog {
-    grid-template-columns: repeat(1, $card-width);
-  }
-}
-
-@media (min-width: 488px) {
-  .catalog {
-    grid-template-columns: repeat(2, $card-width);
-  }
-}
-
-@media (min-width: 768px) {
-  .catalog {
-    grid-template-columns: repeat(3, $card-width);
-  }
-}
-
-@media (min-width: 1024px) {
-  .catalog {
-    grid-template-columns: repeat(4, $card-width);
   }
 }
