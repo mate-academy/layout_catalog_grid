@@ -1,7 +1,15 @@
-.catalog {
-  display: flex;
-  flex-wrap: wrap;
+$card-width: 200px;
+$screens: (
+  0 : 1,
+  488 : 2,
+  768: 3,
+  1024: 4
+);
 
+.catalog {
+  display: grid;
+  justify-content: center;
+  gap: 48px;
   max-width: 944px;
   margin: 0 auto;
 
@@ -9,7 +17,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: $card-width;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -20,3 +28,28 @@
     margin-right: 48px;
   }
 }
+
+@media (min-width: 1px) {
+  .catalog {
+    grid-template-columns: repeat(1, $card-width);
+  }
+}
+
+@media (min-width: 488px) {
+  .catalog {
+    grid-template-columns: repeat(2, $card-width);
+  }
+}
+
+@media (min-width: 768px) {
+  .catalog {
+    grid-template-columns: repeat(3, $card-width);
+  }
+}
+
+@media (min-width: 1024px) {
+  .catalog {
+    grid-template-columns: repeat(4, $card-width);
+  }
+}
+
