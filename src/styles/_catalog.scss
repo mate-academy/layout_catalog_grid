@@ -1,19 +1,35 @@
-.catalog {
-  display: flex;
-  flex-wrap: wrap;
 
-  max-width: 944px;
+$card-width: 200px;
+
+.catalog {
+  gap: 48px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, $card-width);
+  justify-content: center;
+  // max-width: 944px;
   margin: 0 auto;
+
+  @media(max-width: 1023.98px) {
+    grid-template-columns: repeat(3, $card-width);
+  }
+
+  @media(max-width: 767.98px) {
+    grid-template-columns: repeat(2, $card-width);
+  }
+
+  @media(max-width: 487.98px) {
+    grid-template-columns: $card-width;
+  }
 
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 300px;
+    max-width: $card-width;
+    width: 100%;
+    min-height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
   }
 
   &__card:not(:nth-child(4n)) {
