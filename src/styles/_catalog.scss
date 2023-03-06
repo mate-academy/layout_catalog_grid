@@ -1,23 +1,21 @@
 
 $card-width: 200px;
+$card-gap: 48px;
+$card-row-number: 4;
 
 .catalog {
-  gap: 48px;
+  max-width: ($card-width + $card-gap) * $card-row-number;
+  gap: $card-gap;
   display: grid;
   grid-template-columns: repeat(auto-fill, $card-width);
   justify-content: center;
-  // max-width: 944px;
   margin: 0 auto;
 
-  @media(max-width: 1023.98px) {
+  @media(max-width: 1023px) {
     grid-template-columns: repeat(3, $card-width);
   }
 
-  @media(max-width: 767.98px) {
-    grid-template-columns: repeat(2, $card-width);
-  }
-
-  @media(max-width: 487.98px) {
+  @media(max-width: 487px) {
     grid-template-columns: $card-width;
   }
 
