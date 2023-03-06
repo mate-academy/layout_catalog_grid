@@ -1,0 +1,33 @@
+@mixin grid_template($frames) {
+  grid-template-columns: repeat($frames, 200px);
+}
+%grid_center {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.catalog {
+  @extend %grid_center;
+  width: 100%;
+  gap: 48px;
+
+  @media (min-width: 488px) {
+    @include grid_template(2);
+  }
+  @media (min-width: 768px) {
+    @include grid_template(3);
+  }
+  @media (min-width: 1023px) {
+    @include grid_template(4);
+  }
+
+  &__card {
+    @extend %grid_center;
+    width: 200px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
