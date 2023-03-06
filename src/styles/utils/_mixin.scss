@@ -1,0 +1,9 @@
+@mixin card-size {
+  width: $card-width;
+  height: 300px;
+}
+
+@mixin null-padding-margin {
+  padding: 0;
+  margin: 0;
+}
