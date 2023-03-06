@@ -1,15 +1,28 @@
-.catalog {
-  display: flex;
-  flex-wrap: wrap;
+$card-width: 200px;
+$screens:
+  "1px" 1,
+  "488px" 2,
+  "768px" 3,
+  "1024px" 4;
 
+.catalog {
+  display: grid;
+  justify-content: center;
+  gap: 48px;
   max-width: 944px;
   margin: 0 auto;
-
+  @each $width, $blocks in $screens {
+    @media (min-width: $width) {
+      & {
+        grid-template-columns: repeat($blocks, $card-width);
+      }
+    }
+  }
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: $card-width;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
