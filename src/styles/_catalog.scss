@@ -1,4 +1,4 @@
-$card-width: 200px;
+@import "./utils/variables";
 
 .catalog {
   display: grid;
@@ -7,16 +7,12 @@ $card-width: 200px;
   justify-content: center;
   align-content: center;
 
-  @media (max-width: 1024px) {
-    grid-template-columns: repeat(3, $card-width);
-  }
-
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(2, $card-width);
-  }
-
-  @media (max-width: 488px) {
-    grid-template-columns: $card-width;
+  @each $width, $blocks in $widths {
+    @media (max-width: $width) {
+      & {
+        grid-template-columns: repeat($blocks, $card-width);
+      }
+    }
   }
 
   &__card {
