@@ -15,6 +15,10 @@ $card-row-number: 4;
     grid-template-columns: repeat(3, $card-width);
   }
 
+  @media(max-width: 767px) {
+    grid-template-columns: repeat(2, $card-width);
+  }
+
   @media(max-width: 487px) {
     grid-template-columns: $card-width;
   }
