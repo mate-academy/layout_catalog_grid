@@ -7,6 +7,24 @@
   gap: 48px;
   max-width: 944px;
   margin: 0 auto;
+  
+  @media (min-width: $medium-size-media) and (max-width: $max-size-media) {
+    .catalog {
+      grid-template-columns: repeat(3, $card-width);
+    }
+  }
+  
+  @media (min-width: $min-size-media) and (max-width: $medium-size-media) {
+    .catalog {
+      grid-template-columns: repeat(2, $card-width);
+    }
+  }
+  
+  @media (max-width: $min-size-media) {
+    .catalog {
+      grid-template-columns: repeat(1, $card-width);
+    }
+  }
 
   &__card {
     display: flex;
@@ -15,23 +33,5 @@
     @include card-size;
     border: 1px solid $border-color;
     border-radius: 5px;
-  }
-}
-
-@media (min-width: $medium-size-media) and (max-width: $max-size-media) {
-  .catalog {
-    grid-template-columns: repeat(3, $card-width);
-  }
-}
-
-@media (min-width: $min-size-media) and (max-width: $medium-size-media) {
-  .catalog {
-    grid-template-columns: repeat(2, $card-width);
-  }
-}
-
-@media (max-width: $min-size-media) {
-  .catalog {
-    grid-template-columns: repeat(1, $card-width);
   }
 }
