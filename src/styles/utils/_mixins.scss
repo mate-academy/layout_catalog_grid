@@ -1,0 +1,5 @@
+@mixin media-padding($size, $padding) {
+  @media (max-width:$size) {
+    padding: $padding;
+  }
+}
