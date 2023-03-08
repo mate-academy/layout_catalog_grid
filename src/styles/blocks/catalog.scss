@@ -1,0 +1,22 @@
+.catalog {
+  &__container {
+    display: grid;
+    justify-content: center;
+    --card-amount: 4;
+    grid-template-columns: repeat(var(--card-amount), #{$card-width});
+    gap: 48px;
+    padding: 50px 0;
+
+    @media screen and (max-width: 1023px) {
+      --card-amount: 3;
+    }
+
+    @media screen and (max-width: 767px) {
+      --card-amount: 2;
+    }
+
+    @media screen and (max-width: 487px) {
+      --card-amount: 1;
+    }
+  }
+}
