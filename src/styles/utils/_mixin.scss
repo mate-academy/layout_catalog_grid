@@ -1,0 +1,15 @@
+@mixin card-size {
+  width: $card-width;
+  height: 300px;
+}
+
+@mixin null-padding-margin {
+  padding: 0;
+  margin: 0;
+}
+
+@mixin gridColumns($min-size-media, $card-width) {
+  @media (min-width: $min-size-media) {
+    grid-template-columns: repeat($card-width, 200px);
+  }
+}

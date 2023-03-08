@@ -1,0 +1,24 @@
+@import "./../utils/mixin";
+@import "./../utils/var";
+
+.catalog {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fill, $card-width);
+  gap: 48px;
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include card-size;
+    border: 1px solid $border-color;
+    border-radius: 5px;
+  }
+
+  @include gridColumns (488px, 2);
+
+  @include gridColumns (768px, 3);
+
+  @include gridColumns (1024px, 4);
+}
