@@ -1,12 +1,8 @@
-$card-size: 200px;
 
 .catalog {
   display: grid;
   grid-template-columns: repeat(auto-fill, $card-size);
   justify-content: center;
-
-  max-width: 944px;
-  margin: 0 auto;
 
   gap: 48px;
 
@@ -19,10 +15,6 @@ $card-size: 200px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 48px;
-  }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
   }
 
   @media (min-width: 488px) {
