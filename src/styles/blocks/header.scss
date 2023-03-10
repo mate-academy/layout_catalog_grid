@@ -1,6 +1,3 @@
-@import "./../utils/mixin";
-@import "./../utils/var";
-
 .header {
   display: flex;
   align-items: center;
@@ -21,12 +18,13 @@
 .nav {
   &__list {
     display: flex;
-    @include null-padding-margin;
+    margin: 0;
+    padding: 0;
   }
 
   &__item {
     position: relative;
-    color: $header-item-color;
+    color: #060b35;
     list-style: none;
     line-height: 60px;
   }
