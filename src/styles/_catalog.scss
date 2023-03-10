@@ -1,6 +1,11 @@
+@import "./utils/variables";
+@import "./utils/functions";
+
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, $card-width);
+  justify-content: center;
+  gap: $card-gap;
 
   max-width: 944px;
   margin: 0 auto;
@@ -9,14 +14,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 300px;
+    width: $card-width;
+    height: $card-height;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
+  
+  @media (max-width: $phone-width) {
+    grid-template-columns: repeat(1, $card-width);
+  }
+  
+  @media (min-width: $phone-width) {
+    grid-template-columns: repeat(2, $card-width);
+  }
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: repeat(3, $card-width);
+  }
+
+  @media (min-width: $laptop-width) {
+    grid-template-columns: repeat(auto-fill, $card-width);
   }
 }
