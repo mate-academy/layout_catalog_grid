@@ -1,13 +1,17 @@
 $card-width: 200px;
+$media-phones: 488px;
+$media-tablets: 768px;
+$media-desktop: 1024px;
 
 .catalog {
   display: grid;
+  grid-template-columns: repeat(var(--cards-number), $card-width);
   justify-items: center;
   justify-content: center;
   gap: 48px;
 
   &__card {
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: $card-width;
@@ -15,22 +19,16 @@ $card-width: 200px;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
-}
 
-@media (min-width: 488px) {
-  .catalog {
-    grid-template-columns: repeat(2, $card-width);
+  @media (min-width: $media-phones) {
+    --cards-number: 2;
   }
-}
 
-@media (min-width: 768px) {
-  .catalog {
-    grid-template-columns: repeat(3, $card-width);
+  @media (min-width: $media-tablets) {
+    --cards-number: 3;
   }
-}
 
-@media (min-width: 1024px) {
-  .catalog {
-    grid-template-columns: repeat(4, $card-width);
+  @media (min-width: $media-desktop) {
+    --cards-number: 4;
   }
 }
