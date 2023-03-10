@@ -1,31 +1,24 @@
-@function catalog-width (
-  $card-quantity, 
-  $card-width: 200px, 
-  $card-margin: 48px
-) {
-  @return ($card-quantity * $card-width)
-    + ($card-margin * ($card-quantity - 1));
-}
+$card-width: 200px;
+$card-height: 300px;
 
 .catalog {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-
-  max-width: catalog-width(4);
-  margin: 0 auto;
+  grid-template-columns: repeat(4, $card-width);
+  gap: 48px;
+  justify-content: center;
 
   @media (max-width: 1024px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, $card-width);
     max-width: catalog-width(3);
   }
 
   @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, $card-width);
     max-width: catalog-width(2);
   }
 
   @media (max-width: 488px) {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, $card-width);
     max-width: catalog-width(1);
   }
 
@@ -33,8 +26,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 300px;
+    width: $card-width;
+    height: $card-height;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 48px;
