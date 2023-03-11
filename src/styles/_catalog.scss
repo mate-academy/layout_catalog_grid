@@ -2,21 +2,21 @@
 
 .catalog {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 200px;
   gap: 48px;
-  justify-items: center;
+  justify-content: center;
   margin: 0 auto;
   max-width: $container-main;
 
   @media (min-width: 488px) {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 200px 200px;
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 200px 200px 200px;
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 200px 200px 200px 200px;
   }
 }
