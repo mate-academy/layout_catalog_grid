@@ -1,0 +1,3 @@
+@function cards ($size) {
+  @return  repeat($size, 1fr);
+}
