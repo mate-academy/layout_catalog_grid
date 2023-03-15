@@ -1,14 +1,10 @@
-@import "./utils/functions";
 @import "./utils/variables";
 
 .catalog {
   display: grid;
   grid-template-columns: repeat(4, $card-width);
   gap: 48px;
-  justify-items: center;
-
-  max-width: 1024px;
-  margin: 0 auto;
+  justify-content: center;
 
   &__card {
     display: flex;
@@ -21,14 +17,14 @@
   }
 
   @media (max-width: 1024px) {
-    grid-template-columns: cards(3);
+    grid-template-columns: repeat(3, $card-width);
   }
 
   @media (max-width: 768px) {
-    grid-template-columns: cards(2);
+    grid-template-columns: repeat(2, $card-width);
   }
 
   @media (max-width: 488px) {
-    grid-template-columns: cards(1);
+    grid-template-columns: repeat(1, $card-width);
   }
 }
