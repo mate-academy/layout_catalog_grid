@@ -1,0 +1,36 @@
+@import "./../utils/variables";
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, $cWidth);
+  gap: 48px;
+  justify-content: center;
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $cWidth;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .catalog {
+    grid-template-columns: repeat(3, $cWidth);
+  }
+}
+
+@media (max-width: 767px) {
+  .catalog {
+    grid-template-columns: repeat(2, $cWidth);
+  }
+}
+
+@media (max-width: 487px) {
+  .catalog {
+    grid-template-columns: repeat(1, $cWidth);
+  }
+}
