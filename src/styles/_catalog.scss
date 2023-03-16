@@ -20,10 +20,6 @@
     margin-bottom: 48px;
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
-  }
-
   @media (max-width: 488px) {
     grid-template-columns: repeat(1, 200px);
   }
