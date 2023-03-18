@@ -1,0 +1,4 @@
+@mixin card-columns-number($card-width, $card-number, $column-gap) {
+  grid-template-columns: repeat($card-number, $card-width);
+  column-gap: $column-gap;
+}
