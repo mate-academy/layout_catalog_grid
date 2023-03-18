@@ -1,0 +1,26 @@
+.catalog {
+  display: grid;
+  @include card-columns-number($card-width, 1, $column-gap);
+  justify-content: center;
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 48px;
+  }
+
+  &__card:not(:nth-child(4n)) {
+    margin-right: 48px;
+  }
+
+  @each  $screen-width, $elements-number in $screen-widths-elementsNumber {
+    @media ( min-width: $screen-width) {
+      @include card-columns-number($card-width, $elements-number, $column-gap);
+    }
+  }
+}
