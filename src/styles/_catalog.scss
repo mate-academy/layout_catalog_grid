@@ -2,12 +2,13 @@
   max-width: 944px;
   margin: 0 auto;
   display: grid;
+  justify-content: center;
   gap: 48px;
 
   --num-col: 1;
 
   @media (min-width: 487px) {
-    grid-template-columns: repeat(var(--num-col), 1fr);
+    grid-template-columns: repeat(var(--num-col), 200px);
   }
 
   @media (min-width: 488px) and (max-width: 767px) {
