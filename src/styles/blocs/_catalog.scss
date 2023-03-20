@@ -1,0 +1,31 @@
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(4, $Card-size);
+  gap: $Card-gap;
+
+  max-width: 944px;
+  margin: 0 auto;
+
+  @each $minW, $maxW, $RepW in $VarMedia {
+    @media (max-width:#{$maxW}) and (min-width:#{$minW}) {
+      & {
+        grid-template-columns: repeat(#{$RepW}, $Card-size);
+      }
+    }
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $Card-size;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: $Card-gap;
+  }
+
+  &__card:not(:nth-child(4n)) {
+    margin-right: $Card-gap;
+  }
+}
