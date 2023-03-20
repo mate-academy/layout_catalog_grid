@@ -1,9 +1,23 @@
+$VarMedia :
+  768px 1024px 3,
+  488px 768px 2,
+  488px 0 1;
+
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  gap: 48px;
 
   max-width: 944px;
   margin: 0 auto;
+
+  @each $minW, $maxW, $RepW in $VarMedia {
+    @media (max-width:#{$maxW}) and (min-width:#{$minW}) {
+      & {
+        grid-template-columns: repeat(#{$RepW}, 200px);
+      }
+    }
+  }
 
   &__card {
     display: flex;
