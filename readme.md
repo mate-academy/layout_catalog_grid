@@ -1,6 +1,6 @@
 # Frontend practice with catalog page using grid
 Replace `<your_account>` with your Github username and copy the links to Pull Request description:
-- [DEMO LINK](https://<your_account>.github.io/layout_catalog_grid/)
+- [DEMO LINK](https://kq333.github.io/layout_catalog_grid/)
 
 > Follow [this instructions](https://github.com/mate-academy/layout_task-guideline#how-to-solve-the-layout-tasks-on-github)
 
@@ -12,7 +12,7 @@ Implement layout using grid layout
   - There should be four columns starting at `1024px`
   - There should be three columns starting at `768px`
   - There should be two columns starting at `488px`
-  - There should be one column below `488px`
+  - There should be one column below `488px`s
 - Gap between cards should be `48px`
 - Do not modify header
 - Blocks should start from the left
