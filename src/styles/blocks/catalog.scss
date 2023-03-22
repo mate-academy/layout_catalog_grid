@@ -1,0 +1,21 @@
+.catalog {
+  @extend %gridCenter;
+
+  grid-template-columns: $card-width;
+  gap: $card-gap;
+
+  @each $index, $value in $columns-per-breakpoint {
+    @media (min-width: #{$value}) {
+      grid-template-columns: repeat(#{$index}, $card-width);
+    }
+  }
+
+  &__card {
+    @extend %gridCenter;
+
+    align-content: center;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
