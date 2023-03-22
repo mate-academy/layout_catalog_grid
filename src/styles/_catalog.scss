@@ -1,9 +1,9 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
-
-  max-width: 944px;
-  margin: 0 auto;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: repeat(1, 200px);
+  gap: 48px;
 
   &__card {
     display: flex;
@@ -16,7 +16,15 @@
     margin-bottom: 48px;
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
+  @media screen and(min-width: 488px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media screen and(min-width: 768px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media screen and(min-width: 1024px) {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
