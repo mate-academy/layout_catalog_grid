@@ -6,16 +6,16 @@
   max-width: 944px;
 
   @media (max-width: 1024px) {
-    grid-template-columns: repeat(3, $card-width);
+    grid-template-columns: repeat(4, $card-width);
     justify-content: center;
   }
 
-  @media (max-width: 767px) {
-    grid-template-columns: repeat(2, $card-width);
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(3, $card-width);
   }
 
   @media (max-width: 488px) {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, $card-width);
   }
 
   &__card {
@@ -23,8 +23,10 @@
     justify-content: center;
     align-items: center;
     height: $card-height;
+    width: $card-width;
     padding: 24px;
-    background-color: #fff;
-    border: 1px solid #ddd;
+
+    background-color: $bgrd-color;
+    border: 1px solid $border-card-color;
   }
 }
