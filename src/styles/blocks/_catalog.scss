@@ -3,11 +3,6 @@
   justify-content: center;
   grid-template-columns: repeat(1, $width);
   gap: 48px;
-
-  // display: flex;
-  // flex-wrap: wrap;
-
-  // max-width: 944px;
   margin: 0 auto;
 
   &__card {
@@ -16,13 +11,8 @@
     align-items: center;
     width: $width;
     height: $height;
-    border: 1px solid #ccc;
+    border: 1px solid $c-color;
     border-radius: 5px;
-    margin-bottom: 48px;
-  }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
   }
 
   @media (min-width: 488px) {
