@@ -14,8 +14,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 300px;
+    width: $width;
+    height: $height;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 48px;
@@ -27,10 +27,10 @@
 
   @media (min-width: 488px) {
     grid-template-columns: repeat(2, $width);
+  }
 
   @media (min-width: 768px) {
     grid-template-columns: repeat(3, $width);
-  }
   }
 
   @media (min-width: 1024px) {
