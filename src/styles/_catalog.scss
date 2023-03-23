@@ -15,7 +15,7 @@ $card-border-color: #ccc;
 $media:
   1023 3,
   767 2,
-  488 1;
+  487 1;
 
 .catalog {
   @extend %bottom-shift;
@@ -23,6 +23,7 @@ $media:
   grid-template-columns: repeat(4, $card-width);
   @extend %centring;
   gap: 48px;
+
 
   &__card {
     display: flex;
