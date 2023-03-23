@@ -1,11 +1,11 @@
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .catalog {
     grid-template-columns: 248px 248px 200px;
     width: 696px;
   }
 }
 
-@media (max-width: 488px) {
+@media (max-width: 767px) {
   .catalog {
     grid-template-columns: 248px 200px;
     width: 448px;
