@@ -1,9 +1,13 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
-
+  // display: flex;
+  // flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(4, 200px);
+  // grid-template-rows: repeat(auto, 300px);
+  gap: 48px;
   max-width: 944px;
   margin: 0 auto;
+  margin-bottom: 50px;
 
   &__card {
     display: flex;
@@ -13,10 +17,34 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
+    box-sizing: border-box;
   }
 
   &__card:not(:nth-child(4n)) {
     margin-right: 48px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .catalog {
+    grid-template-columns: repeat(3, 200px);
+    gap: 48px;
+    max-width: 696px;
+  }
+}
+
+@media (max-width: 767px) {
+  .catalog {
+    grid-template-columns: repeat(2, 200px);
+    gap: 48px;
+    max-width: 448px;
+  }
+}
+
+@media (max-width: 487px) {
+  .catalog {
+    grid-template-columns: 200px;
+    gap: 48px;
+    max-width: 200px;
   }
 }
