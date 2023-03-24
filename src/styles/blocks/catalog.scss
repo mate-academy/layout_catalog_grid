@@ -1,0 +1,17 @@
+.catalog {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(1, $card-width);
+  gap: 48px;
+
+  $media:
+    $mobile-endpoint 2,
+    $laptop-endpoint 3,
+    $desktop-endpoint 4;
+
+  @each $endpoint, $count in $media {
+    @media (min-width: $endpoint) {
+      grid-template-columns: repeat($count, $card-width);
+    }
+  }
+}
