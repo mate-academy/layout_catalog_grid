@@ -1,0 +1,9 @@
+@mixin center-catalog($center) {
+  justify-content: $center;
+  align-items: $center;
+}
+
+@mixin center-card-item ($center) {
+  justify-items: center;
+  align-items: center;
+}
