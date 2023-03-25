@@ -1,9 +1,9 @@
 .catalog {
+  justify-content: center;
+  align-items: center;
   display: grid;
   grid-template-columns: repeat(4, $card-item-width);
   gap: 48px;
-  max-width: $catalog-max-width;
-  margin: 0 auto;
 
   &__card {
     display: flex;
