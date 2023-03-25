@@ -1,0 +1,17 @@
+@media (max-width: 1023px) {
+  .catalog {
+    grid-template-columns: repeat(3, #{$card-item-width});
+  }
+}
+
+@media (max-width: 767px) {
+  .catalog {
+    grid-template-columns: repeat(2, #{$card-item-width});
+  }
+}
+
+@media (max-width: 487px) {
+  .catalog {
+    grid-template-columns: #{$card-item-width};
+  }
+}
