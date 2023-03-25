@@ -11,4 +11,8 @@ body {
 }
 
 @import "_header.scss";
+@import "./utils/variables";
+@import "./utils/extends";
+@import "./utils/mixins";
 @import "_catalog.scss";
+@import "./utils/media-queries";
