@@ -1,16 +1,16 @@
 .catalog {
   display: grid;
-  grid-template-columns: repeat(4, 200px);
+  grid-template-columns: repeat(4, $card-item-width);
   gap: 48px;
-  max-width: 944px;
+  max-width: $catalog-max-width;
   margin: 0 auto;
 
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 300px;
+    width: $card-item-width;
+    height: $card-item-height;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
