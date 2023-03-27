@@ -17,7 +17,6 @@ Implement layout using grid layout
 - Do not modify header
 - Blocks should start from the left
 
-
 ## Requirements:
 - write styles in `src/styles/_catalog.scss`
 - use SCSS in this task
