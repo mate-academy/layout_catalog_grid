@@ -20,10 +20,10 @@
   @media (max-width: 487px) {
     grid-template: repeat(2, 1fr) / repeat(1, 1fr);
   }
-  @media (min-width: 488px) and (max-width: 768px) {
+  @media (min-width: 488px) and (max-width: 767px) {
     grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   }
-  @media (min-width: 767px) and (max-width: 1023px) {
+  @media (min-width: 768px) and (max-width: 1023px) {
     grid-template: repeat(2, 1fr) / repeat(3, 1fr);
   }
   @media (min-width: 1024px) {
