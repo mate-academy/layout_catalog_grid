@@ -4,7 +4,7 @@
   justify-items: center;
   align-items: center;
 
-  grid-template-columns: repeat(1, minmax(200px, 1fr));
+  grid-template-columns: 1, minmax(200px, 1fr);
   max-width: 944px;
   margin: 0 auto;
 
