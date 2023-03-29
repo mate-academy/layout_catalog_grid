@@ -1,3 +1,6 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
 .catalog {
   display: grid;
   gap: 48px;
@@ -8,15 +11,15 @@
   max-width: 944px;
   margin: 0 auto;
 
-  @media screen and (min-width: 1024px) {
+  @include onBigScreen {
     grid-template-columns: repeat(4, minmax(200px, 1fr));
   }
 
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
+  @include onMediumScreen {
     grid-template-columns: repeat(3, minmax(200px, 1fr));
   }
 
-  @media screen and (min-width: 488px) and (max-width: 768px) {
+  @include onSmallScreen {
     grid-template-columns: repeat(2, minmax(200px, 1fr));
   }
 

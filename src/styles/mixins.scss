@@ -1,0 +1,19 @@
+@import "./variables.scss";
+
+@mixin onBigScreen {
+  @media screen and (min-width: $high-size) {
+    @content;
+  }
+}
+
+@mixin onMediumScreen {
+  @media screen and (min-width: $mid-size) and (max-width: $high-size) {
+    @content;
+  }
+}
+
+@mixin onSmallScreen {
+  @media screen and (min-width: $low-size) and (max-width: $mid-size) {
+    @content;
+  }
+}
