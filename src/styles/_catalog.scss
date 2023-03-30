@@ -1,9 +1,27 @@
-.catalog {
-  display: flex;
-  flex-wrap: wrap;
+@import "./variables.scss";
+@import "./mixins.scss";
 
+.catalog {
+  display: grid;
+  gap: 48px;
+  justify-items: center;
+  align-items: center;
+
+  grid-template-columns: $card-width;
   max-width: 944px;
   margin: 0 auto;
+
+  @include onBigScreen {
+    grid-template-columns: repeat(4, minmax($card-width, 1fr));
+  }
+
+  @include onMediumScreen {
+    grid-template-columns: repeat(3, minmax($card-width, 1fr));
+  }
+
+  @include onSmallScreen {
+    grid-template-columns: repeat(2, minmax($card-width, 1fr));
+  }
 
   &__card {
     display: flex;
@@ -14,9 +32,5 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 48px;
-  }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
   }
 }
