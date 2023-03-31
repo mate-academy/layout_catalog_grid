@@ -1,9 +1,15 @@
 $width-card:200px;
 
+.container {
+  width: 100px;
+  margin: 0 auto;
+}
+
 .catalog {
   display: grid;
   gap: 48px;
   grid-template-columns: repeat(1, $width-card);
+  justify-content: center;
 
   &__card {
     display: flex;
