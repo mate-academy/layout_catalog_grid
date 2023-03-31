@@ -1,0 +1,18 @@
+.catalog {
+  @extend %grid;
+  grid-template-columns: $card-width;
+  gap: 48px;
+
+  @include media(2, 488px);
+  @include media(3, 768px);
+  @include media(4, 1024px);
+
+  &__card {
+    @extend %flex;
+    align-items: center;
+    width: $card-width;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}

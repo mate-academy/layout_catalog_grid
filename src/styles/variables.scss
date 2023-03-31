@@ -1,0 +1,11 @@
+$card-width: 200px;
+
+%grid {
+  display: grid;
+  justify-content: center;
+}
+
+%flex {
+  display: flex;
+  justify-content: center;
+}
