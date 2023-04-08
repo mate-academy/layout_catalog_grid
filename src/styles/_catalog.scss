@@ -1,6 +1,6 @@
 .catalog {
   display: grid;
-  grid-template-columns: repeat(4, $widthnp);
+  grid-template-columns: repeat(4, $width);
   gap: 48px;
   justify-content: center;
 
