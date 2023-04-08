@@ -2,6 +2,7 @@
   display: grid;
   grid-template-columns: repeat(4, $size);
   gap: 48px;
+  justify-content: center;
 
   &__card {
     display: flex;
