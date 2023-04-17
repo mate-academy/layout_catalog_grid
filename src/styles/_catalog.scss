@@ -1,9 +1,22 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
-
   max-width: 944px;
   margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(1, $block-size);
+  justify-content: center;
+  gap: 48px;
+
+  @media (min-width: 488px) {
+    grid-template-columns: repeat(2, $block-size);
+  }
+  
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, $block-size);
+  }
+  
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, $block-size);
+  }
 
   &__card {
     display: flex;
