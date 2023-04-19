@@ -1,8 +1,27 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  column-gap: 48px;
 
-  max-width: 944px;
+  @media (max-width: 488px) {
+    grid-template-columns: 1fr;
+    max-width: 200px;
+  }
+
+  @media (min-width: 488px) {
+    grid-template-columns: 1fr 1fr;
+    max-width: 448px;
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 696px;
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    max-width: 944px;
+  }
+
   margin: 0 auto;
 
   &__card {
@@ -16,7 +35,4 @@
     margin-bottom: 48px;
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
-  }
 }
