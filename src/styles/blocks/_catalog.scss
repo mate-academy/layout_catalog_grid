@@ -2,17 +2,16 @@
   display: grid;
   gap: 48px;
   justify-content: center;
-  margin: 0 auto;
 
-  @include more488 {
+  @include onMobileLarge {
     grid-template-columns: repeat(2, $card-width);
   }
 
-  @include more768 {
+  @include onTablet {
     grid-template-columns: repeat(3, $card-width);
   }
 
-  @include more1024 {
+  @include onDesktop {
     grid-template-columns: repeat(4, $card-width);
   }
 
@@ -26,5 +25,4 @@
     border-radius: 5px;
     margin-bottom: 48px;
   }
-
 }

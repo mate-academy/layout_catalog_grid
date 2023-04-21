@@ -1,16 +1,16 @@
-@mixin more488 {
+@mixin onMobileLarge {
   @media (min-width: 488px) {
     @content;
   }
 }
 
-@mixin more768 {
+@mixin onTablet {
   @media (min-width: 768px) {
     @content;
   }
 }
 
-@mixin more1024 {
+@mixin onDesktop {
   @media (min-width: 1024px) {
     @content;
   }
