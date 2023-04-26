@@ -3,6 +3,8 @@
   grid-template-columns: repeat(auto-fit, 200px);
   gap: 48px;
   grid-auto-flow: row;
+  justify-content: center;
+  align-content: center;
 
   &__card {
     display: grid;
@@ -10,7 +12,7 @@
     align-items: center;
     width: 200px;
     height: 300px;
-    // box-sizing: border-box;
+    box-sizing: border-box;
     border: 1px solid #ccc;
     border-radius: 5px;
   }
@@ -30,4 +32,12 @@
   @media screen and (min-width: 1024px) {
     grid-template-columns: repeat(4, 200px);
   }
+
+
+
+
+
+  // @media screen and (max-width: 487px) {
+  //   grid-template-columns: repeat(1, minmax(200px, 1fr));
+  // }
 }
