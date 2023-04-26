@@ -1,5 +1,6 @@
 .catalog {
   display: grid;
+  grid-template-columns: 200px;
   justify-content: center;
   gap: 48px;
 
@@ -15,26 +16,21 @@
 
 }
 
-@media screen and (min-width: 0px) {
+@media (min-width: 488px) {
   .catalog {
-    grid-template-columns: 200px;
+    grid-template-columns: repeat(2, 200px);
   }
 }
 
-@media screen and (min-width: 488px) {
+@media (min-width: 768px) {
   .catalog {
-    grid-template-columns: 200px 200px;
+    grid-template-columns: repeat(3, 200px);
   }
 }
 
-@media screen and (min-width: 768px){
+@media (min-width: 1024px){
   .catalog {
-    grid-template-columns: 200px 200px 200px;
+    grid-template-columns: repeat(4, 200px);
   }
 }
 
-@media screen and (min-width: 1024px){
-  .catalog {
-    grid-template-columns: 200px 200px 200px 200px;
-  }
-}
