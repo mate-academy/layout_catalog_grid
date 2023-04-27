@@ -1,0 +1,13 @@
+$width-card: 200px;
+$height-card: 300px;
+
+$screen-small: 488px;
+$screen-medium: 768px;
+$screen-large: 1024px;
+
+$gap: 48px;
+
+$one-card-width: $width-card;
+$two-cards-width: $width-card * 2 + $gap;
+$three-cards-width: $width-card * 3 + $gap * 2;
+$four-cards-width: $width-card * 4 + $gap * 3;

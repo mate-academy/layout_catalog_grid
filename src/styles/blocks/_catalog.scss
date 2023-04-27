@@ -1,0 +1,33 @@
+.catalog {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: $gap;
+
+  max-width: $one-card-width;
+  margin: 0 auto;
+
+  @media (min-width: $screen-small) and (max-width: #{$screen-medium - 1}) {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: $two-cards-width;
+  }
+
+  @media (min-width: $screen-medium) and (max-width: #{$screen-large - 1}) {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: $three-cards-width;
+  }
+
+  @media (min-width: $screen-large) {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: $four-cards-width;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $width-card;
+    height: $height-card;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
