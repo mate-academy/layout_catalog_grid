@@ -1,0 +1,29 @@
+.catalog {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-gap: 48px;
+
+  @include screen-size($two-columns-size) {
+    grid-template-columns: repeat(2, $card-size);
+  }
+
+  @include screen-size($three-columns-size) {
+    grid-template-columns: repeat(3, $card-size);
+  }
+
+  @include screen-size($four-columns-size) {
+    grid-template-columns: repeat(4, $card-size);
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
