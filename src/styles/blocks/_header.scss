@@ -23,12 +23,14 @@
       padding: 0;
       height: 100%;
     }
+
     &-item {
       margin: 0 0 0 20px;
       &:first-child {
         margin: 0;
       }
     }
+
     &-link {
       position: relative;
       display: inline-block;
@@ -43,7 +45,6 @@
       }
     }
   }
-
 }
 
 .is-active {
