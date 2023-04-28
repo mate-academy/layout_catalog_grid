@@ -6,25 +6,25 @@
 
   @media screen and (max-width: 488px) {
     & {
-      grid-template-columns: repeat(1, minmax($card-width, 1fr));
+      grid-template-columns: repeat(1, $card-width);
     }
   }
 
   @media screen and (min-width: 488px) {
     & {
-      grid-template-columns: repeat(2, minmax($card-width, 1fr));
+      grid-template-columns: repeat(2, $card-width);
     }
   }
 
   @media screen and (min-width: 768px) {
     & {
-      grid-template-columns: repeat(3, minmax($card-width, 1fr));
+      grid-template-columns: repeat(3, $card-width);
     }
   }
 
   @media screen and (min-width: 1024px) {
     & {
-      grid-template-columns: repeat(4, minmax($card-width, 1fr));
+      grid-template-columns: repeat(4, $card-width);
     }
   }
 
