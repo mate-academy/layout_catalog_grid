@@ -3,7 +3,7 @@
   justify-content: center;
   justify-items: center;
   grid-template-columns: 1fr;
-  grid-gap: 48px;
+  grid-gap: $gap;
 
   @include screen-size($two-columns-size) {
     grid-template-columns: repeat(2, $card-size);
@@ -21,7 +21,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
+    width: $card-size;
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
