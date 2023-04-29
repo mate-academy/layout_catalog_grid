@@ -1,0 +1,21 @@
+$color-blue-accent: #00acdc;
+$color-main-accent: #060b35;
+$color-secondary: #616070;
+$color-white: #fff;
+$color-gray-elements: #f3f3f3;
+
+$padding-card: 32px 16px 16px;
+
+$width-card: 200px;
+$height-card: 300px;
+
+$screen-small: 488px;
+$screen-medium: 768px;
+$screen-large: 1024px;
+
+$gap: 48px;
+
+$one-card-width: $width-card;
+$two-cards-width: $width-card * 2 + $gap;
+$three-cards-width: $width-card * 3 + $gap * 2;
+$four-cards-width: $width-card * 4 + $gap * 3;

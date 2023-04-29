@@ -1,0 +1,30 @@
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax($one-card-width, 1fr));
+  gap: $gap;
+
+  max-width: $one-card-width;
+  margin: 0 auto;
+
+  @media (min-width: $screen-small) and (max-width: #{$screen-medium - 1}) {
+    max-width: $two-cards-width;
+  }
+
+  @media (min-width: $screen-medium) and (max-width: #{$screen-large - 1}) {
+    max-width: $three-cards-width;
+  }
+
+  @media (min-width: $screen-large) {
+    max-width: $four-cards-width;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $width-card;
+    height: $height-card;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
