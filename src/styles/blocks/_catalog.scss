@@ -1,7 +1,7 @@
 .catalog {
   display: grid;
   gap: 48px;
-  grid-template-columns: $card-width $card-width $card-width $card-width;
+  grid-template-columns: repeat(1, $card-width);
   justify-content: center;
   align-items: center;
 
@@ -15,15 +15,9 @@
     border-radius: 5px;
   }
 
-  @media (max-width: 1023px) {
-    grid-template-columns: $card-width $card-width $card-width;
-  }
-
-  @media (max-width: 767px) {
-    grid-template-columns: $card-width $card-width;
-  }
-
-  @media (max-width: 487px) {
-    grid-template-columns: $card-width;
+  @each $size, $number-of-cards in $screen-sizes {
+    @media (min-width: $size) {
+      grid-template-columns: repeat($number-of-cards, $card-width);
+    }
   }
 }
