@@ -1,5 +1,15 @@
-@mixin screen-size ($size) {
-  @media (min-width: $size) {
-    @content;
+@mixin grid($columns, $screen-size, $card-size,) {
+  @media (min-width: $screen-size) {
+    grid-template-columns: repeat($columns, $card-size);
   }
+}
+
+@mixin image-size($size) {
+  width: $size;
+  height: $size;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
 }

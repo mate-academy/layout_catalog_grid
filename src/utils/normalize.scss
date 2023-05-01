@@ -1,7 +1,17 @@
 html {
   font-family: "Roboto", sans-serif;
+  font-style: normal;
 }
 
 * {
   box-sizing: border-box;
+}
+
+img {
+  display: block;
+}
+
+a,
+img {
+  cursor: pointer;
 }
