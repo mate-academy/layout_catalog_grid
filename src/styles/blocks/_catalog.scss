@@ -1,0 +1,33 @@
+.catalog {
+  display: grid;
+  gap: 48px;
+  justify-content: center;
+
+  max-width: 944px;
+  margin: 0 auto;
+
+  @media (max-width: 487px) {
+    grid-template-columns: repeat(1, $maxCardWidth);
+  }
+
+  @media (min-width: 488px) {
+    grid-template-columns: repeat(2, $maxCardWidth);
+  }
+
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(3, $maxCardWidth);
+  }
+
+  @media (min-width: 1024px) {
+    grid-template-columns: repeat(4, $maxCardWidth);
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: $cardHeight;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
