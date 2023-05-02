@@ -3,6 +3,7 @@ $card-width: 200px;
 .catalog {
   display: grid;
   gap: 48px;
+  justify-content: center;
 
   @media (min-width: 488px) {
     grid-template-columns: repeat(2, $card-width);
