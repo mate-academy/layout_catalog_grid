@@ -1,6 +1,6 @@
-@import url(./blocks/_catalog.scss);
-@import url(./blocks/_header.scss);
-
+@import url(./utils/variables.scss);
 @import url(./utils/normalize.scss);
 @import url(./utils/reset.scss);
-@import url(./utils/variables.scss);
+
+@import url(./blocks/_catalog.scss);
+@import url(./blocks/_header.scss);
