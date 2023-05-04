@@ -1,14 +1,6 @@
-html {
-  font-family: Roboto, sans-serif;
-}
+@import url(./utils/variables.scss);
+@import url(./utils/normalize.scss);
+@import url(./utils/reset.scss);
 
-body {
-  margin: 0;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@import "_header.scss";
-@import "_catalog.scss";
+@import url(./blocks/_catalog.scss);
+@import url(./blocks/_header.scss);
