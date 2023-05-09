@@ -6,9 +6,17 @@
   grid-gap: $gap;
   padding-bottom: $catalog-padding-bottom;
 
-  @include grid($column-2, $two-columns-size, $card-size);
-  @include grid($column-3, $three-columns-size, $card-size);
-  @include grid($column-4, $four-columns-size, $card-size);
+  @include onBigPhone {
+    grid-template-columns: repeat(2, $card-size);
+  }
+
+  @include onTablet {
+    grid-template-columns: repeat(3, $card-size);
+  }
+
+  @include onDesktop {
+    grid-template-columns: repeat(4, $card-size);
+  }
 
   &__card {
     width: $card-size;

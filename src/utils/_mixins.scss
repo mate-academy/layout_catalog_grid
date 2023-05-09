@@ -1,15 +1,27 @@
-@mixin grid($columns, $screen-size, $card-size,) {
-  @media (min-width: $screen-size) {
-    grid-template-columns: repeat($columns, $card-size);
+@mixin onBigPhone {
+  @media (min-width: $two-columns-size) {
+    @content;
   }
 }
 
-@mixin image-size($size) {
-  width: $size;
-  height: $size;
-}
-
-@mixin flex {
+@mixin x-centered-flex {
   display: flex;
   align-items: center;
+}
+
+@mixin onTablet {
+  @media (min-width: $three-columns-size) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: $four-columns-size) {
+    @content;
+  }
+}
+
+@mixin square ($size) {
+  width: $size;
+  height: $size;
 }
