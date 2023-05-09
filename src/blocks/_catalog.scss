@@ -1,0 +1,30 @@
+.catalog {
+  display: grid;
+  justify-content: center;
+  justify-items: center;
+  grid-template-columns: 1fr;
+  grid-gap: $gap;
+  padding-bottom: $catalog-padding-bottom;
+
+  @include onBigPhone {
+    grid-template-columns: repeat(2, $card-size);
+  }
+
+  @include onTablet {
+    grid-template-columns: repeat(3, $card-size);
+  }
+
+  @include onDesktop {
+    grid-template-columns: repeat(4, $card-size);
+  }
+
+  &__card {
+    width: $card-size;
+
+    transition: color $hover-duration, transform $hover-duration;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}

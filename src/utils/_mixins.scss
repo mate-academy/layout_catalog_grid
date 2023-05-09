@@ -1,0 +1,27 @@
+@mixin onBigPhone {
+  @media (min-width: $two-columns-size) {
+    @content;
+  }
+}
+
+@mixin x-centered-flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin onTablet {
+  @media (min-width: $three-columns-size) {
+    @content;
+  }
+}
+
+@mixin onDesktop {
+  @media (min-width: $four-columns-size) {
+    @content;
+  }
+}
+
+@mixin square ($size) {
+  width: $size;
+  height: $size;
+}
