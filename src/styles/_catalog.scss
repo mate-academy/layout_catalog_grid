@@ -1,9 +1,6 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
-
   max-width: 944px;
-  margin: 0 auto;
+  margin: auto;
 
   &__card {
     display: flex;
@@ -18,5 +15,29 @@
 
   &__card:not(:nth-child(4n)) {
     margin-right: 48px;
+  }
+}
+
+@media (min-width:1024px) {
+  .catalog {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-template-rows: auto auto auto auto;
+  }
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+  .catalog {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+  }
+}
+
+@media (min-width:488px) and (max-width:767px) {
+  .catalog {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
   }
 }
