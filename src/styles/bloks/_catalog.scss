@@ -1,7 +1,7 @@
 .catalog {
   display: grid;
   justify-content: center;
-  gap: 48px;
+  gap: $gap;
   margin: 0 auto;
 
   &__card {
