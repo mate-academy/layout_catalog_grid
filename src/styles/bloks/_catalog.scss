@@ -20,7 +20,7 @@
     }
   }
 
-  @media (min-width:748px) {
+  @media (min-width:768px) {
     & {
       grid-template-columns: repeat(3, $width-card);
     }
