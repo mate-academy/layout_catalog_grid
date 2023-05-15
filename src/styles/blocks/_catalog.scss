@@ -1,0 +1,22 @@
+.catalog {
+  @extend %gridTemplate;
+
+  gap: 48px;
+
+  @each $viewportWidth, $columns in $howColumns {
+    @media (min-width: #{$viewportWidth}) {
+      grid-template-columns: repeat(#{$columns}, #{$cardsWidth});
+    }
+  }
+
+  &__card {
+    @extend %gridTemplate;
+
+    align-items: center;
+
+    width: $cardsWidth;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}
