@@ -7,19 +7,19 @@
 
   @media (min-width: 488px) {
     & {
-      grid-template-columns: repeat(2, minmax($card-size, 1fr));
+      grid-template-columns: repeat(2, $card-size);
     }
   }
 
   @media (min-width: 768px) {
     & {
-      grid-template-columns: repeat(3, minmax($card-size, 1fr));
+      grid-template-columns: repeat(3, $card-size);
     }
   }
 
   @media (min-width: 1024px) {
     & {
-      grid-template-columns: repeat(4, minmax($card-size, 1fr));
+      grid-template-columns: repeat(4, $card-size);
     }
   }
 
