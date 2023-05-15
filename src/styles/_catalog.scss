@@ -1,6 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 .catalog {
   display: grid;
-  grid-template-columns: repeat(auto-fill);
+  grid-template-columns: repeat(auto-fill, 200px);
   max-width: 944px;
   gap: 48px;
   margin: 0 auto;
@@ -13,24 +17,23 @@
 
   @media screen and (min-width: 488px) {
     & {
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(2, 1fr);;
     }
   }
 
   @media screen and (min-width: 768px) {
     & {
-      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 
   @media screen and (min-width: 1024px) {
     & {
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 
   &__card {
-    box-sizing: border-box;
     display: flex;
     justify-content: center;
     align-items: center;
