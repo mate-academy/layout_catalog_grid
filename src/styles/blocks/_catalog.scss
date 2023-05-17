@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(1, $base-card-width);
   justify-content: center;
-  gap: 0 48px;
+  gap: $gap-size;
 
   margin: 0 auto;
 
@@ -14,22 +14,21 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
   }
 
-  @media (min-width: 488px) {
+  @media (min-width: $breakpoint-first) {
     & {
       grid-template-columns: repeat(2, $base-card-width);
     }
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-second) {
     & {
       grid-template-columns: repeat(3, $base-card-width);
     }
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $breakpoint-third) {
     & {
       grid-template-columns: repeat(4, $base-card-width);
     }
