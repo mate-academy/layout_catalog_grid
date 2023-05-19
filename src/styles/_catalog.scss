@@ -3,19 +3,11 @@
   justify-content: center;
   gap: 48px;
 
-  @media (max-width: 488px) {
-    & {
-      grid-template-columns: repeat(1, 200px);
-    }
-  }
-
   $widths: (2: 488px, 3: 768px, 4: 1024px);
 
   @each $column, $width in $widths {
     @media (min-width: $width) {
-      & {
-        grid-template-columns: repeat($column, 200px);
-      }
+      grid-template-columns: repeat($column, 200px);
     }
   }
 
