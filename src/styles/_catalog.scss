@@ -1,16 +1,21 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: $widthCard;
+  gap: 48px;
+  justify-content: center;
 
-  max-width: 944px;
-  margin: 0 auto;
+  @each $size, $amount in $media {
+    @media (min-width:#{$size}) {
+      grid-template-columns: repeat($amount, $widthCard);
+    }
+  }
 
   &__card {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 300px;
+    width: 100%;
+    height: $heightCard;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 48px;
