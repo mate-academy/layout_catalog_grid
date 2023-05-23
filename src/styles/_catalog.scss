@@ -3,6 +3,10 @@
   justify-content: center;
   gap: 48px;
   grid-template-columns: $cardWith;
+  $media:
+    "488px" 2,
+    "768px" 3,
+    "1024px" 4;
 
   @each $size, $amount in $media {
     @media (min-width:#{$size}) {
