@@ -12,3 +12,9 @@ body {
 
 @import "_header.scss";
 @import "_catalog.scss";
+
+@media (min-width: 1200px) {
+  & {
+    grid-template-columns: repeat(3, minmax(301px, 1fr));
+  }
+}
