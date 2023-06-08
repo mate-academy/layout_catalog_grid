@@ -5,7 +5,7 @@ Replace `<your_account>` with your Github username and copy the links to Pull Re
 > Follow [this instructions](https://github.com/mate-academy/layout_task-guideline#how-to-solve-the-layout-tasks-on-github)
 
 ## The task
-Implement layout using grid layout
+Implement layout using grid layout.
 
 - Replace `flex` with `grid`
 - Media queries
