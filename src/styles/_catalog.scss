@@ -1,12 +1,14 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
-
+  box-sizing: border-box;
+  display: grid;
   max-width: 944px;
   margin: 0 auto;
 
+  grid-template-columns: repeat(4, 200px);
+  gap: 0 48px;
+
   &__card {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     width: 200px;
@@ -16,7 +18,19 @@
     margin-bottom: 48px;
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
+  @media screen and (max-width: 488px) {
+    grid-template-columns: 1fr;
+  }
+
+  @media screen and (min-width: 488px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (min-width: 768px) {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  @media screen and (min-width: 1024px) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
