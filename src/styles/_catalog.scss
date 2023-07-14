@@ -1,9 +1,10 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
-
-  max-width: 944px;
-  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(var(--column-count), $column-size);
+  grid-template-rows: repeat(var(--row-count), $row-size);
+  grid-gap: 48px;
+  justify-content: center;
+  justify-items: center;
 
   &__card {
     display: flex;
@@ -13,10 +14,20 @@
     height: 300px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 48px;
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
+  @media (min-width: 488px) {
+    --column-count: 2;
+    --row-count: 4;
+  }
+
+  @media (min-width: 768px) {
+    --column-count: 3;
+    --row-count: 3;
+  }
+
+  @media (min-width: 1024px) {
+    --column-count: 4;
+    --row-count: 2;
   }
 }
