@@ -1,14 +1,16 @@
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
-
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  justify-content: center;
+  align-content: center;
   max-width: 944px;
   margin: 0 auto;
+  gap: 48px;
 
   &__card {
-    display: flex;
+    display: grid;
     justify-content: center;
-    align-items: center;
+    align-content: center;
     width: 200px;
     height: 300px;
     border: 1px solid #ccc;
@@ -18,5 +20,23 @@
 
   &__card:not(:nth-child(4n)) {
     margin-right: 48px;
+  }
+
+  @media (min-width: 488px) {
+    .catalog {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (min-width: 768px) {
+    .catalog {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .catalog {
+      grid-template-columns: repeat(4, 1fr);
+    }
   }
 }
