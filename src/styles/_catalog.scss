@@ -1,9 +1,17 @@
-.catalog {
-  display: flex;
-  flex-wrap: wrap;
+$dimensions: (1: 488px, 2: 768px, 3: 1024px);
 
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 200px);
+  gap: 48px;
+  justify-content: center;
   max-width: 944px;
   margin: 0 auto;
+  @each $index, $dim in $dimensions {
+    @media only screen and (min-width: $dim) {
+      grid-template-columns: repeat($index, 200px);
+    }
+  }
 
   &__card {
     display: flex;
