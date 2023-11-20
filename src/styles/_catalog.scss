@@ -1,12 +1,16 @@
+$breakpoint-computer: 1024px;
+$breakpoint-tablet: 768px;
+$breakpoint-phone: 488px;
+
 .catalog {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  gap: 48px;
 
   max-width: 944px;
   margin: 0 auto;
 
   &__card {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     width: 200px;
@@ -18,5 +22,29 @@
 
   &__card:not(:nth-child(4n)) {
     margin-right: 48px;
+  }
+}
+
+@media (min-width: $breakpoint-phone) {
+  .catalog {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: $breakpoint-phone) {
+  .catalog {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (min-width: $breakpoint-tablet) {
+  .catalog {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (min-width: $breakpoint-computer) {
+  .catalog {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
