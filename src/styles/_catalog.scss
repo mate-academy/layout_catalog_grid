@@ -5,12 +5,13 @@ $breakpoint-phone: 488px;
 .catalog {
   display: grid;
   gap: 48px;
-
   max-width: 944px;
   margin: 0 auto;
+  padding: 0 20px;
+
 
   &__card {
-    display: grid;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 200px;
@@ -18,10 +19,7 @@ $breakpoint-phone: 488px;
     border: 1px solid #ccc;
     border-radius: 5px;
     margin-bottom: 48px;
-  }
-
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
+    box-sizing: border-box;
   }
 }
 
