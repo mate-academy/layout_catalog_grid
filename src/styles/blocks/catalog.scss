@@ -1,0 +1,28 @@
+.catalog {
+  display: grid;
+  justify-content: center;
+  gap: 48px;
+  grid-template-columns: repeat(4, $cardWidth);
+
+  @include onDesktop() {
+    grid-template-columns: repeat(3, $cardWidth);
+  }
+
+  @include onTablet() {
+    grid-template-columns: repeat(2, $cardWidth);
+  }
+
+  @include onPhone() {
+    grid-template-columns: $cardWidth;
+  }
+
+  &__card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $cardWidth;
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}

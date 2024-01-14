@@ -2,6 +2,10 @@ html {
   font-family: Roboto, sans-serif;
 }
 
+header {
+  margin-bottom: 50px;
+}
+
 body {
   margin: 0;
 }
@@ -10,5 +14,8 @@ body {
   box-sizing: border-box;
 }
 
-@import "_header.scss";
-@import "_catalog.scss";
+@import "./utils/_variables";
+@import "./utils/_mixins";
+@import "./blocks/header";
+@import "./blocks/nav";
+@import "./blocks/catalog";
