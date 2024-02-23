@@ -1,22 +1,152 @@
 .catalog {
-  display: flex;
+  font-size: 10px;
+  display: grid;
   flex-wrap: wrap;
-
-  max-width: 944px;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
+  gap: 48px;
+
+  @include columns-per-screen;
 
   &__card {
+    box-sizing: border-box;
+    display: flex;
+    width: $card-width;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 406px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+  }
+
+  &__card:not(.catalog :nth-child(4n)) {
+    margin-right: 48px;
+  }
+}
+
+.card {
+
+  @include smooth-animation;
+
+  &__img-container {
+    margin-top: 16px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    height: 300px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 48px;
   }
 
-  &__card:not(:nth-child(4n)) {
-    margin-right: 48px;
+  &__img {
+    width: $img-width;
+    height: $img-height;
+  }
+
+  &__title {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 18px;
+    margin-top: 40px;
+    margin-bottom: 0;
+    color: $main-accent;
+  }
+
+  &__code {
+    color: $secondary;
+    line-height: 14px;
+    margin-top: 4px;
+    margin-bottom: 0;
+  }
+
+  &__rating {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+  }
+
+  &__reviews {
+    color: $main-accent;
+    text-align: right;
+    line-height: 14px;
+    margin: 0;
+
+  }
+
+  &__pricing {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 24px;
+  }
+  &__price-label {
+    color: $secondary;
+    font-size: 12px;
+    line-height: 18px;
+    margin: 0;
+  }
+
+  &__price-value {
+    text-align: right;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 700;
+    color: $main-accent;
+    margin: 0;
+  }
+
+  &__button {
+    margin-top: 16px;
+  }
+}
+
+.card:hover {
+  transform: scale(1.2);
+}
+
+.card:hover .card__title {
+    color: $card-title-hovered;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  border-radius: 5px;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 16px;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 11px 69px;
+
+  @include smooth-animation;
+}
+
+.button--cta {
+  background-color: $primary;
+  border: 1px solid $primary;
+  color: white;
+  font-weight: 700;
+
+  &:hover {
+    background-color: white;
+    border: 1px solid $primary;
+    color: $primary;
+  }
+}
+
+.stars {
+  display: flex;
+
+  &--4 :nth-child(-n + 4) {
+    background-image: url(/images/star-active.svg);
+    background-repeat: no-repeat;
+  }
+
+  &__star {
+    background-image: url(/images/star.svg);
+    background-repeat: no-repeat;
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
   }
 }
