@@ -1,0 +1,13 @@
+.catalog {
+  
+  display: grid;
+  grid-template-columns: repeat(1, $cardWidth);
+  justify-content: center;
+  gap: $cardsGaps;
+
+  @each $screen-width, $columns in $screen-width-columns {
+    @media (min-width: $screen-width) {
+      grid-template-columns: repeat($columns, $cardWidth);
+    }
+  }
+}
